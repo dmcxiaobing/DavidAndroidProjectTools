@@ -23,4 +23,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:22.2.1'
+    //Gson用来解析json
+    compile 'com.google.code.gson:gson:2.7'
+    //Picasso用来显示图片
+    compile 'com.squareup.picasso:picasso:2.3.2'
 }
