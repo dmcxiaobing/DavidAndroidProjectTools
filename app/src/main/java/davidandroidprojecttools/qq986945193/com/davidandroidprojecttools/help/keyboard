@@ -1,0 +1,11 @@
+/**
+ * @author ：程序员小冰
+ * @新浪微博 ：http://weibo.com/mcxiaobing
+ * @GitHub: https://github.com/QQ986945193
+ * @CSDN博客: http://blog.csdn.net/qq_21376985
+ * @交流Qq ：986945193
+ */
+
+ 此文件是关于AndroidStudio的一些技巧总结。
+
+ 1,设置AndroidStudio不区分大小写进行提示：进入--Settings--Editor--code Completion 将case Sensitive completion 设置为None即可。
