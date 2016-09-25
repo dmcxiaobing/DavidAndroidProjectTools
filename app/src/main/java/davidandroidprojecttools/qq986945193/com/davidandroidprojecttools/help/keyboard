@@ -9,3 +9,5 @@
  此文件是关于AndroidStudio的一些技巧总结。
 
  1,设置AndroidStudio不区分大小写进行提示：进入--Settings--Editor--code Completion 将case Sensitive completion 设置为None即可。
+
+ 2, Ctrl+Alt+T  抛异常
