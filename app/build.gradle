@@ -10,6 +10,7 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -17,6 +18,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -24,7 +26,10 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:22.2.1'
     //Gson用来解析json
-    compile 'com.google.code.gson:gson:2.7'
+    //    compile 'com.google.code.gson:gson:2.7'
     //Picasso用来显示图片
-    compile 'com.squareup.picasso:picasso:2.3.2'
+    //    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile files('libs/badgeview.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile files('libs/picasso-2.5.2.jar')
 }
