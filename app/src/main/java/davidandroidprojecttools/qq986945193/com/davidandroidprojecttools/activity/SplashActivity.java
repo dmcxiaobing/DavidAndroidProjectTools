@@ -16,6 +16,7 @@ import android.view.animation.ScaleAnimation;
 import android.widget.LinearLayout;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ActivityManagerUtils;
 
 
 /**
@@ -52,6 +53,8 @@ public class SplashActivity extends Activity {
         //全屏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
+        ActivityManagerUtils.getInstance().addActivity(SplashActivity.this);
+
 
         ll_splash = (LinearLayout) findViewById(R.id.ll_splash);
         /**
