@@ -32,4 +32,4 @@ Android开发常用功能大集合。以及知识点的详解代码
 
 里面所使用第三方库以及（jar文件上传）：
 
-Gson
+Gson, Xutils2.6, Picasso,Universional_Imageloader, 
