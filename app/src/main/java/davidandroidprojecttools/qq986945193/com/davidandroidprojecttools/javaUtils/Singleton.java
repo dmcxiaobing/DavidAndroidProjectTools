@@ -54,7 +54,7 @@ public class Singleton {
      * <p/>
      * 直接在方法上添加 但是每次都要去进行同步，显然不是最好的。
      *
-     * 最好的当然是最下面的
+     * 最好的当然是下面的，在方法中进行加上synchronized
      * @return
      */
     public static Singleton getInstance() {
