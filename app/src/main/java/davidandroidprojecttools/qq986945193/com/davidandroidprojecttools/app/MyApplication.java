@@ -13,6 +13,7 @@ import android.app.Application;
  * Application的配置
  */
 public class MyApplication extends Application {
+
     @Override
     public void onCreate() {
         super.onCreate();
