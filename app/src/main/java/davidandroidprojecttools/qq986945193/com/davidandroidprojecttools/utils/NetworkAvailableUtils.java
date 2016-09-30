@@ -16,6 +16,9 @@ import java.util.List;
  * @GitHub: https://github.com/QQ986945193
  */
 
+/**
+ * 网络状态的工具类
+ */
 public class NetworkAvailableUtils {
 
     /**
