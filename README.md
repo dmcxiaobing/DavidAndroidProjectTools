@@ -37,3 +37,5 @@ Gson, Xutils2.6, Picasso,Universional_Imageloader,
 java知识点：
 
 1,设计模式：单例的恶汉式和懒汉式写法。
+
+2,Map集合的存取数据详解。
