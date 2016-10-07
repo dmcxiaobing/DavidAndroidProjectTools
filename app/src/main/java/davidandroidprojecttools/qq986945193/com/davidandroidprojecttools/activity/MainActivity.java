@@ -36,7 +36,7 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
     //封装控件
     public PackageControlFragment mPackageControlFragment = new PackageControlFragment();
     //著名开源库
-    public FamousFrameFragment personalFragment = new FamousFrameFragment();
+    public FamousFrameFragment mFamousFrameFragment = new FamousFrameFragment();
 
     /**
      * 底栏四个按钮的集合Tab
@@ -126,7 +126,7 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
                 //著名开源库
                 pressFlag = 3;
                 index = 3;
-                switchContent(personalFragment);
+                switchContent(mFamousFrameFragment);
                 mTabs[3].setSelected(false);
 
                 break;
