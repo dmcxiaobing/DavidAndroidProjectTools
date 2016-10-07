@@ -33,4 +33,6 @@
     <color name="roll_view_bg">#88000000</color>
     <color name="ebebeb_bg">#ebebeb</color>
     <color name="nearby_friends_tag">#a9cd24</color>
+    <color name="tab_text_normal">#333333</color>
+    <color name="theme_color" >#f10100</color>
 </resources>
