@@ -77,7 +77,6 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
         mTabs[1] = (LinearLayout) findViewById(R.id.main_package_control);// 封装控件
         mTabs[2] = (LinearLayout) findViewById(R.id.main_commonly_used_function);// 常用功能
         mTabs[3] = (LinearLayout) findViewById(R.id.mian_famous_frame);// 著名开源库
-        mTabs[0].setSelected(true);
 
         pressFlag = 0;
         index = 0;
@@ -86,7 +85,8 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
         mTabs[1].setOnClickListener(this);
         mTabs[2].setOnClickListener(this);
         mTabs[3].setOnClickListener(this);
-
+        mTabs[0].setSelected(true);
+        switchContent(mainFragment);
 
     }
 
@@ -117,18 +117,16 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
                 switchContent(mPackageControlFragment);
                 break;
             case R.id.main_commonly_used_function:
-                switchContent(mCommonlyUsedFunctionFragment);
                 //常用功能fragment
                 pressFlag = 2;
                 index = 2;
+                switchContent(mCommonlyUsedFunctionFragment);
                 break;
             case R.id.mian_famous_frame:
                 //著名开源库
                 pressFlag = 3;
                 index = 3;
                 switchContent(mFamousFrameFragment);
-                mTabs[3].setSelected(false);
-
                 break;
 
 
