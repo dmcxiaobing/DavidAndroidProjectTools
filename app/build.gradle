@@ -12,12 +12,47 @@ android {
         versionName "1.0"
         multiDexEnabled true
     }
+
+    /**
+     * 配置签名文件
+     */
+    signingConfigs {
+        davidConfig {
+            keyAlias 'david'
+            keyPassword '123456'
+//            storeFile file('D:/DavidAndroidProjectTools.jks')
+            storeFile file('D:\\DavidAndroidProjectTools.jks')
+            storePassword '123456'
+        }
+    }
+    /**
+     * 设置生成apk文件 一定要在signingConfigs下面
+     */
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.davidConfig
+        }
+
+        debug {
+            signingConfig signingConfigs.davidConfig
         }
     }
+
+
+
+    productFlavors {
+    }
+    /**
+     * 解决错误：
+     * `Error:Execution failed for task ‘:app:lintVitalRelease’.
+     */
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
 
 }
 
@@ -29,7 +64,7 @@ dependencies {
     //    compile 'com.google.code.gson:gson:2.7'
     //Picasso用来显示图片
     //    compile 'com.squareup.picasso:picasso:2.3.2'
-    //Umeng统计引入工具
+    //Umeng统计引入工具  可以使用jar文件，这里使用gradle方式
     compile 'com.umeng.analytics:analytics:latest.integration'
     compile files('libs/badgeview.jar')
     compile files('libs/gson-2.3.1.jar')
