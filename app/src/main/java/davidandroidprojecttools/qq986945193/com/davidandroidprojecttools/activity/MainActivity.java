@@ -1,41 +1,21 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity;
 
-import android.content.Intent;
-import android.os.Handler;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
-import android.view.Window;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jauker.widget.BadgeView;
-import com.lidroid.xutils.http.RequestParams;
-import com.lidroid.xutils.http.client.HttpRequest;
-import com.umeng.analytics.MobclickAgent;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.ClasslyFragment;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.PackageControlFragment;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.MainFragment;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.PersonalFragment;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.ShoppingCartFragment;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.FamousFrameFragment;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.CommonlyUsedFunctionFragment;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ActivityManagerUtils;
-import de.greenrobot.event.EventBus;
 /**
  * @author ：程序员小冰
  * @新浪微博 ：http://weibo.com/mcxiaobing
@@ -47,18 +27,16 @@ import de.greenrobot.event.EventBus;
 /**
  * 首次进入的主类
  */
-public class MainActivity extends FragmentActivity implements View.OnClickListener {
+public class MainActivity extends BaseFragmentActivity implements View.OnClickListener {
 
-    //首页fragment
+    //首页fragment 知识点
     public MainFragment mainFragment = new MainFragment();
-    //购物车fragment 购物车为空
-    public ShoppingCartFragment mShoppingCartFragment = new ShoppingCartFragment();
-
-
-    //商品分类
-    public ClasslyFragment mClasslyFragment = new ClasslyFragment();
-    //个人中心
-    public PersonalFragment personalFragment = new PersonalFragment();
+    //常用功能
+    public CommonlyUsedFunctionFragment mCommonlyUsedFunctionFragment = new CommonlyUsedFunctionFragment();
+    //封装控件
+    public PackageControlFragment mPackageControlFragment = new PackageControlFragment();
+    //著名开源库
+    public FamousFrameFragment personalFragment = new FamousFrameFragment();
 
     /**
      * 底栏四个按钮的集合Tab
@@ -95,10 +73,10 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
      */
     private void initViews() {
         mTabs = new LinearLayout[4];
-        mTabs[0] = (LinearLayout) findViewById(R.id.new_main_page_rl);// 首页
-        mTabs[1] = (LinearLayout) findViewById(R.id.main_page_rl);// 商品分类
-        mTabs[2] = (LinearLayout) findViewById(R.id.find_page_rl);// 购物车
-        mTabs[3] = (LinearLayout) findViewById(R.id.person_page_rl);// 我的
+        mTabs[0] = (LinearLayout) findViewById(R.id.main_knowledge_point);// 首页 知识点详解
+        mTabs[1] = (LinearLayout) findViewById(R.id.main_package_control);// 封装控件
+        mTabs[2] = (LinearLayout) findViewById(R.id.main_commonly_used_function);// 常用功能
+        mTabs[3] = (LinearLayout) findViewById(R.id.mian_famous_frame);// 著名开源库
         mTabs[0].setSelected(true);
 
         pressFlag = 0;
@@ -126,31 +104,26 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.new_main_page_rl:
+            case R.id.main_knowledge_point:
                 //首页fragment
                 pressFlag = 0;
                 index = 0;
                 switchContent(mainFragment);
-//                mTabs[3].setSelected(false);
                 break;
-            case R.id.main_page_rl:
-                //商品分类fragment
+            case R.id.main_package_control:
+                //封装控件fragment
                 pressFlag = 1;
                 index = 1;
-                switchContent(mClasslyFragment);
-//                mTabs[3].setSelected(false);
+                switchContent(mPackageControlFragment);
                 break;
-                  /*购物车*/
-            case R.id.find_page_rl:
-                switchContent(mShoppingCartFragment);
-                //购物车fragment
+            case R.id.main_commonly_used_function:
+                switchContent(mCommonlyUsedFunctionFragment);
+                //常用功能fragment
                 pressFlag = 2;
                 index = 2;
                 break;
-            /**
-             * 个人中心
-             */
-            case R.id.person_page_rl:
+            case R.id.mian_famous_frame:
+                //著名开源库
                 pressFlag = 3;
                 index = 3;
                 switchContent(personalFragment);
