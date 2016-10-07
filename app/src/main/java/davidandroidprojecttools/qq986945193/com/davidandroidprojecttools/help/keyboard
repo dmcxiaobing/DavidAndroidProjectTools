@@ -11,3 +11,5 @@
  1,设置AndroidStudio不区分大小写进行提示：进入--Settings--Editor--code Completion 将case Sensitive completion 设置为None即可。
 
  2, Ctrl+Alt+T  抛异常
+
+ 3,ALT+SHIFT+R 文件重命名

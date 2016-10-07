@@ -3,4 +3,34 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="blue">#ffccddff</color>
+    <color name="grey">#58616d</color>
+    <color name="darkgrey">#ff404040</color>
+    <color name="toasterro">#9fd524</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="semitransparent">#80000000</color>
+    <color name="lightransparent">#a0000000</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="province_line_border">#C7C7C7</color>
+    <!-- 纯色 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="alpha_white">#9ED89F</color>
+    <color name="red">#E51A18</color>
+    <color name="transparent">#0000</color>
+    <!-- 背景色 -->
+    <color name="backcolor_white">#FFFFFF</color>
+    <color name="backcolor">#EDEDED</color>
+    <color name="backcolor_light">#f6f6f6</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="gray_background">#ffececec</color>
+    <color name="title_bg">#00a33e</color>
+    <color name="guide_bg1">#f2eee5</color>
+    <color name="guide_bg2">#6d71df</color>
+    <color name="transparent_bg">#00000000</color>
+    <color name="calendar_transparent_bg">#a0000000</color>
+    <color name="subtransparent">#90000000</color>
+    <color name="roll_view_bg">#88000000</color>
+    <color name="ebebeb_bg">#ebebeb</color>
+    <color name="nearby_friends_tag">#a9cd24</color>
 </resources>

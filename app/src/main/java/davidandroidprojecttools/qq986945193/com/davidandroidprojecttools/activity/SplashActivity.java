@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ActivityManagerUtils;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.SharedPreferencesUtils;
 
 
 /**
@@ -168,8 +169,19 @@ public class SplashActivity extends Activity {
      * 跳转到主界面
      */
     private void startMainActivity() {
-        startActivity(new Intent(SplashActivity.this, MainActivity.class));
-        finish();
+//        startActivity(new Intent(SplashActivity.this, GuideActivity.class));
+//        finish();
+        boolean isFirst = SharedPreferencesUtils.getBoolean(SplashActivity.this, "is_user_guide_showed", false);
+        if (!isFirst) {
+            Intent intentFirst = new Intent();
+            intentFirst.setClass(SplashActivity.this, GuideActivity.class);
+            SplashActivity.this.startActivity(intentFirst);
+            finish();
+        } else {
+            Intent intentMain = new Intent(SplashActivity.this, MainActivity.class);
+            startActivity(intentMain);
+            finish();
+        }
     }
 
     @Override
