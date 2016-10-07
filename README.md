@@ -30,6 +30,8 @@ Android开发常用功能大集合。以及知识点的详解代码
 
 5，通过url获取Json数据 // 通过url获取网络Bitmap数据 （httpClient所完成）
 
+6,网络状态的判断（是否有网络，以及网络是3G,WIFI等状况）
+
 里面所使用第三方库以及（jar文件上传）：
 
 Gson, Xutils2.6, Picasso,Universional_Imageloader, 
