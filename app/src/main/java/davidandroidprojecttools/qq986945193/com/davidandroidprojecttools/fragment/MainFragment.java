@@ -69,11 +69,14 @@ public class MainFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     /**
-                     * ListView详解的类
+                     * ListView与adapter的详解
                      */
                     case 0:
                         intent = new Intent(mContext, ListViewIntroduceActivity.class);
                         break;
+                    /**
+                     * 退出app应用的四种实现方式
+                     */
                     case 1:
                         intent = new Intent(mContext, SystemAppFourMethodActivity.class);
                         break;

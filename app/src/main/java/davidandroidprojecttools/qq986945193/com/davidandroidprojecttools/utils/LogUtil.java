@@ -9,6 +9,8 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils;
  * @GitHub: https://github.com/QQ986945193
  */
 
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Constants;
+
 /**
  * 打印日志的工具类，方便查看log
  */
@@ -40,7 +42,7 @@ public final class LogUtil {
     /**
      * default print tag
      */
-    private final static String defaultTag = "xiaobing";
+    private final static String defaultTag = Constants.LOG_TAG;
 
     private LogUtil() {
     }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_normal_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="普通无封装GET网络请求" />
+    <Button
+        android:id="@+id/btn_normal_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="普通无封装POST网络请求" />
+    <Button
+        android:id="@+id/btn_normal_bitmaputils"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="普通BitmapUtils显示图片的使用" />
+    <ImageView
+        android:id="@+id/iv_bitmaputils"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:src="@mipmap/ic_launcher"/>
+</LinearLayout>

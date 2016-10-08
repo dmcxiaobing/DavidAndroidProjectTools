@@ -62,7 +62,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
      * 初始化数据
      */
     private void initData() {
-        listDatas.add("圆形头像的实现");
+        listDatas.add("圆形头像图片的实现");
         listDatas.add("底部Tab菜单栏五种实现方式");
         listDatas.add("SwipeRefreshLayout下拉刷新的详解");
         listDatas.add("无限轮播滚动的banner(封装ViewPager)");
@@ -76,7 +76,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     /**
-                     * ListView详解的类
+                     * 圆形头像图片的实现
                      */
                     case 0:
                         intent = new Intent(mContext, RoundZoomImageViewActivity.class);
@@ -95,7 +95,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                         intent = new Intent(mContext, AutoViewPagerBannerActivity.class);
                         break;
                     /**
-                     * 仿微信提示消息个数两种实现方式
+                     * 仿QQ微信提示消息个数两种实现方式
                      */
                     case 4:
                         intent = new Intent(mContext, BadgeViewWaterDropActivity.class);

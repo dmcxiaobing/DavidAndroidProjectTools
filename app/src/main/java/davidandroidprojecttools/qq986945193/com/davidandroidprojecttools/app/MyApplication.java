@@ -1,8 +1,10 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app;
 
 import android.app.Application;
+import android.graphics.Bitmap;
 import android.os.Environment;
 
+import com.lidroid.xutils.BitmapUtils;
 import com.lidroid.xutils.HttpUtils;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -28,11 +30,11 @@ public class MyApplication extends Application {
     private HttpUtils httpUtils;
     private ImageLoader imageLoader = null;
     private DisplayImageOptions imageOptions;
+    private BitmapUtils bitmapUtils;
 
     @Override
     public void onCreate() {
         super.onCreate();
-
         app = this;
         initHttpUtils();
         /**
@@ -74,10 +76,80 @@ public class MyApplication extends Application {
         httpUtils.configSoTimeout(30 * 1000);
 
         httpUtils.configTimeout(60 * 1000);
+
+        initBitmapUtils();
+    }
+
+    /**
+     * 初始化BitmapUtils
+     */
+    private void initBitmapUtils() {
+        // BitmapUtils
+
+        // 获取磁盘缓存路径
+        String diskCachePath = null;
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+            diskCachePath =
+                    Environment.getExternalStorageDirectory().getPath()
+                            + "/xUtils_Cache/images";
+            // /mnt/sdcard/xUtils_Cache/images
+        } else {
+            diskCachePath =
+                    this.getCacheDir() + "/xUtils_Cache/images";
+            // /data/data/<包名>/cache/xUtils_Cache/images
+        }
+
+        //
+        File file = new File(diskCachePath);
+        // 创建磁盘缓存路径
+        file.mkdirs();
+
+        // 定义内存缓存大小
+        int memoryCacheSize = (int) Runtime.getRuntime().maxMemory() / 8;
+
+        // 使用指定内存缓存和磁盘路径的方式创建BitmapUtils
+        bitmapUtils = new BitmapUtils(
+                this,
+                diskCachePath,
+                memoryCacheSize
+        );
+
+        // BitmapUtils进行配置
+
+        // 设置线程池中线程的数量
+        bitmapUtils.configThreadPoolSize(5);
+
+        // 是否使用内存缓存
+        bitmapUtils.configMemoryCacheEnabled(true);
+
+        // 是否使用磁盘缓存
+        bitmapUtils.configDiskCacheEnabled(true);
+
+        // 设置加载中的图片
+        bitmapUtils.configDefaultLoadingImage(R.mipmap.ic_launcher);
+
+        // 设置加载失败的图片资源
+        bitmapUtils.configDefaultLoadFailedImage(R.mipmap.ic_launcher);
+
+        // 设置图片的最大宽度和高度
+        bitmapUtils.configDefaultBitmapMaxSize(100, 100);
+
+        // 连接超时时间
+        bitmapUtils.configDefaultConnectTimeout(20 * 1000);
+
+        // 缓存存留时间,设置3小时
+        bitmapUtils.configDefaultCacheExpiry(3 * 60 * 60 * 1000);
+
+        // 设置图片显示属性
+        bitmapUtils.configDefaultBitmapConfig(Bitmap.Config.RGB_565);
     }
 
     public HttpUtils getHttpUtils() {
         return this.httpUtils;
+    }
+
+    public BitmapUtils getBitmapUtils() {
+        return this.bitmapUtils;
     }
 
     /**
