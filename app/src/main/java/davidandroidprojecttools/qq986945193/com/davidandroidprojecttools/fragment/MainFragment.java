@@ -16,6 +16,7 @@ import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
 /**
  * @author ：程序员小冰
@@ -58,7 +59,7 @@ public class MainFragment extends Fragment {
     private void initData() {
         listDatas.add("ListView与adapter的详解");
         listDatas.add("退出app应用的四种实现方式");
-        listDatas.add("ListView详解");
+        listDatas.add("SwipeRefreshLayout下拉刷新的详解");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_main_fragment.setAdapter(mAdatper);
@@ -78,7 +79,9 @@ public class MainFragment extends Fragment {
                         break;
 
                 }
-                mContext.startActivity(intent);
+                if (intent!=null){
+                    mContext.startActivity(intent);
+                }
 
             }
         });
