@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.RoundImageView
+        android:id="@+id/iv_badge_view_water_drop_black"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/img_black_android" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.RoundImageView
+            android:id="@+id/iv_badge_view_water_drop_music"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/img_music_android"
+            android:scaleType="fitXY" />
+
+        <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.WaterDropView
+            android:id="@+id/mWaterDropView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="-20dp"
+            android:layout_toRightOf="@+id/iv_badge_view_water_drop_music"
+            android:gravity="center_vertical" />
+    </RelativeLayout>
+</LinearLayout>

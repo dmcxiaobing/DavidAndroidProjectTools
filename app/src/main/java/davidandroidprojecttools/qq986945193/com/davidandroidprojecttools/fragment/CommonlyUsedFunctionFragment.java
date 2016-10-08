@@ -11,11 +11,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.jauker.widget.BadgeView;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.AutoViewPagerBannerActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.BadgeViewWaterDropActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
@@ -63,6 +66,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
         listDatas.add("底部Tab菜单栏五种实现方式");
         listDatas.add("SwipeRefreshLayout下拉刷新的详解");
         listDatas.add("无限轮播滚动的banner(封装ViewPager)");
+        listDatas.add("仿微信提示消息个数两种实现方式");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_commonly_used_function_fragment.setAdapter(mAdatper);
@@ -89,6 +93,12 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                      */
                     case 3:
                         intent = new Intent(mContext, AutoViewPagerBannerActivity.class);
+                        break;
+                    /**
+                     * 仿微信提示消息个数两种实现方式
+                     */
+                    case 4:
+                        intent = new Intent(mContext, BadgeViewWaterDropActivity.class);
                         break;
 
                 }
