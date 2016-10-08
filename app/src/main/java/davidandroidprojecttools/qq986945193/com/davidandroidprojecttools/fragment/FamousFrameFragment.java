@@ -56,7 +56,7 @@ public class FamousFrameFragment extends Fragment {
      * 初始化数据
      */
     private void initData() {
-        listDatas.add("Xutils2使用详解");
+        listDatas.add("Xutils2的四大模块使用详解");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_famous_frame_fragment.setAdapter(mAdatper);
