@@ -2,12 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-
-    <ListView
-        android:id="@+id/lv_commonly_used_function_fragment"
+    <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.autobanner.ConvenientBanner
+        android:id="@+id/vp_auto_bannar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="200dp" />
 </LinearLayout>

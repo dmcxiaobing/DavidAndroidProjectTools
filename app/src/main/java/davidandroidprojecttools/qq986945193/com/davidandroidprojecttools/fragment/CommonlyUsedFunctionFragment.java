@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.AutoViewPagerBannerActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
@@ -61,6 +62,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
         listDatas.add("圆形头像的实现");
         listDatas.add("底部Tab菜单栏五种实现方式");
         listDatas.add("SwipeRefreshLayout下拉刷新的详解");
+        listDatas.add("无限轮播滚动的banner(封装ViewPager)");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_commonly_used_function_fragment.setAdapter(mAdatper);
@@ -77,6 +79,16 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                         break;
                     case 1:
                         intent = new Intent(mContext, SystemAppFourMethodActivity.class);
+                        break;
+
+                    case 2:
+                        intent = new Intent(mContext, SystemAppFourMethodActivity.class);
+                        break;
+                    /**
+                     * 无限轮播滚动的banner(封装ViewPager)
+                     */
+                    case 3:
+                        intent = new Intent(mContext, AutoViewPagerBannerActivity.class);
                         break;
 
                 }
