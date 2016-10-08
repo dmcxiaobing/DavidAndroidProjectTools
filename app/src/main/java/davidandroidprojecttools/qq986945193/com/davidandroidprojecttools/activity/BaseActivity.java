@@ -1,6 +1,7 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 
 import com.umeng.analytics.MobclickAgent;
 
@@ -25,4 +26,11 @@ public class BaseActivity extends Activity {
         super.onPause();
         MobclickAgent.onPause(this);
     }
+
+    //    跳转类
+    protected void startActivity(Class<?> activity) {
+        Intent intent = new Intent(getBaseContext(), activity);
+        startActivity(intent);
+    }
+
 }

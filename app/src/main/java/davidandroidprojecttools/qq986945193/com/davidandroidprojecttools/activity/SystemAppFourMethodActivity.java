@@ -17,6 +17,8 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.A
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  * @交流Qq ：986945193
  * 类名：退出app应用的四种实现方式
+ *
+ * 说明：我这里只是调用了finish()当前的activity，实际项目中，按需要更改即可。
  */
 public class SystemAppFourMethodActivity extends Activity {
     private Toast toast;
@@ -24,7 +26,7 @@ public class SystemAppFourMethodActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_system_app_four_method);
         ActivityManagerUtils.getInstance().addActivity(this);
         toast = Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT);
     }
