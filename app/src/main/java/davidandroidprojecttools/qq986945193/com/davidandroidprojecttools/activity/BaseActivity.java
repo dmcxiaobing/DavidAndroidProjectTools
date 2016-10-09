@@ -2,6 +2,7 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 
 import com.umeng.analytics.MobclickAgent;
 
@@ -14,6 +15,13 @@ import com.umeng.analytics.MobclickAgent;
  * 类名：activity的基类
  */
 public class BaseActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
     /**
      * onResume与onPause()封装提取原因友盟统计
      */

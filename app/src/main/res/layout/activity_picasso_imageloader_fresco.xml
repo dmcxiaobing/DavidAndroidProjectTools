@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_picasso_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Picasso显示图片" />
+
+    <Button
+        android:id="@+id/btn_imageloader_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Universal-Imageloader展示图片" />
+
+    <Button
+        android:id="@+id/btn_fresco_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fresco展示图片" />
+
+    <Button
+        android:id="@+id/btn_glide_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Glide展示图片" />
+
+    <ImageView
+        android:id="@+id/iv_picasso_fresco_glide_imageloader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher" />
+</LinearLayout>

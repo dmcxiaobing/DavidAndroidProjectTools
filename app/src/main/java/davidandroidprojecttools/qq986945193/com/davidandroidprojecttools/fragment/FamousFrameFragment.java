@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.PicassoAndImageloaderFrescoActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.XutilsTwoActivity;
 
 /**
@@ -57,7 +58,7 @@ public class FamousFrameFragment extends Fragment {
      */
     private void initData() {
         listDatas.add("Xutils2的四大模块使用详解");
-
+        listDatas.add("Imageloader,Picasso,Fresco,Glide图片处理");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_famous_frame_fragment.setAdapter(mAdatper);
 
@@ -70,6 +71,11 @@ public class FamousFrameFragment extends Fragment {
                      */
                     case 0:
                         intent = new Intent(mContext, XutilsTwoActivity.class);
+                    /**
+                     * Imageloader,Picasso,Fresco,Glide图片处理
+                     */
+                    case 1:
+                        intent = new Intent(mContext, PicassoAndImageloaderFrescoActivity.class);
 
                 }
                 if (intent != null) {
