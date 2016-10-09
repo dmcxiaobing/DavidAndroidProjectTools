@@ -20,6 +20,7 @@ android {
         davidConfig {
             keyAlias 'david'
             keyPassword '123456'
+            //根据自己电脑上的签名秘钥配置
 //            storeFile file('D:/DavidAndroidProjectTools.jks')
             storeFile file('H:\\StudioWork\\DavidAndroidProjectTools\\app\\src\\main\\DavidAndroidProjectTools.jks')
             storePassword '123456'
