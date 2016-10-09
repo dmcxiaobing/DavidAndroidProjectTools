@@ -19,6 +19,7 @@ import java.util.List;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.AutoViewPagerBannerActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.BadgeViewWaterDropActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.BarCodeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
@@ -67,6 +68,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
         listDatas.add("SwipeRefreshLayout下拉刷新的详解");
         listDatas.add("无限轮播滚动的banner(封装ViewPager)");
         listDatas.add("仿微信提示消息个数两种实现方式");
+        listDatas.add("利用Zxing实现二维码的生成与扫描功能");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_commonly_used_function_fragment.setAdapter(mAdatper);
@@ -99,6 +101,12 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                      */
                     case 4:
                         intent = new Intent(mContext, BadgeViewWaterDropActivity.class);
+                        break;
+                    /**
+                     * 利用Zxing实现二维码的生成与扫描功能
+                     */
+                    case 5:
+                        intent = new Intent(mContext, BarCodeActivity.class);
                         break;
 
                 }

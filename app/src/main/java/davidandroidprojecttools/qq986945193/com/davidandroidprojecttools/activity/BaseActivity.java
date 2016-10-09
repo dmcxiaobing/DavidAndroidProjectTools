@@ -14,13 +14,32 @@ import com.umeng.analytics.MobclickAgent;
  * @交流Qq ：986945193
  * 类名：activity的基类
  */
-public class BaseActivity extends Activity {
+public abstract class BaseActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initView();
+        initData();
+        setOnclickListener();
 
     }
+
+    protected void setOnclickListener() {
+    }
+
+
+
+    /**
+     * 绑定UI布局，以及初始化UI控件
+     */
+    protected abstract void initView();
+
+
+    /**
+     * 初始化数据
+     */
+    protected abstract void initData();
 
     /**
      * onResume与onPause()封装提取原因友盟统计

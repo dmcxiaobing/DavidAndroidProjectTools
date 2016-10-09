@@ -14,4 +14,12 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
  * ListView详解的类
  */
 public class ListViewIntroduceActivity extends BaseActivity{
+    @Override
+    protected void initView() {
+    }
+
+    @Override
+    protected void initData() {
+
+    }
 }
