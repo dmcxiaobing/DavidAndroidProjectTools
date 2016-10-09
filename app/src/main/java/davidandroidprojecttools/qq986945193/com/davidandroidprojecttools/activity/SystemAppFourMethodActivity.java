@@ -136,6 +136,7 @@ public class SystemAppFourMethodActivity extends Activity {
             switch (which) {
                 case AlertDialog.BUTTON_POSITIVE:// "确认"按钮退出程序
 //                    finish();
+//                    ActivityManagerUtils.getInstance().finishActivityclass(SystemAppFourMethodActivity.class);
                     ActivityManagerUtils.getInstance().finishActivity(SystemAppFourMethodActivity.this);
                     break;
                 case AlertDialog.BUTTON_NEGATIVE:// "取消"第二个按钮取消对话框
