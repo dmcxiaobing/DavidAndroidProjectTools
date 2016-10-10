@@ -34,7 +34,7 @@
     <color name="ebebeb_bg">#ebebeb</color>
     <color name="nearby_friends_tag">#a9cd24</color>
     <color name="tab_text_normal">#333333</color>
-    <color name="theme_color" >#f10100</color>
+    <color name="theme_color">#f10100</color>
 
     <color name="bg_color">#EDEDED</color>
     <color name="contents_text">#ff000000</color>
@@ -62,4 +62,8 @@
     <color name="viewfinder_mask">#60000000</color>
     <color name="header">#58567D</color>
     <color name="grgray">#686868</color>
+    <color name="title_color">#565a58</color>
+    <!--刷新的颜色-->
+    <color name="background">#F7F4F0</color>
+
 </resources>

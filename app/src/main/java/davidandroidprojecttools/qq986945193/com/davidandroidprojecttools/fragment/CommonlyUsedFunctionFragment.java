@@ -20,9 +20,11 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.AutoViewPagerBannerActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.BadgeViewWaterDropActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.BarCodeActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.DavidXListViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.XListViewActivity;
 
 /**
  * @author ：程序员小冰
@@ -69,6 +71,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
         listDatas.add("无限轮播滚动的banner(封装ViewPager)");
         listDatas.add("仿微信提示消息个数两种实现方式");
         listDatas.add("利用Zxing实现二维码的生成与扫描功能");
+        listDatas.add("XListView下拉刷新和上拉加载更多");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_commonly_used_function_fragment.setAdapter(mAdatper);
@@ -107,6 +110,14 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                      */
                     case 5:
                         intent = new Intent(mContext, BarCodeActivity.class);
+                        break;
+                    /**
+                     * XListView下拉刷新和上拉加载更多
+                     */
+                    case 6:
+//                        intent = new Intent(mContext, XListViewActivity.class);
+                        intent = new Intent(mContext, DavidXListViewActivity.class);
+
                         break;
 
                 }

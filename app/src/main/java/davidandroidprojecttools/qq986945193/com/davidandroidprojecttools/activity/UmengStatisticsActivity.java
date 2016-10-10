@@ -2,8 +2,27 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
 
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 
 import com.umeng.analytics.MobclickAgent;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
+
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.XListView;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.XScrollView;
 
 /**
  * @author ：程序员小冰
@@ -35,4 +54,7 @@ public class UmengStatisticsActivity extends Activity {
         super.onPause();
         MobclickAgent.onPause(this);
     }
+
+
+
 }
