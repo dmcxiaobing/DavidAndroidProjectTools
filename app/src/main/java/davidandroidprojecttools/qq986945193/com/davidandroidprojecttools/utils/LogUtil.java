@@ -13,6 +13,8 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constan
 
 /**
  * 打印日志的工具类，方便查看log
+ *
+ * 测试时是true，上线时改为false
  */
 public final class LogUtil {
     /**

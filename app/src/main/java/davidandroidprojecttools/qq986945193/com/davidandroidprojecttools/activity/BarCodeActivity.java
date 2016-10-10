@@ -17,6 +17,7 @@ import com.google.zxing.WriterException;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.DensityUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.EditTextTextViewUtils;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.SystemgcBitmapUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ToastUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.zxing.activity.CaptureActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.zxing.encoding.EncodingUtils;
@@ -120,5 +121,6 @@ public class BarCodeActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        SystemgcBitmapUtils.SystemGcBitmap(mBitmap);
     }
 }
