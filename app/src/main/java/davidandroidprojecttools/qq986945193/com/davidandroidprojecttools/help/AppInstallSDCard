@@ -1,0 +1,31 @@
+/**
+ * @author ：程序员小冰
+ *
+ * @新浪微博 ：http://weibo.com/mcxiaobing
+ *
+ * @GitHub: https://github.com/QQ986945193
+ *
+ * @CSDN博客: http://blog.csdn.net/qq_21376985
+ * 如何将app安装到SD卡上
+ */
+
+自从Android 2.2版本开始，Android系统引入了一个全新的功能——APP2SD，这个功能让Android系统允许将应用程序安装到SD卡上面，一方面节约出更多的RAM空间，另一方面也允许应用程序扩大自身的体积。
+但是仅仅Android系统支持APP2SD，这样还是不够的，应用程序如果不经过处理，仍然会一如既往的转进RAM里。这是因为Android系统保持向后兼容的特性。那么，如果让应用程序不装入RAM，而是装入SD卡呢？这需要在应用程序的Android清单文件manifest.xml的manifest元素里加入android:installLocation属性。其值为：perferExtenal或auto。
+ perferExtental——意味着此应用程序安装到扩展存储（通常就是SD卡），但是系统不能保证应用肯定会安装到扩展存储。如果扩展存储没有空间或者不可用，那么系统仍然会将应用程序安装到RAM里。
+　auto——意味着此应用程序可能安装到扩展存储，但是对安装位置没有特别偏好，将有系统根据自身算法，参考很多因素之后决定将此应用程序安装到哪里。
+internalOnly——意味着此应用程序只能被安装到RAM。
+一旦加入android:installLocation，不论其值为什么，用户都可以将应用程序在RAM和SD卡之间自由移动。当应用程序安装到SD卡后，需要注意以下几点：
+1. 仅apk文件保存在SD卡上，其他所有用户的私有数据、数据库、经过优化的dex文件和释放的原生代码仍然保存在RAM上。
+2. SD卡里的应用程序在进行安装时会被加密，因此安装在SD卡上的应用程序仅对安装这个应用程序的设备起效，在其他设备上将不能运行。
+3. 当用户启用USB大容量存储以共享文件给计算机、或者卸载SD卡，那么所有安装在SD卡上的应用都会被立即结束。
+由于安装在SD卡上的应用程序会受到SD卡状态的影响，所以为了确保应用程序的健壮性，在决定应用程序是否可以安装在SD卡上时，应该做到以下原则：
+1. 有后台服务（Service）的应用程序，不应该支持APP2SD上。因为Service是前台界面不可见的，在卸载SD卡或者启用USB时，用户并无法知道该应用程序的Service是否处于活动状态。所以可能造成Service的意外终止。
+2. 输入法程序不应该支持APP2SD。如果卸载SD或者启用USB，那么该输入法将被终止，并由系统默认输入法所替代。
+3. 壁纸和包含桌面小工具（Widget）等常显于界面的应用程序不应该支持APP2SD。
+4. AccountManager等与用户数据有关的应用程序不应该支持APP2SD，因为在SD卡正常挂载之前，程序都无法看到通过AccountManager创建的用户。
+如果应用程序有Service、或支持桌面小工具等以上提到的功能时，应该尽可能避免被安装到SD卡上。一种保险的做法是指定android:installLocation的值为internalOnly。
+由于APP2SD是Android 2.2版本的新特性，如果该应用程序被计划支持2.2之前的版本，做到向后兼容的话，那么需要进行以下步骤：
+　　　　1. 在manifest元素里加入android:installLocation属性，并指定其值为perferExternal或者auto。
+2. 指定andorid：minSdkVersion值，其值可以小于8（2.2版本之前）。
+3. 更改该应用程序的build target为API Level 8，以使编译器能编译此应用程序。（必须）如果不指定build target，那么旧的Android库将无法理解android:installLocation属性，也就无法编译此应用。
+实现以上三个步骤之后，那么如果此应用被安装到API Level低于8的设备上时，android:installLocation属性将被忽略。并且该应用会被安装于RAM上。
