@@ -12,16 +12,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.zxing.WriterException;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.DensityUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.EditTextTextViewUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ToastUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.zxing.activity.CaptureActivity;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.zxing.encoding.EncodingHandler;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.zxing.encoding.EncodingUtils;
 
 /**
  * @author ：程序员小冰
@@ -92,12 +90,13 @@ public class BarCodeActivity extends BaseActivity {
                 } else {
                     try {
                         //得到二维码图片并且展示
-                        mBitmap = EncodingHandler.createQRCode(string, 400);
+                        mBitmap = EncodingUtils.createQRCode(string, DensityUtils.dip2px(BarCodeActivity.this, 240),DensityUtils.dip2px(BarCodeActivity.this, 240),mBitmap);
+//                        mBitmap = EncodingHandler.createQRCode(string, 400);
                         if (mBitmap != null) {
 
                             iv_qr_image.setImageBitmap(mBitmap);
                         }
-                    } catch (WriterException e) {
+                    } catch (Exception e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
                     }

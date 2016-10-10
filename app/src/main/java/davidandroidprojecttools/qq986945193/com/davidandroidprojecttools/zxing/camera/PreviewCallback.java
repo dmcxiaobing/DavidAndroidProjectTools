@@ -17,50 +17,49 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.zxing.camera;
 /**
  * @author ：程序员小冰
+ *
  * @新浪微博 ：http://weibo.com/mcxiaobing
+ *
  * @GitHub: https://github.com/QQ986945193
+ *
  * @CSDN博客: http://blog.csdn.net/qq_21376985
- * @交流Qq ：986945193
+ *
  */
-
 import android.graphics.Point;
 import android.hardware.Camera;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
-final class PreviewCallback implements Camera.PreviewCallback {
+public class PreviewCallback implements Camera.PreviewCallback {
 
-  private static final String TAG = PreviewCallback.class.getSimpleName();
+    private static final String TAG = PreviewCallback.class.getSimpleName();
 
-  private final CameraConfigurationManager configManager;
-  private final boolean useOneShotPreviewCallback;
-  private Handler previewHandler;
-  private int previewMessage;
+    private final CameraConfigurationManager configManager;
+    private Handler previewHandler;
+    private int previewMessage;
 
-  PreviewCallback(CameraConfigurationManager configManager, boolean useOneShotPreviewCallback) {
-    this.configManager = configManager;
-    this.useOneShotPreviewCallback = useOneShotPreviewCallback;
-  }
-
-  void setHandler(Handler previewHandler, int previewMessage) {
-    this.previewHandler = previewHandler;
-    this.previewMessage = previewMessage;
-  }
-
-  public void onPreviewFrame(byte[] data, Camera camera) {
-    Point cameraResolution = configManager.getCameraResolution();
-    if (!useOneShotPreviewCallback) {
-      camera.setPreviewCallback(null);
+    public PreviewCallback(CameraConfigurationManager configManager) {
+        this.configManager = configManager;
     }
-    if (previewHandler != null) {
-      Message message = previewHandler.obtainMessage(previewMessage, cameraResolution.x,
-          cameraResolution.y, data);
-      message.sendToTarget();
-      previewHandler = null;
-    } else {
-      Log.d(TAG, "Got preview callback, but no handler for it");
+
+    public void setHandler(Handler previewHandler, int previewMessage) {
+        this.previewHandler = previewHandler;
+        this.previewMessage = previewMessage;
     }
-  }
+
+    @Override
+    public void onPreviewFrame(byte[] data, Camera camera) {
+        Point cameraResolution = configManager.getCameraResolution();
+        Handler thePreviewHandler = previewHandler;
+        if (cameraResolution != null && thePreviewHandler != null) {
+            Message message = thePreviewHandler.obtainMessage(previewMessage, cameraResolution.x,
+                    cameraResolution.y, data);
+            message.sendToTarget();
+            previewHandler = null;
+        } else {
+            Log.d(TAG, "Got preview callback, but no handler or resolution available");
+        }
+    }
 
 }
