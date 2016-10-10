@@ -26,6 +26,8 @@ Android开发常用功能大集合。以及知识点的详解代码
 
 3,app开发中常用功能的集成
 
+a,二维码的扫描与生成功能 b,圆形头像的功能 
+
 4,著名的一些开源框架的使用以及封装
 
 【JAVA方面】java知识点：
@@ -51,5 +53,5 @@ Android开发常用功能大集合。以及知识点的详解代码
 
 里面所使用第三方库以及（jar文件上传）：
 
-Gson, Xutils2.6, Picasso,Universional_Imageloader, 
+Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,
 
