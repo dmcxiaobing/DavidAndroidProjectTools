@@ -18,6 +18,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.OkHttpActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.PicassoAndImageloaderFrescoActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.XutilsTwoActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 
 /**
  * @author ：程序员小冰
@@ -71,6 +72,7 @@ public class FamousFrameFragment extends Fragment {
         lv_famous_frame_fragment.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                LogUtil.E("position == " + position);
                 switch (position) {
                     /**
                      * Xutils2使用详解
@@ -80,13 +82,18 @@ public class FamousFrameFragment extends Fragment {
                         /**
                          * Imageloader,Picasso,Fresco,Glide图片处理
                          */
+                        break;
                     case 1:
                         intent = new Intent(mContext, PicassoAndImageloaderFrescoActivity.class);
                         /**
                          * OkHttp的封装与网络请求详解
                          */
+                        break;
+
                     case 2:
                         intent = new Intent(mContext, OkHttpActivity.class);
+                        break;
+
 
                 }
                 if (intent != null) {

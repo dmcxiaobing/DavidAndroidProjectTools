@@ -9,12 +9,14 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
  */
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.internal.widget.ViewUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.lidroid.xutils.BitmapUtils;
 import com.lidroid.xutils.HttpUtils;
@@ -31,6 +33,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app.MyA
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Constants;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Urls;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ToastUtils;
 
 /**
  * Xutils2使用详解
@@ -42,6 +45,7 @@ public class XutilsTwoActivity extends Activity {
     private Button btn_normal_get;
     private Button btn_normal_post;
     private HttpUtils mHttUtils;
+    private Context mContext;
     /**
      * 注解的使用 最后记得调用inject（）方法
      */
@@ -79,13 +83,17 @@ public class XutilsTwoActivity extends Activity {
                     @Override
                     public void onSuccess(ResponseInfo<String> responseInfo) {
                         if (responseInfo.result != null) {
-                            LogUtil.E(responseInfo.result);
+//                            LogUtil.E(responseInfo.result);
+                            ToastUtils.show(mContext, responseInfo.result, Toast.LENGTH_SHORT);
+
                         }
                     }
 
                     @Override
                     public void onFailure(HttpException e, String s) {
                         LogUtil.E("网络请求失败");
+                        ToastUtils.show(mContext, "网络请求失败: ", Toast.LENGTH_SHORT);
+
                     }
                 });
             }
@@ -114,12 +122,15 @@ public class XutilsTwoActivity extends Activity {
                     public void onSuccess(ResponseInfo<String> responseInfo) {
                         if (responseInfo.result != null) {
                             LogUtil.E(responseInfo.result);
+                            ToastUtils.show(mContext,responseInfo.result, Toast.LENGTH_SHORT);
+
                         }
                     }
 
                     @Override
                     public void onFailure(HttpException e, String s) {
                         LogUtil.E("网络请求失败");
+                        ToastUtils.show(mContext, "网络请求失败: ", Toast.LENGTH_SHORT);
 
                     }
                 });
@@ -158,5 +169,6 @@ public class XutilsTwoActivity extends Activity {
         btn_normal_get = (Button) findViewById(R.id.btn_normal_get);
         btn_normal_post = (Button) findViewById(R.id.btn_normal_post);
         mHttUtils = MyApplication.getApp().getHttpUtils();
+        mContext = this;
     }
 }
