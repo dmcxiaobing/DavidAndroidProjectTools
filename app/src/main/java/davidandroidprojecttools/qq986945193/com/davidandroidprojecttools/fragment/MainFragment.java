@@ -42,13 +42,18 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        initView(rootView);
+        return rootView;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         if (getActivity() != null) {
             mContext = getActivity();
         }
-        initView(rootView);
         initData();
 
-        return rootView;
     }
 
     private Intent intent;
@@ -82,7 +87,7 @@ public class MainFragment extends Fragment {
                         break;
 
                 }
-                if (intent!=null){
+                if (intent != null) {
                     mContext.startActivity(intent);
                 }
 

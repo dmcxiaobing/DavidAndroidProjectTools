@@ -50,13 +50,17 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         rootView = inflater.inflate(R.layout.fragment_commonly_used_function, container, false);
+        initView(rootView);
+        return rootView;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         if (getActivity() != null) {
             mContext = getActivity();
         }
-        initView(rootView);
         initData();
-
-        return rootView;
     }
 
     private Intent intent;

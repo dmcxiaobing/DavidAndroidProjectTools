@@ -3,6 +3,9 @@
 buildscript {
     repositories {
         jcenter()
+        /**
+         * mavenCentral()仓库
+         */
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.5.0'
@@ -15,6 +18,8 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+//        mavenCentral()
+//        maven { url 'http://maven.oschina.net/content/groups/public/' }
     }
 }
 

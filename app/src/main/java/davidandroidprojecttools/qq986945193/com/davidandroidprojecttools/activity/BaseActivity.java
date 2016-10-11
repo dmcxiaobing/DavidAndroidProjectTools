@@ -1,6 +1,7 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -15,10 +16,11 @@ import com.umeng.analytics.MobclickAgent;
  * 类名：activity的基类
  */
 public abstract class BaseActivity extends Activity {
-
+    protected Context mContext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext = this;
         initView();
         initData();
         setOnclickListener();

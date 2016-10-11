@@ -18,4 +18,8 @@ public class Urls {
     public static final String GET_IMAGE_URL_FRESCO = "http://img1.imgtn.bdimg.com/it/u=3997926325,3443864302&fm=21&gp=0.jpg";
     public static final String XUTILS_TWO_GET = "http://aqicn.org/publishingdata/json";
     public static final String XUTILS_TWO_POST = "http://apis.baidu.com/apistore/idservice/id";
+    public static final String OKHTTP_GET_URL = "http://apis.baidu.com/apistore/idservice/id";
+    public static final String OKHTTP_POS_TURL = "http://apis.baidu.com/apistore/idservice/id";
+
+
 }

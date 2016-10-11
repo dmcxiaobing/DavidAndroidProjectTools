@@ -14,6 +14,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import java.io.File;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.OkHttpUtils;
 /**
  * @author ：程序员小冰
  * @新浪微博 ：http://weibo.com/mcxiaobing
@@ -31,6 +32,8 @@ public class MyApplication extends Application {
     private ImageLoader imageLoader = null;
     private DisplayImageOptions imageOptions;
     private BitmapUtils bitmapUtils;
+    private OkHttpUtils mOkHttpUtils;
+
 
     @Override
     public void onCreate() {
@@ -54,8 +57,19 @@ public class MyApplication extends Application {
 
 //        initUniversalImageLoader();
 
+        initOkHttpUtils();
+
 
     }
+
+    /**
+     * 初始化OkHttp
+     */
+    private void initOkHttpUtils() {
+        mOkHttpUtils = OkHttpUtils.getInstance();
+
+    }
+
 
     public static MyApplication getApp() {
         return app;
@@ -91,11 +105,11 @@ public class MyApplication extends Application {
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
             diskCachePath =
                     Environment.getExternalStorageDirectory().getPath()
-                            + "/xUtils_Cache/images";
+                            + "/david/images";
             // /mnt/sdcard/xUtils_Cache/images
         } else {
             diskCachePath =
-                    this.getCacheDir() + "/xUtils_Cache/images";
+                    this.getCacheDir() + "/david/images";
             // /data/data/<包名>/cache/xUtils_Cache/images
         }
 
@@ -202,6 +216,15 @@ public class MyApplication extends Application {
 
     public DisplayImageOptions getImageOptions() {
         return imageOptions;
+    }
+
+    /**
+     * @return
+     * @GitHub: https://github.com/QQ986945193
+     * @CSDN博客: http://blog.csdn.net/qq_21376985
+     */
+    public OkHttpUtils getOkHttpUtils() {
+        return this.mOkHttpUtils;
     }
 
 

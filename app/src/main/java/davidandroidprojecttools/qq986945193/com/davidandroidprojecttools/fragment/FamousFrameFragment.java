@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.OkHttpActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.PicassoAndImageloaderFrescoActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.XutilsTwoActivity;
 
@@ -42,13 +43,17 @@ public class FamousFrameFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         rootView = inflater.inflate(R.layout.fragment_famous_frame, container, false);
+        initView(rootView);
+        return rootView;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         if (getActivity() != null) {
             mContext = getActivity();
         }
-        initView(rootView);
         initData();
-
-        return rootView;
     }
 
     private Intent intent;
@@ -59,6 +64,7 @@ public class FamousFrameFragment extends Fragment {
     private void initData() {
         listDatas.add("Xutils2的四大模块使用详解");
         listDatas.add("Imageloader,Picasso,Fresco,Glide图片处理");
+        listDatas.add("OkHttp的封装与网络请求详解");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_famous_frame_fragment.setAdapter(mAdatper);
 
@@ -71,11 +77,16 @@ public class FamousFrameFragment extends Fragment {
                      */
                     case 0:
                         intent = new Intent(mContext, XutilsTwoActivity.class);
-                    /**
-                     * Imageloader,Picasso,Fresco,Glide图片处理
-                     */
+                        /**
+                         * Imageloader,Picasso,Fresco,Glide图片处理
+                         */
                     case 1:
                         intent = new Intent(mContext, PicassoAndImageloaderFrescoActivity.class);
+                        /**
+                         * OkHttp的封装与网络请求详解
+                         */
+                    case 2:
+                        intent = new Intent(mContext, OkHttpActivity.class);
 
                 }
                 if (intent != null) {
