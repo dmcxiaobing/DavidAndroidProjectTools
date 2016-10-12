@@ -17,6 +17,7 @@ import java.util.List;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SwipeRefreshListViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
 /**
  * @author ：程序员小冰
@@ -84,6 +85,12 @@ public class MainFragment extends Fragment {
                      */
                     case 1:
                         intent = new Intent(mContext, SystemAppFourMethodActivity.class);
+                        break;
+                    /**
+                     * SwipeRefreshLayout的简单使用教程。下拉刷新控件炫酷效果。
+                     */
+                    case 2:
+                        intent = new Intent(mContext, SwipeRefreshListViewActivity.class);
                         break;
 
                 }
