@@ -16,21 +16,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.UpMarqueeView;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.UpMarqueeAniView;
 
 /**
  * 仿淘宝,百度外卖,饿了么等头条滚动效果
  */
 public class UpMarqueeActivity extends BaseActivity {
 
-    private UpMarqueeView up_view_marques;
+    private UpMarqueeAniView up_view_marques;
     List<String> data = new ArrayList<>();
     List<View> views = new ArrayList<>();
 
     @Override
     protected void initView() {
         setContentView(R.layout.activity_up_marquee);
-        up_view_marques = (UpMarqueeView) findViewById(R.id.up_view_marques);
+        up_view_marques = (UpMarqueeAniView) findViewById(R.id.up_view_marques);
     }
 
     @Override
@@ -51,7 +51,7 @@ public class UpMarqueeActivity extends BaseActivity {
         /**
          * 设置item_view的监听
          */
-        up_view_marques.setOnItemClickListener(new UpMarqueeView.OnItemClickListener() {
+        up_view_marques.setOnItemClickListener(new UpMarqueeAniView.OnItemClickListener() {
             @Override
             public void onItemClick(int position, View view) {
                 Toast.makeText(mContext, "你点击了第几个items" + position, Toast.LENGTH_SHORT).show();

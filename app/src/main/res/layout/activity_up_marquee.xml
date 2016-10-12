@@ -20,7 +20,7 @@
             android:textColor="#ff00"
             android:textSize="22sp" />
 
-        <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.UpMarqueeView
+        <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.UpMarqueeAniView
             android:id="@+id/up_view_marques"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
