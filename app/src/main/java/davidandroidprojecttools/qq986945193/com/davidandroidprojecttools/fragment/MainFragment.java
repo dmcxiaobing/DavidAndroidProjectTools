@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.CallphoneActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SwipeRefreshListViewActivity;
@@ -66,6 +67,7 @@ public class MainFragment extends Fragment {
         listDatas.add("ListView与adapter的详解");
         listDatas.add("退出app应用的四种实现方式");
         listDatas.add("SwipeRefreshLayout下拉刷新的详解");
+        listDatas.add("拨打电话号码的详解代码(比较简单)");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_main_fragment.setAdapter(mAdatper);
@@ -91,6 +93,12 @@ public class MainFragment extends Fragment {
                      */
                     case 2:
                         intent = new Intent(mContext, SwipeRefreshListViewActivity.class);
+                        break;
+                    /**
+                     * 拨打电话号码的详解代码(比较简单)
+                     */
+                    case 3:
+                        intent = new Intent(mContext, CallphoneActivity.class);
                         break;
 
                 }
