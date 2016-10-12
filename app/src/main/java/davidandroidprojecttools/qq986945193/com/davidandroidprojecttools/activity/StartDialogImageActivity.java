@@ -8,8 +8,6 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
  */
 
 import android.app.Dialog;
-import android.content.Context;
-import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
