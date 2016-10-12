@@ -63,6 +63,7 @@ public class UpMarqueeActivity extends BaseActivity {
      * 初始化需要循环的View
      * 为了灵活的使用滚动的View，所以把滚动的内容让用户自定义
      * 假如滚动的是三条或者一条，或者是其他，只需要把对应的布局，和这个方法稍微改改就可以了，
+     * http://blog.csdn.net/qq_21376985
      */
     private void setView() {
         for (int i = 0; i < data.size(); i = i + 2) {
