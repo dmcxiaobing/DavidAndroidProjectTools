@@ -20,7 +20,7 @@ public class Urls {
     public static final String XUTILS_TWO_POST = "http://apis.baidu.com/apistore/idservice/id";
     public static final String OKHTTP_GET_URL = "http://apis.baidu.com/apistore/idservice/id";
     public static final String OKHTTP_POS_TURL = "http://apis.baidu.com/apistore/idservice/id";
-    public static final String TXAPI_APPLE_APPLE = "http://apis.baidu.com/txapi/apple/apple";
+    public static final String TXAPI_APPLE_APPLE = "http://apis.baidu.com/txapi/apple/apple?num=10&page=1";
 
 
 }
