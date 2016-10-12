@@ -24,6 +24,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.UpMarqueeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.XListViewActivity;
 
 /**
@@ -76,6 +77,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
         listDatas.add("仿微信提示消息个数两种实现方式");
         listDatas.add("利用Zxing实现二维码的生成与扫描功能");
         listDatas.add("XListView下拉刷新和上拉加载更多");
+        listDatas.add("仿淘宝,百度外卖,饿了么等头条滚动效果");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_commonly_used_function_fragment.setAdapter(mAdatper);
@@ -121,6 +123,13 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                     case 6:
 //                        intent = new Intent(mContext, XListViewActivity.class);
                         intent = new Intent(mContext, DavidXListViewActivity.class);
+
+                        break;
+                    /**
+                     * 仿淘宝,百度外卖,饿了么等头条滚动效果
+                     */
+                    case 7:
+                        intent = new Intent(mContext, UpMarqueeActivity.class);
 
                         break;
 
