@@ -2,5 +2,30 @@
 <resources>
     <declare-styleable name="ConvenientBanner">
         <attr name="canLoop" format="boolean" />
+
+    </declare-styleable>
+    <!--星星控件属性-->
+    <declare-styleable name="StarBarView">
+        <!--设置星星间的间隔-->
+        <attr name="space_width" format="dimension" />
+        <!--星星间宽度-->
+        <attr name="star_width" format="dimension" />
+        <!--星星间高度-->
+        <attr name="star_height" format="dimension" />
+        <!--最大数量-->
+        <attr name="star_max" format="integer" />
+        <!--选中数量-->
+        <attr name="star_rating" format="float" />
+        <!--未选中图片-->
+        <attr name="star_hollow" format="reference" />
+        <!--选中图片-->
+        <attr name="star_solid" format="reference" />
+        <!--是否可以滑动改变选中数量-->
+        <attr name="star_isIndicator" format="boolean" />
+        <!--排列方向-->
+        <attr name="star_orientation" format="enum">
+            <enum name="vertical" value="1" />
+            <enum name="horizontal" value="0" />
+        </attr>
     </declare-styleable>
 </resources>

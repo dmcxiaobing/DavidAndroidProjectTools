@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.StarBarView
+        android:id="@+id/sbv_starbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        app:space_width="1dp"
+        app:star_height="25dp"
+        app:star_hollow="@mipmap/ic_star_yellow_normal"
+        app:star_isIndicator="false"
+        app:star_max="5"
+        app:star_orientation="horizontal"
+        app:star_rating="2"
+        app:star_solid="@mipmap/ic_star_yellow_selected"
+        app:star_width="25dp" />
+
+    <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.StarBarView
+        android:id="@+id/starBarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sbv_starbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp"
+        app:space_width="1dp"
+        app:star_height="25dp"
+        app:star_hollow="@mipmap/ic_star_yellow_normal"
+        app:star_isIndicator="false"
+        app:star_max="5"
+        app:star_orientation="vertical"
+        app:star_rating="2"
+        app:star_solid="@mipmap/ic_star_yellow_selected"
+        app:star_width="25dp" />
+
+    <Button
+        android:id="@+id/btn_show_num_star"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击显示有多少个星星"/>
+</RelativeLayout>
