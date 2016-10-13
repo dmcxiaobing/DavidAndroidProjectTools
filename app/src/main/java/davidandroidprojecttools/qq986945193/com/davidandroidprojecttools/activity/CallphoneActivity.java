@@ -42,7 +42,7 @@ public class CallphoneActivity extends BaseActivity {
 //                    if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
 //                        return;
 //                    }
-                    mContext.startActivity(intent);
+                    startActivity(intent);
 
                 }
             }
