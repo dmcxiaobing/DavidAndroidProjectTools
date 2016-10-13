@@ -26,7 +26,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.XListView;
 
 /**
- * XListView下拉刷新和上拉加载更多
+ * XListView下拉刷新和上拉加载更多 这里使用的是模拟数据
  */
 public class DavidXListViewActivity extends Activity {
 
