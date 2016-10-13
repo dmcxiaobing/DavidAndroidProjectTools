@@ -48,7 +48,7 @@ public class ListViewIntroduceActivity extends BaseActivity {
             public void onSuccess(Response response, TxApiAppleBean txApiAppleBean) {
                 mTxApiAppleBean = txApiAppleBean;
                 if (mTxApiAppleBean != null) {
-                    if (mTxApiAppleBean.getCode().equals("200")) {
+                    if (mTxApiAppleBean.getCode()!=null && mTxApiAppleBean.getCode().equals("200")) {
                         if (mTxApiAppleBean.getNewslist() != null) {
                             newslistBeans.addAll(mTxApiAppleBean.getNewslist());
                             if (mAdapter == null) {
