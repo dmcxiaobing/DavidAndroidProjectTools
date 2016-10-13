@@ -21,6 +21,7 @@ public class Urls {
     public static final String OKHTTP_GET_URL = "http://apis.baidu.com/apistore/idservice/id";
     public static final String OKHTTP_POS_TURL = "http://apis.baidu.com/apistore/idservice/id";
     public static final String TXAPI_APPLE_APPLE = "http://apis.baidu.com/txapi/apple/apple?num=10&page=1";
+    public static final String TXAPI_APPLE_APPLE_POST = "http://apis.baidu.com/txapi/apple/apple";
 
 
 }
