@@ -1,10 +1,13 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Urls;
@@ -23,11 +26,16 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.P
  * 显示图片的Picasso,UniversalImageloader,Fresco的使用教程
  */
 public class PicassoAndImageloaderFrescoActivity extends Activity {
+    /**
+     * Fresco的使用,1初始化fresco，2,布局中引用SimpleDraweeView 3,java代码中进行使用。
+     */
+    private SimpleDraweeView simple_image_view_one;
     private Button btn_picasso_img;
     private Button btn_imageloader_img;
     private Button btn_fresco_img;
     private Button btn_glide_img;
     private ImageView iv_picasso_fresco_glide_imageloader;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +78,18 @@ public class PicassoAndImageloaderFrescoActivity extends Activity {
             }
         });
 
+        /**
+         *Fresco显示一张基本的网络图片
+         */
+
+        btn_fresco_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse(Urls.FRESCO_IMAGE_LOGO);
+                simple_image_view_one.setImageURI(uri);
+            }
+        });
+
     }
 
     private void initView() {
@@ -78,7 +98,7 @@ public class PicassoAndImageloaderFrescoActivity extends Activity {
         btn_fresco_img = (Button) findViewById(R.id.btn_fresco_img);
         btn_glide_img = (Button) findViewById(R.id.btn_glide_img);
         iv_picasso_fresco_glide_imageloader = (ImageView) findViewById(R.id.iv_picasso_fresco_glide_imageloader);
-
+        simple_image_view_one = (SimpleDraweeView) findViewById(R.id.simple_image_view_one);
 
     }
 }

@@ -3,6 +3,8 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,10 +15,12 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.adapter.ListViewIntroduceAdapter;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.adapter.MyAdapter_CommonAdapter;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app.MyApplication;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app.ViewHolder;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.TxApiAppleBean;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.callback.OkHttpStopCallback;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Urls;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.OkHttpUtils;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.PicassoWithImageLoaderImageViewUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.XListviewAndTimeUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.XListView;
 import okhttp3.Response;
@@ -27,6 +31,10 @@ import okhttp3.Response;
  * @GitHub: https://github.com/QQ986945193
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  */
+
+/**
+ * 利用万能Listview的adapter进行展示数据
+ */
 public class MyAdapterActivity extends BaseActivity implements XListView.IXListViewListener {
     private XListView mListView;
     private MyAdapter mAdapter;
@@ -34,6 +42,7 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
     private OkHttpUtils mOkHttpUtils = MyApplication.getApp().getOkHttpUtils();
     private Map<String, String> params = new HashMap<>();
     private List<TxApiAppleBean.NewslistBean> lists = new ArrayList<>();
+    private String url = "";
 
     @Override
     protected void initView() {
@@ -54,9 +63,9 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
     @Override
     protected void initData() {
 
-        params.put("page", page + "");
-        params.put("num", "10");
-        mOkHttpUtils.post(Urls.TXAPI_APPLE_APPLE_POST, params, null, new OkHttpStopCallback<TxApiAppleBean>() {
+
+        url = Urls.TXAPI_APPLE_APPLE_POST + "?num=10&page=" + page;
+        mOkHttpUtils.get(url, null, new OkHttpStopCallback<TxApiAppleBean>() {
 
             @Override
             public void onSuccess(Response response, TxApiAppleBean txApiAppleBean) {
@@ -65,7 +74,7 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
                         if (txApiAppleBean.getNewslist() != null) {
                             lists.addAll(txApiAppleBean.getNewslist());
                             if (mAdapter == null) {
-                                mAdapter = new MyAdapter(mContext,lists);
+                                mAdapter = new MyAdapter(mContext, lists);
                                 /**
                                  * listview绑定adapter
                                  */
@@ -73,6 +82,9 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
                             } else {
                                 mAdapter.notifyDataSetChanged();
                             }
+                            XListviewAndTimeUtils.stopWait(mListView);
+                        } else {
+                            XListviewAndTimeUtils.stopWait(mListView);
                         }
                     } else {
                         XListviewAndTimeUtils.stopWait(mListView);
@@ -84,6 +96,39 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
                 }
             }
         });
+        /**
+         * post请求，接口不支持，所以这里使用get
+         */
+        //        params.put("num", "10");
+//        params.put("page", page + "");
+//        mOkHttpUtils.post(Urls.TXAPI_APPLE_APPLE_POST, params, null, new OkHttpStopCallback<TxApiAppleBean>() {
+//
+//            @Override
+//            public void onSuccess(Response response, TxApiAppleBean txApiAppleBean) {
+//                if (txApiAppleBean != null) {
+//                    if (txApiAppleBean.getCode() != null && txApiAppleBean.getCode().equals("200")) {
+//                        if (txApiAppleBean.getNewslist() != null) {
+//                            lists.addAll(txApiAppleBean.getNewslist());
+//                            if (mAdapter == null) {
+//                                mAdapter = new MyAdapter(mContext, lists);
+//                                /**
+//                                 * listview绑定adapter
+//                                 */
+//                                mListView.setAdapter(mAdapter);
+//                            } else {
+//                                mAdapter.notifyDataSetChanged();
+//                            }
+//                        }
+//                    } else {
+//                        XListviewAndTimeUtils.stopWait(mListView);
+//
+//                    }
+//
+//                } else {
+//                    XListviewAndTimeUtils.stopWait(mListView);
+//                }
+//            }
+//        });
 
     }
 
@@ -92,7 +137,9 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
      */
     @Override
     public void onRefresh() {
-
+        page = 1;
+        lists.clear();
+        initData();
     }
 
     /**
@@ -100,11 +147,12 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
      */
     @Override
     public void onLoadMore() {
-
+        page++;
+        initData();
     }
 
 
-    class MyAdapter extends MyAdapter_CommonAdapter<TxApiAppleBean.NewslistBean> {
+    private class MyAdapter extends MyAdapter_CommonAdapter<TxApiAppleBean.NewslistBean> {
 
         public MyAdapter(Context context, List<TxApiAppleBean.NewslistBean> datas) {
             super(context, datas);
@@ -112,8 +160,21 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+            ViewHolder holder = ViewHolder.getHolder(mContext, convertView, parent,
+                    R.layout.item_listview_introduce, position);
+            TxApiAppleBean.NewslistBean bean = mDatas.get(position);
 
-            return convertView;
+            TextView tv_introduce_name;
+            ImageView iv_introduce_img;
+
+            tv_introduce_name = holder.getView(R.id.tv_introduce_name);
+            iv_introduce_img = holder.getView(R.id.iv_introduce_img);
+
+
+            tv_introduce_name.setText(bean.getTitle());
+            PicassoWithImageLoaderImageViewUtils.withImageView(mContext, bean.getPicUrl(), iv_introduce_img);
+
+            return holder.getmConvertView();
         }
     }
 }

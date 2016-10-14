@@ -4,6 +4,7 @@ import android.app.Application;
 import android.graphics.Bitmap;
 import android.os.Environment;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.lidroid.xutils.BitmapUtils;
 import com.lidroid.xutils.HttpUtils;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;
@@ -58,8 +59,16 @@ public class MyApplication extends Application {
 //        initUniversalImageLoader();
 
         initOkHttpUtils();
+        //最基本的初始化Fresco
+        initFresco();
 
+    }
 
+    /**
+     * 最基本的初始化Fresco
+     */
+    private void initFresco() {
+        Fresco.initialize(this);
     }
 
     /**

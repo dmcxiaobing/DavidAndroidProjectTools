@@ -6,6 +6,6 @@
 
     <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.XListView
         android:id="@+id/xlv_my_adapter_activity"
-        android:layout_width="match_parentm"
+        android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

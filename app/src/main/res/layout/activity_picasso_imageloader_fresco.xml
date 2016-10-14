@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -20,7 +21,7 @@
         android:id="@+id/btn_fresco_img"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fresco展示图片" />
+        android:text="Fresco显示一张基本的网络图片" />
 
     <Button
         android:id="@+id/btn_glide_img"
@@ -33,4 +34,11 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:src="@mipmap/ic_launcher" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/simple_image_view_one"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@mipmap/ic_launcher"
+        fresco:placeholderImage="@mipmap/ic_launcher" />
 </LinearLayout>
