@@ -41,4 +41,5 @@
         android:layout_height="130dp"
         android:src="@mipmap/ic_launcher"
         fresco:placeholderImage="@mipmap/ic_launcher" />
+
 </LinearLayout>

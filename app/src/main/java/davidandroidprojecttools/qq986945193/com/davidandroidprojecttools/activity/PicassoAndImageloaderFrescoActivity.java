@@ -7,7 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
+import com.facebook.imagepipeline.request.ImageRequest;
+import com.facebook.imagepipeline.request.ImageRequestBuilder;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Urls;
@@ -28,6 +32,8 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.P
 public class PicassoAndImageloaderFrescoActivity extends Activity {
     /**
      * Fresco的使用,1初始化fresco，2,布局中引用SimpleDraweeView 3,java代码中进行使用。
+     *
+     * 渐进式JPEG图仅仅支持网络图。本地图片会一次解码完成，所以没必要渐进式加载。
      */
     private SimpleDraweeView simple_image_view_one;
     private Button btn_picasso_img;
