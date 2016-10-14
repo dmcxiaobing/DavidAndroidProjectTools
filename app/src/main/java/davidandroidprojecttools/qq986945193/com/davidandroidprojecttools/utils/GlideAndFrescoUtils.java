@@ -56,9 +56,6 @@ public class GlideAndFrescoUtils {
 
     }
 
-    public static void frescoDisplayLoacalImage(){
-
-    }
 
 
 }
