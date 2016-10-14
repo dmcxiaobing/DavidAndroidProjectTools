@@ -21,6 +21,7 @@ public class ForEach {
 
 
     public static void main(String args[]) {
+        //定义一个数组
         int arrs[] = {1,2,3,4,5,6,7,8,9,0};
         int sum = 0;
         for (int i : arrs){
