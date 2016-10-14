@@ -76,7 +76,7 @@ public class ListViewIntroduceAdapter extends BaseAdapter {
         holder.tv_introduce_name.setText(bean.getTitle());
         PicassoWithImageLoaderImageViewUtils.displayImage(bean.getPicUrl(), holder.iv_introduce_img);
 
-        return null;
+        return convertView;
     }
 
     protected class ViewHolder {
