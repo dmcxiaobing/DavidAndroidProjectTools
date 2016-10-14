@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#E1E6F6"
+    android:orientation="vertical">
+
+    <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.FlowLayoutView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="Welcome android" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="IT工程师" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="学习ing" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="JAVAEE" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="挣钱ing" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="努力ing" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:text="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+    </davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.FlowLayoutView>
+
+
+    <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.FlowLayoutView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_02"
+            android:text="Welcome"
+            android:textColor="#888888" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_02"
+            android:text="IT工程师"
+            android:textColor="#888888" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_02"
+            android:text="学习ing"
+            android:textColor="#888888" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_02"
+            android:text="恋爱ing"
+            android:textColor="#888888" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_02"
+            android:text="挣钱ing"
+            android:textColor="#888888" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_02"
+            android:text="努力ing"
+            android:textColor="#888888" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_02"
+            android:text="I thick i can"
+            android:textColor="#888888" />
+    </davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.FlowLayoutView>
+
+    <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.FlowLayoutView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_03"
+            android:text="Welcome"
+            android:textColor="#43BBE7" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_03"
+            android:text="IT工程师"
+            android:textColor="#43BBE7" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_03"
+            android:text="学习ing"
+            android:textColor="#43BBE7" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_03"
+            android:text="恋爱ing"
+            android:textColor="#43BBE7" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_03"
+            android:text="挣钱ing"
+            android:textColor="#43BBE7" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_03"
+            android:text="努力ing"
+            android:textColor="#43BBE7" />
+
+        <TextView
+            style="@style/text_flag_01"
+            android:background="@drawable/shape_white_flowlayout_03"
+            android:text="I thick i can"
+            android:textColor="#43BBE7" />
+    </davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.FlowLayoutView>
+
+</LinearLayout>
