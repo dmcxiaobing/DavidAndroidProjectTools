@@ -88,5 +88,6 @@ dependencies {
     //Okhttp的引用
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
     //fresco的引入
-    compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'com.facebook.fresco:fresco:0.13.0'
+
 }
