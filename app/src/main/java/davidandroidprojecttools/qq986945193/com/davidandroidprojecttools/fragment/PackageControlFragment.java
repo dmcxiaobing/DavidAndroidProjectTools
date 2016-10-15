@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.FlowLayoutActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MyAdapterActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.OkHttpActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.PicassoAndImageloaderFrescoActivity;
@@ -67,6 +68,7 @@ public class PackageControlFragment extends Fragment {
     private void initData() {
         listDatas.add("封装显示星星个数 常用评论数");
         listDatas.add("利用万能Listview的adapter进行展示数据");
+        listDatas.add("流式布局显示标签，以及热搜关键词等功能");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_package_control_fragment.setAdapter(mAdatper);
@@ -87,6 +89,12 @@ public class PackageControlFragment extends Fragment {
                      */
                     case 1:
                         intent = new Intent(mContext, MyAdapterActivity.class);
+                        break;
+                    /**
+                     * 流式布局显示标签，以及热搜关键词等功能
+                     */
+                    case 2:
+                        intent = new Intent(mContext, FlowLayoutActivity.class);
                         break;
 
                 }
