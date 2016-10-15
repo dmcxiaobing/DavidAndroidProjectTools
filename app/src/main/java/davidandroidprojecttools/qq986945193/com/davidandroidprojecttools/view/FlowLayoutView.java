@@ -1,4 +1,10 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view;
+/**
+ * @author ：程序员小冰
+ * @新浪微博 ：http://weibo.com/mcxiaobing
+ * @GitHub: https://github.com/QQ986945193
+ * @CSDN博客: http://blog.csdn.net/qq_21376985
+ */
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +17,9 @@ import android.view.ViewGroup;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Constants;
 
+/**
+ * 流式布局显示标签，以及热搜关键词的自定义View
+ */
 public class FlowLayoutView extends ViewGroup {
 
 
