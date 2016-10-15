@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ButterKnifeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.OkHttpActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.PicassoAndImageloaderFrescoActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.XutilsTwoActivity;
@@ -66,6 +67,7 @@ public class FamousFrameFragment extends Fragment {
         listDatas.add("Xutils2的四大模块使用详解");
         listDatas.add("Imageloader,Picasso,Fresco,Glide图片处理");
         listDatas.add("OkHttp的封装与网络请求详解");
+        listDatas.add("ButterKnife的使用详解");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_famous_frame_fragment.setAdapter(mAdatper);
 
@@ -89,9 +91,17 @@ public class FamousFrameFragment extends Fragment {
                          * OkHttp的封装与网络请求详解
                          */
                         break;
-
+                    /**
+                     * OkHttp的封装与网络请求详解
+                     */
                     case 2:
                         intent = new Intent(mContext, OkHttpActivity.class);
+                        break;
+                    /**
+                     * ButterKnife的使用详解
+                     */
+                    case 3:
+                        intent = new Intent(mContext, ButterKnifeActivity.class);
                         break;
 
 

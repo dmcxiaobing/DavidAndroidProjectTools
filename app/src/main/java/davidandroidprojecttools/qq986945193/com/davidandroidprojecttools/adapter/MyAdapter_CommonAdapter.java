@@ -1,5 +1,12 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.adapter;
 
+/**
+ * @author ：程序员小冰
+ * @新浪微博 ：http://weibo.com/mcxiaobing
+ * @GitHub: https://github.com/QQ986945193
+ * @CSDN博客: http://blog.csdn.net/qq_21376985
+ */
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +15,10 @@ import android.widget.BaseAdapter;
 
 import java.util.List;
 
+/**
+ * listview所有的adapter全部继承此adapter，万能adapter
+ * @param <T>
+ */
 public abstract class MyAdapter_CommonAdapter<T> extends BaseAdapter {
 
 	protected Context mContext;
@@ -30,16 +41,13 @@ public abstract class MyAdapter_CommonAdapter<T> extends BaseAdapter {
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		if (mDatas == null){
-			return 0;
-		}
-		return mDatas.size();
+		return mDatas == null ? 0 : mDatas.size();
 	}
 
 	@Override
 	public Object getItem(int position) {
 		// TODO Auto-generated method stub
-		return mDatas.get(position);
+		return mDatas == null ? null : mDatas.get(position);
 	}
 
 	@Override

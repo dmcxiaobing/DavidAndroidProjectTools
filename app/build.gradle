@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'android-apt'
 android {
     compileSdkVersion 22
     buildToolsVersion "23.0.1"
@@ -92,5 +92,8 @@ dependencies {
     compile 'com.facebook.fresco:fresco:0.13.0'
     /*引入multidex库文件*/
     compile 'com.android.support:multidex:1.0.0'
+    /*增加注解的使用 butterknife*/
+    compile 'com.jakewharton:butterknife:8.1.0'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'//增加这一句
 
 }
