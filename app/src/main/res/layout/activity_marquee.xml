@@ -133,5 +133,32 @@
             android:layout_toRightOf="@+id/iv_loudspeaker1"/>
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_broadcast"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:src="@mipmap/ic_red_loudspeaker" />
+
+        <TextView
+            android:id="@+id/tv_marquee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:layout_toRightOf="@+id/iv_broadcast"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:text="我是正宗的跑马灯，横向跑马灯。欢迎关注程序员小冰，微博：http://weibo.com/mcxiaobing"
+            android:textSize="14sp" />
+    </RelativeLayout>
 
 </LinearLayout>
