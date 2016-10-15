@@ -10,6 +10,7 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+        // dex突破65535的限制
         multiDexEnabled true
     }
 
@@ -89,5 +90,7 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
     //fresco的引入
     compile 'com.facebook.fresco:fresco:0.13.0'
+    /*引入multidex库文件*/
+    compile 'com.android.support:multidex:1.0.0'
 
 }

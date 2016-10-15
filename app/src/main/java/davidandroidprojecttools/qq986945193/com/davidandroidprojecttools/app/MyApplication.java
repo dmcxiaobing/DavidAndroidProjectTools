@@ -3,6 +3,7 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app;
 import android.app.Application;
 import android.graphics.Bitmap;
 import android.os.Environment;
+import android.support.multidex.MultiDexApplication;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.lidroid.xutils.BitmapUtils;
@@ -25,9 +26,9 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.O
  */
 
 /**
- * Application的配置
+ * Application的配置 继承MultiDexApplication是为了使项目能够突破65535限制
  */
-public class MyApplication extends Application {
+public class MyApplication extends MultiDexApplication {
     private static MyApplication app;
     private HttpUtils httpUtils;
     private ImageLoader imageLoader = null;

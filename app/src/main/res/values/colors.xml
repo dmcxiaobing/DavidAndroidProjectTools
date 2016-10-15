@@ -65,5 +65,6 @@
     <color name="title_color">#565a58</color>
     <!--刷新的颜色-->
     <color name="background">#F7F4F0</color>
+    <color name="half_transparent">#4f000000</color>
 
 </resources>
