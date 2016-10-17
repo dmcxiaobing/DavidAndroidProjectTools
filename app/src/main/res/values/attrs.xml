@@ -28,6 +28,8 @@
             <enum name="horizontal" value="0" />
         </attr>
     </declare-styleable>
+
+
     <declare-styleable name="MarqueeViewStyle">
         <attr name="mvInterval" format="integer|reference" />
         <attr name="mvAnimDuration" format="integer|reference" />
@@ -39,5 +41,23 @@
             <enum name="center" value="1" />
             <enum name="right" value="2" />
         </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CountDownView">
+        <attr name="background_color" format="color" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="text" format="string" />
+        <attr name="text_size" format="dimension" />
+        <attr name="text_color" format="color" />
     </declare-styleable>
 </resources>
