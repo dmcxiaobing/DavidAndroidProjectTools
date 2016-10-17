@@ -19,6 +19,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app.Vie
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.TxApiAppleBean;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.callback.OkHttpStopCallback;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Urls;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.OkHttpUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.PicassoWithImageLoaderImageViewUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.XListviewAndTimeUtils;
@@ -64,7 +65,7 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
     protected void initData() {
 
 
-        url = Urls.TXAPI_APPLE_APPLE_POST + "?num=10&page=" + page;
+        url = Urls.TXAPI_APPLE_APPLE_POST + "?num=5&page=" + page;
         mOkHttpUtils.get(url, null, new OkHttpStopCallback<TxApiAppleBean>() {
 
             @Override
@@ -148,6 +149,12 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
     @Override
     public void onLoadMore() {
         page++;
+        LogUtil.E("page" + page);
+//        if (page == 3) {
+//            page = 999999;
+//            initData();
+//            page = 2;
+//        }
         initData();
     }
 
@@ -176,5 +183,11 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
 
             return holder.getmConvertView();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        LogUtil.E("zouzhelile");
     }
 }

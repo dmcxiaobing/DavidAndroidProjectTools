@@ -4,6 +4,8 @@
     <string name="header_hint_refresh_ready">松开后刷新</string>
     <string name="header_hint_refresh_loading">加载中&#8230;</string>
     <string name="header_hint_refresh_time">更新时间：</string>
+    <!--<string name="footer_hint_load_normal"></string>-->
+    <!--<string name="footer_hint_load_ready"></string>-->
     <string name="footer_hint_load_normal">查看更多</string>
     <string name="footer_hint_load_ready">加载中...</string>
 </resources>
