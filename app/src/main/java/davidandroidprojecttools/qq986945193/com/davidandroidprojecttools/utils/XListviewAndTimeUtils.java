@@ -36,6 +36,8 @@ public class XListviewAndTimeUtils {
     public static String getTime() {
         return new SimpleDateFormat("MM-dd HH:mm", Locale.CHINA).format(new Date());
     }
+
+
 }
 
 
