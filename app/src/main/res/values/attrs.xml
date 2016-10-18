@@ -60,4 +60,12 @@
         <attr name="text_size" format="dimension" />
         <attr name="text_color" format="color" />
     </declare-styleable>
+
+
+    <attr name="visible_tab_count" format="integer" />
+
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="visible_tab_count" />
+    </declare-styleable>
+
 </resources>
