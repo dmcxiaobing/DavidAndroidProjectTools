@@ -22,6 +22,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.BarCodeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.DavidXListViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.LoadingActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MarqueeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SplashAdActivity;
@@ -83,6 +84,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
         listDatas.add("XListView下拉刷新和上拉加载更多");
         listDatas.add("仿淘宝,百度外卖,饿了么等头条滚动效果");
         listDatas.add("进入界面弹出一张大图");
+        listDatas.add("loading等待提示框两种实现方式");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_commonly_used_function_fragment.setAdapter(mAdatper);
@@ -147,6 +149,13 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                      */
                     case 8:
                         intent = new Intent(mContext, StartDialogImageActivity.class);
+
+                        break;
+                    /**
+                     * loading等待提示框两种实现方式
+                     */
+                    case 9:
+                        intent = new Intent(mContext, LoadingActivity.class);
 
                         break;
 
