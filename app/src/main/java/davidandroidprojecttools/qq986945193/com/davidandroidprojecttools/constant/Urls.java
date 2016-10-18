@@ -11,6 +11,12 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.consta
  * 存放一些网络请求中所用的url地址
  */
 public class Urls {
+
+    public static final String CSDN_BLOG_DAVID = "http://blog.csdn.net/qq_21376985";
+    public static final String SINA_WEIBO = "http://weibo.com/mcxiaobing";
+    public static final String GITHUB_DAVID = "https://github.com/QQ986945193";
+    public static final String GIT_OSCHINA_DAVID = "http://git.oschina.net/MCXIAOBING";
+    public static final String CSDN_DAVID = "http://my.csdn.net/qq_21376985";
     public static final String GET_IMAGE_URL = "http://avatar.csdn.net/D/6/7/1_qq_21376985.jpg";
     public static final String GET_IMAGE_URL_IMAGELOADER = "http://img.blog.csdn.net/20160706100407495";
     public static final String GET_IMAGE_URL_GLIDE = "http://img3.imgtn.bdimg.com/it/u=4053239362,2182077315&fm=21&gp=0.jpg";
