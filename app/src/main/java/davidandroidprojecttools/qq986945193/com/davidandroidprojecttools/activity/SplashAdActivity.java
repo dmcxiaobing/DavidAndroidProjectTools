@@ -15,6 +15,10 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.Ro
  * @GitHub: https://github.com/QQ986945193
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  */
+
+/**
+ * 仿Splash首页添加广告progressBar进度
+ */
 public class SplashAdActivity extends BaseActivity {
     private RoundProgressBar mRoundProgressBar;
     private CountDownView count_down_view;
@@ -30,19 +34,19 @@ public class SplashAdActivity extends BaseActivity {
 
             @Override
             public void onFinishCount() {
-                LogUtil.E("dfdsfffffffffff");
+//                LogUtil.E("dfdsfffffffffff");
 
             }
         });
         mRoundProgressBar.start();
-        mRoundProgressBar.setOnClickListener(new View.OnClickListener() {
+      /*  mRoundProgressBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LogUtil.E("计时结束");
-                Toast.makeText(getApplicationContext(), "计时结束", Toast.LENGTH_SHORT).show();
+//                LogUtil.E("计时结束");
+//                Toast.makeText(getApplicationContext(), "计时结束", Toast.LENGTH_SHORT).show();
 
             }
-        });
+        });*/
 
     }
 
@@ -52,12 +56,12 @@ public class SplashAdActivity extends BaseActivity {
         count_down_view.setCountDownTimerListener(new CountDownView.CountDownTimerListener() {
             @Override
             public void onStartCount() {
-//                Toast.makeText(getApplicationContext(), "开始计时", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "开始计时", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFinishCount() {
-//                Toast.makeText(getApplicationContext(), "计时结束", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "计时结束", Toast.LENGTH_SHORT).show();
             }
         });
         count_down_view.start();

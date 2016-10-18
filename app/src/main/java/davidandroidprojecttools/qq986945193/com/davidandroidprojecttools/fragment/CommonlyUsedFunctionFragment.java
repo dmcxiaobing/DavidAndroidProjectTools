@@ -24,6 +24,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MarqueeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SplashAdActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.StartDialogImageActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.UpMarqueeActivity;
@@ -74,7 +75,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
      */
     private void initData() {
         listDatas.add("三种方式圆形头像图片的实现");
-        listDatas.add("底部Tab菜单栏五种实现方式");
+        listDatas.add("Splash首页添加广告progressBar进度");
         listDatas.add("公告广告通知显示滚动，类似淘宝等头条滚动效果");
         listDatas.add("无限轮播滚动的banner(封装ViewPager)");
         listDatas.add("仿微信提示消息个数两种实现方式");
@@ -96,8 +97,11 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                     case 0:
                         intent = new Intent(mContext, RoundZoomImageViewActivity.class);
                         break;
+                    /**
+                     * Splash首页添加广告progressBar进度
+                     */
                     case 1:
-                        intent = new Intent(mContext, SystemAppFourMethodActivity.class);
+                        intent = new Intent(mContext, SplashAdActivity.class);
                         break;
                     /**
                      * 公告广告通知显示滚动，类似淘宝等头条滚动效果
