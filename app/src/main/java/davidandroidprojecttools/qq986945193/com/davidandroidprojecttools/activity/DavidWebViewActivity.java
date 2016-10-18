@@ -51,7 +51,6 @@ public class DavidWebViewActivity extends BaseActivity {
         });
 
         davidWebView.getWebView().loadUrl(Urls.CSDN_BLOG_DAVID);
-
         tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
