@@ -18,4 +18,6 @@ public class Constants {
     public static final String API_KEY = "apikey";
     /*这里是使用百度API的时候所要传递的自己的秘钥*/
     public static final String API_KEY_SECRET = "73ecfce74d2c88190c6568948db5d2018";
+
+    public static final String LOADING_DATA = "加载中...";
 }
