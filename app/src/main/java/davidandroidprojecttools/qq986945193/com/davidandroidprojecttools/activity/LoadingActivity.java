@@ -17,6 +17,10 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.W
  * @GitHub: https://github.com/QQ986945193
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  */
+
+/**
+ * loading等待提示框两种实现方式
+ */
 public class LoadingActivity extends BaseActivity {
     private Dialog mDialog;
     private Dialog mWeiboDialog;
