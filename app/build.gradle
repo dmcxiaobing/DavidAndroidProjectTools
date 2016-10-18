@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "davidandroidprojecttools.qq986945193.com.davidandroidprojecttools"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -95,5 +95,7 @@ dependencies {
     /*增加注解的使用 butterknife*/
     compile 'com.jakewharton:butterknife:8.1.0'
     apt 'com.jakewharton:butterknife-compiler:8.1.0'//增加这一句
+    /*使用一款开源的loading框架，要求最低sdk == 15*/
+    compile 'com.github.d-max:spots-dialog:0.7@aar'
 
 }

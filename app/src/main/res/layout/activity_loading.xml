@@ -3,14 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <Button
         android:id="@+id/btn_show_weibo_loading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="显示仿微博"/>
+        android:text="显示仿微博" />
+
+    <Button
+        android:id="@+id/btn_show_two_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="第二种效果显示loading" />
     <Button
         android:id="@+id/btn_show_thrid_loading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="第三种效果显示loading"/>
+        android:text="第三种效果显示loading" />
+    <Button
+        android:id="@+id/btn_show_four_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="第四种效果显示loading" />
+
 </LinearLayout>

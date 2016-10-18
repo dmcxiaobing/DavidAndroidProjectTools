@@ -1,6 +1,8 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
@@ -10,6 +12,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Constants;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.DialogThridUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.WeiboDialogUtils;
+import dmax.dialog.SpotsDialog;
 
 /**
  * @author ：程序员小冰
@@ -19,13 +22,17 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.W
  */
 
 /**
- * loading等待提示框两种实现方式
+ * loading等待提示框多种实现方式
  */
 public class LoadingActivity extends BaseActivity {
     private Dialog mDialog;
     private Dialog mWeiboDialog;
     private Button btn_show_weibo_loading;
     private Button btn_show_thrid_loading;
+    private Button btn_show_two_loading;
+    private Button btn_show_four_loading;
+    private ProgressDialog mProgressDialog;
+    private AlertDialog githubDialog;
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -34,6 +41,8 @@ public class LoadingActivity extends BaseActivity {
                 case 1:
                     DialogThridUtils.closeDialog(mDialog);
                     WeiboDialogUtils.closeDialog(mWeiboDialog);
+                    hiddenLoading();
+                    hiddenGithubLoading();
                     break;
             }
         }
@@ -44,7 +53,16 @@ public class LoadingActivity extends BaseActivity {
         setContentView(R.layout.activity_loading);
         btn_show_weibo_loading = (Button) findViewById(R.id.btn_show_weibo_loading);
         btn_show_thrid_loading = (Button) findViewById(R.id.btn_show_thrid_loading);
+        btn_show_two_loading = (Button) findViewById(R.id.btn_show_two_loading);
+        btn_show_four_loading = (Button) findViewById(R.id.btn_show_four_loading);
+        githubDialog = new SpotsDialog(mContext);
 //        mWeiboDialog.show();
+
+
+        // 提示正在加载
+        mProgressDialog = new ProgressDialog(this);
+        mProgressDialog.setMessage(Constants.LOADING_DATA);
+        mProgressDialog.setCancelable(false);
 
 
     }
@@ -66,5 +84,41 @@ public class LoadingActivity extends BaseActivity {
                 mHandler.sendEmptyMessageDelayed(1, 2000);
             }
         });
+
+        btn_show_two_loading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mProgressDialog.show();
+                mHandler.sendEmptyMessageDelayed(1, 2000);
+
+            }
+        });
+
+        btn_show_four_loading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                githubDialog.show();
+                mHandler.sendEmptyMessageDelayed(1, 2000);
+            }
+        });
+    }
+
+
+    /**
+     * 隐藏正在加载
+     */
+    private void hiddenLoading() {
+        if (mProgressDialog != null && mProgressDialog.isShowing()) {
+            mProgressDialog.dismiss();
+        }
+    }
+
+    /**
+     * 隐藏正在加载
+     */
+    private void hiddenGithubLoading() {
+        if (githubDialog != null && githubDialog.isShowing()) {
+            githubDialog.dismiss();
+        }
     }
 }
