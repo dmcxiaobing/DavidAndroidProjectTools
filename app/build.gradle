@@ -94,8 +94,19 @@ dependencies {
     compile 'com.android.support:multidex:1.0.0'
     /*增加注解的使用 butterknife*/
     compile 'com.jakewharton:butterknife:8.1.0'
-    apt 'com.jakewharton:butterknife-compiler:8.1.0'//增加这一句
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+    //增加这一句
     /*使用一款开源的loading框架，要求最低sdk == 15*/
     compile 'com.github.d-max:spots-dialog:0.7@aar'
-
+    compile files('libs/ShareSDK-Core-2.7.7.jar')
+    compile files('libs/ShareSDK-Email-2.7.7.jar')
+    compile files('libs/ShareSDK-QQ-2.7.7.jar')
+    compile files('libs/ShareSDK-QZone-2.7.7.jar')
+    compile files('libs/ShareSDK-ShortMessage-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-Favorite-2.7.7.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.7.7.jar')
+    compile files('libs/ShareSDK-Yixin-Core-2.7.7.jar')
+    compile files('libs/ShareSDK-Yixin-Moments-2.7.7.jar')
 }
