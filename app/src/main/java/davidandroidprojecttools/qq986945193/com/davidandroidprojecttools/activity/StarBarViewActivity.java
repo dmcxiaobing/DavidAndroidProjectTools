@@ -43,7 +43,7 @@ public class StarBarViewActivity extends BaseActivity {
         btn_show_num_star.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ToastUtils.show(mContext, sbv_starbar.getStarRating() + "", Toast.LENGTH_SHORT);
+                ToastUtils.show(mContext,(int)sbv_starbar.getStarRating()+"", Toast.LENGTH_SHORT);
             }
         });
     }
