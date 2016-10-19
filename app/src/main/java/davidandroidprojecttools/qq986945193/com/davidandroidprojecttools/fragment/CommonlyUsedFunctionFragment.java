@@ -30,6 +30,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.UpMarqueeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.XListViewActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.MarqueeView;
 
 /**
@@ -57,7 +58,16 @@ public class CommonlyUsedFunctionFragment extends Fragment {
 
         rootView = inflater.inflate(R.layout.fragment_commonly_used_function, container, false);
         initView(rootView);
+        LogUtil.E("create+CommonlyUsedFunctionFragment");
+
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        LogUtil.E("onresume+CommonlyUsedFunctionFragment");
+
     }
 
     @Override

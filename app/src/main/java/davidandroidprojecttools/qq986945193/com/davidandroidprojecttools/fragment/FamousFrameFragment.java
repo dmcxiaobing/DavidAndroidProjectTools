@@ -46,7 +46,17 @@ public class FamousFrameFragment extends Fragment {
 
         rootView = inflater.inflate(R.layout.fragment_famous_frame, container, false);
         initView(rootView);
+        LogUtil.E("oncreate+FamousFrameFragment");
+
         return rootView;
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        LogUtil.E("onresume+FamousFrameFragment");
+
     }
 
     @Override

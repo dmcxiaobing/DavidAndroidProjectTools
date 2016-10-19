@@ -11,6 +11,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.lidroid.xutils.util.LogUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +22,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SwipeRefreshListViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 /**
  * @author ：程序员小冰
  * @新浪微博 ：http://weibo.com/mcxiaobing
@@ -45,7 +48,14 @@ public class MainFragment extends Fragment {
 
         rootView = inflater.inflate(R.layout.fragment_main, container, false);
         initView(rootView);
+        LogUtil.E("create+main");
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        LogUtil.E("onresume+main");
     }
 
     @Override

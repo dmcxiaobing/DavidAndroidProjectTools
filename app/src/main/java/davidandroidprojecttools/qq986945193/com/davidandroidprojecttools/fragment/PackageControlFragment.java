@@ -49,7 +49,16 @@ public class PackageControlFragment extends Fragment {
 
         rootView = inflater.inflate(R.layout.fragment_package_control, container, false);
         initView(rootView);
+        LogUtil.E("oncreate+package");
+
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        LogUtil.E("onresume+package");
+
     }
 
     @Override
