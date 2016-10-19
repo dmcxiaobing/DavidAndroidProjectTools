@@ -18,6 +18,10 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.widget.
  * @GitHub: https://github.com/QQ986945193
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  */
+
+/**
+ * 仿MiUi的TAB切换
+ */
 public class MiUiTabActivity extends BaseFragmentActivity {
     private List<Fragment> mTabContents = new ArrayList<Fragment>();
     private FragmentPagerAdapter mAdapter;
