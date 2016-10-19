@@ -11,6 +11,7 @@ import android.widget.Button;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Constants;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.DialogThridUtils;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LoadingDialog;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.WeiboDialogUtils;
 import dmax.dialog.SpotsDialog;
 
@@ -31,8 +32,10 @@ public class LoadingActivity extends BaseActivity {
     private Button btn_show_thrid_loading;
     private Button btn_show_two_loading;
     private Button btn_show_four_loading;
+    private Button btn_show_five_loading;
     private ProgressDialog mProgressDialog;
     private AlertDialog githubDialog;
+    private LoadingDialog mLoadingDialog;
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -43,6 +46,7 @@ public class LoadingActivity extends BaseActivity {
                     WeiboDialogUtils.closeDialog(mWeiboDialog);
                     hiddenLoading();
                     hiddenGithubLoading();
+                    LoadingDialog.hiddenLoadingDialog(mLoadingDialog);
                     break;
             }
         }
@@ -55,6 +59,7 @@ public class LoadingActivity extends BaseActivity {
         btn_show_thrid_loading = (Button) findViewById(R.id.btn_show_thrid_loading);
         btn_show_two_loading = (Button) findViewById(R.id.btn_show_two_loading);
         btn_show_four_loading = (Button) findViewById(R.id.btn_show_four_loading);
+        btn_show_five_loading = (Button) findViewById(R.id.btn_show_five_loading);
         githubDialog = new SpotsDialog(mContext);
 //        mWeiboDialog.show();
 
@@ -99,6 +104,16 @@ public class LoadingActivity extends BaseActivity {
             public void onClick(View v) {
                 githubDialog.show();
                 mHandler.sendEmptyMessageDelayed(1, 2000);
+            }
+        });
+
+        btn_show_five_loading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mLoadingDialog = LoadingDialog.show(mContext, Constants.LOADING_DATA, true, null);
+                mHandler.sendEmptyMessageDelayed(1, 2000);
+
+
             }
         });
     }
