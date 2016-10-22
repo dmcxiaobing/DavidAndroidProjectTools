@@ -98,6 +98,7 @@ dependencies {
     //增加这一句
     /*使用一款开源的loading框架，要求最低sdk == 15*/
     compile 'com.github.d-max:spots-dialog:0.7@aar'
+    /*一键分享ShareSDK*/
     compile files('libs/ShareSDK-Core-2.7.7.jar')
     compile files('libs/ShareSDK-Email-2.7.7.jar')
     compile files('libs/ShareSDK-QQ-2.7.7.jar')
