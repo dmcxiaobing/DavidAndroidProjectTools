@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.jauker.widget.BadgeView;
 
@@ -32,6 +33,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.UpMarqueeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.XListViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ToastUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.MarqueeView;
 
 /**
@@ -92,7 +94,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
         listDatas.add("无限轮播滚动的banner(封装ViewPager)");
         listDatas.add("仿微信提示消息个数两种实现方式");
         listDatas.add("利用Zxing实现二维码的生成与扫描功能");
-        listDatas.add("XListView下拉刷新和上拉加载更多");
+        listDatas.add("---");
         listDatas.add("仿淘宝,百度外卖,饿了么等头条滚动效果");
         listDatas.add("进入界面弹出一张大图");
         listDatas.add("loading等待提示框多种实现方式");
@@ -142,12 +144,10 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                         intent = new Intent(mContext, BarCodeActivity.class);
                         break;
                     /**
-                     * XListView下拉刷新和上拉加载更多
+                     *
                      */
                     case 6:
-//                        intent = new Intent(mContext, XListViewActivity.class);
-                        intent = new Intent(mContext, DavidXListViewActivity.class);
-
+                        ToastUtils.show(mContext,"6", Toast.LENGTH_SHORT);
                         break;
                     /**
                      * 仿淘宝,百度外卖,饿了么等头条滚动效果

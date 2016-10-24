@@ -29,6 +29,7 @@ public class Urls {
     public static final String TXAPI_APPLE_APPLE_POST = "http://apis.baidu.com/txapi/apple/apple";
     public static final String FRESCO_IMAGE_LOGO = "https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=4032588057,3964571653&fm=58&s=F9E31B72CF8369535C9B03E80200702B";
     public static final String FRESCO_IMAGE_LOGO_IMAGE_PIPELINE = "https://avatars1.githubusercontent.com/u/13946951?v=3&s=466";
-
+    /*取得热点热词列表，也可以用分类id作为参数*/
+    public static final String AUTOLOADMORE_TOP_LIST ="http://www.tngou.net/api/top/list";
 
 }

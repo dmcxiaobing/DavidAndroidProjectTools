@@ -18,10 +18,8 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.DavidWebViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.FlowLayoutActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MyAdapterActivity;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.OkHttpActivity;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.PicassoAndImageloaderFrescoActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RefreshLoadMoreActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.StarBarViewActivity;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.XutilsTwoActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 
 /**
@@ -80,6 +78,7 @@ public class PackageControlFragment extends Fragment {
         listDatas.add("利用万能Listview的adapter进行展示数据");
         listDatas.add("流式布局显示标签，以及热搜关键词等功能");
         listDatas.add("自定义WebView支持下拉刷新的功能");
+        listDatas.add("上拉加载更多与下拉刷新的多种实现");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_package_control_fragment.setAdapter(mAdatper);
@@ -112,6 +111,12 @@ public class PackageControlFragment extends Fragment {
                      */
                     case 3:
                         intent = new Intent(mContext, DavidWebViewActivity.class);
+                        break;
+                    /**
+                     *上拉加载更多与下拉刷新的多种实现
+                     */
+                    case 4:
+                        intent = new Intent(mContext, RefreshLoadMoreActivity.class);
                         break;
 
                 }

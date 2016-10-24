@@ -65,7 +65,7 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
     protected void initData() {
 
 
-        url = Urls.TXAPI_APPLE_APPLE_POST + "?num=5&page=" + page;
+        url = Urls.TXAPI_APPLE_APPLE_POST + "?num=10&page=" + page;
         mOkHttpUtils.get(url, null, new OkHttpStopCallback<TxApiAppleBean>() {
 
             @Override
