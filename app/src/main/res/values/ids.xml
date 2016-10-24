@@ -27,4 +27,7 @@
     <item name="quit" type="id" />
     <item name="restart_preview" type="id" />
     <item name="return_scan_result" type="id" />
+    <item name="swipeRefreshLayout" type="id" />
+    <item name="recyclerView" type="id" />
+    <item name="pullRecycler" type="id" />
 </resources>

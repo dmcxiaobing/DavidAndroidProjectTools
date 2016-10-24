@@ -7,6 +7,9 @@ import android.os.Bundle;
 
 import com.umeng.analytics.MobclickAgent;
 
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app.MyApplication;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.OkHttpUtils;
+
 /**
  * @author ：程序员小冰
  * @新浪微博 ：http://weibo.com/mcxiaobing
@@ -17,6 +20,7 @@ import com.umeng.analytics.MobclickAgent;
  */
 public abstract class BaseActivity extends Activity {
     protected Context mContext;
+    protected OkHttpUtils okHttpUtils = MyApplication.getApp().getOkHttpUtils();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

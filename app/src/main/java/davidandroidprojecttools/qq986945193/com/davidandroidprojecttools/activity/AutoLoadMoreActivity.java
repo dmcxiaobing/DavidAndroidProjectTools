@@ -93,7 +93,7 @@ public class AutoLoadMoreActivity extends BaseActivity implements AutoLoadMoreLi
     @Override
     public void onLoadMore() {
         if (isEnd) {
-            page+=500;
+            page+=1;
             initData();
         } else {
             auto_listview.showLoadComplete();
