@@ -1,16 +1,4 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils;
-
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 /**
  * @author ：程序员小冰
  * @新浪微博 ：http://weibo.com/mcxiaobing
@@ -26,7 +14,7 @@ import java.io.InputStreamReader;
  */
 public class HttpUtils {
     // 通过url获取Json数据
-    public static String getJsonFromUrl(String url) {
+    /*public static String getJsonFromUrl(String url) {
         String json = "";
         HttpClient httpClient = new DefaultHttpClient();
         HttpGet httpGet = new HttpGet(url);
@@ -65,6 +53,6 @@ public class HttpUtils {
         }
         return bitmap;
     }
-
+*/
 
 }

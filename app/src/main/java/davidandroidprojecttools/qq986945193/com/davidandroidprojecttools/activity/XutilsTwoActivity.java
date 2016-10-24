@@ -75,11 +75,12 @@ public class XutilsTwoActivity extends Activity {
         btn_normal_get.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mHttUtils.send(HttpRequest.HttpMethod.GET, Urls.XUTILS_TWO_GET, new RequestCallBack<String>() {
-                    /**
-                     * 请求成功，打印出所得到的字符串
-                     * @param responseInfo
-                     */
+                ToastUtils.show(mContext, "由于最新版本已经将HttpClient删除了，所以具体实现请看代码", Toast.LENGTH_LONG);
+                /*mHttUtils.send(HttpRequest.HttpMethod.GET, Urls.XUTILS_TWO_GET, new RequestCallBack<String>() {
+                    *//**
+                 * 请求成功，打印出所得到的字符串
+                 * @param responseInfo
+                 *//*
                     @Override
                     public void onSuccess(ResponseInfo<String> responseInfo) {
                         if (responseInfo.result != null) {
@@ -95,7 +96,7 @@ public class XutilsTwoActivity extends Activity {
                         ToastUtils.show(mContext, "网络请求失败: ", Toast.LENGTH_SHORT);
 
                     }
-                });
+                });*/
             }
         });
 
@@ -105,6 +106,8 @@ public class XutilsTwoActivity extends Activity {
         btn_normal_post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ToastUtils.show(mContext, "由于最新版本已经将HttpClient删除了，所以具体实现请看代码", Toast.LENGTH_LONG);
+
                 RequestParams params = new RequestParams();
                 /**
                  * 这里因为用的第三方接口平台，所以需要穿自己的header，项目中，按实际需要，
@@ -113,11 +116,11 @@ public class XutilsTwoActivity extends Activity {
                  */
                 params.addHeader(Constants.API_KEY, Constants.API_KEY_SECRET);
                 params.addBodyParameter("id", "642226199303107806");
-                mHttUtils.send(HttpRequest.HttpMethod.POST, Urls.XUTILS_TWO_POST, params, new RequestCallBack<String>() {
-                    /**
-                     * 请求成功，打印出所得到的字符串
-                     * @param responseInfo
-                     */
+                /*mHttUtils.send(HttpRequest.HttpMethod.POST, Urls.XUTILS_TWO_POST, params, new RequestCallBack<String>() {
+                    *//**
+                 * 请求成功，打印出所得到的字符串
+                 * @param responseInfo
+                 *//*
                     @Override
                     public void onSuccess(ResponseInfo<String> responseInfo) {
                         if (responseInfo.result != null) {
@@ -133,7 +136,7 @@ public class XutilsTwoActivity extends Activity {
                         ToastUtils.show(mContext, "网络请求失败: ", Toast.LENGTH_SHORT);
 
                     }
-                });
+                });*/
             }
         });
         /**

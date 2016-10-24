@@ -19,4 +19,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="自动加载更多AutoLoadmore仿微博" />
+    <Button
+        android:id="@+id/btn_recycleview_auto_loadmore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecycleView的自动加载更多数据" />
 </LinearLayout>
