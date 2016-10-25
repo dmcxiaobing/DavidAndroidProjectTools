@@ -21,6 +21,7 @@ public class RefreshLoadMoreActivity extends BaseActivity {
     private Button btn_auto_loadmore;
     private Button btn_recycleview_auto_loadmore;
     private Button btn_recycleview_auto_loadmore_swipe_ay;
+    private Button btn_recycleview_auto_loadmore_swipe_fm;
 
 
     @Override
@@ -31,6 +32,7 @@ public class RefreshLoadMoreActivity extends BaseActivity {
         btn_auto_loadmore = (Button) findViewById(R.id.btn_auto_loadmore);
         btn_recycleview_auto_loadmore = (Button) findViewById(R.id.btn_recycleview_auto_loadmore);
         btn_recycleview_auto_loadmore_swipe_ay = (Button) findViewById(R.id.btn_recycleview_auto_loadmore_swipe_ay);
+        btn_recycleview_auto_loadmore_swipe_fm = (Button) findViewById(R.id.btn_recycleview_auto_loadmore_swipe_fm);
     }
 
     @Override
@@ -79,6 +81,16 @@ public class RefreshLoadMoreActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(PullRefreshRecycleViewActivity.class);
+            }
+        });
+
+        /**
+         *
+         */
+        btn_recycleview_auto_loadmore_swipe_fm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(PullRecycleViewFragmentActivity.class);
             }
         });
 

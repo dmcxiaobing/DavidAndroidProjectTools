@@ -8,11 +8,11 @@
         android:id="@+id/tv_introduce_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:ellipsize="end"
         android:singleLine="true"
+        android:layout_alignParentRight="true"
         android:maxEms="10"
         android:layout_centerVertical="true"
         android:text="" />
@@ -21,8 +21,8 @@
         android:id="@+id/iv_introduce_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:src="@mipmap/ic_launcher" />
