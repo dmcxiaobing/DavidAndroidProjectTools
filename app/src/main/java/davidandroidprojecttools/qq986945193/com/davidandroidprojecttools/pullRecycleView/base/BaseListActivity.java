@@ -1,4 +1,4 @@
-package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity;
+package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pullRecycleView.base;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.BaseActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pullRecycleView.BaseListAdapter;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pullRecycleView.BaseViewHolder;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pullRecycleView.DividerItemDecoration;
@@ -19,6 +20,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pullRec
  * @GitHub: https://github.com/QQ986945193
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  */
+
 public abstract class BaseListActivity<T> extends BaseActivity implements PullRecycler.OnRecyclerRefreshListener {
     protected BaseListAdapter adapter;
     protected ArrayList<T> mDataList;
