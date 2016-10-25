@@ -18,7 +18,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.Ti
  * @GitHub: https://github.com/QQ986945193
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  * @交流Qq ：986945193
- * 类名：退出app应用的四种实现方式
+ * 类名：退出app应用的多种实现方式
  * <p/>
  * 说明：我这里只是调用了finish()当前的activity，实际项目中，按需要更改即可。
  */

@@ -75,7 +75,7 @@ public class MainFragment extends Fragment {
      */
     private void initData() {
         listDatas.add("ListView与adapter的详解");
-        listDatas.add("退出app应用的四种实现方式");
+        listDatas.add("退出app应用的多种实现方式");
         listDatas.add("SwipeRefreshLayout下拉刷新的详解");
         listDatas.add("拨打电话号码的详解代码(比较简单)");
 
@@ -93,7 +93,7 @@ public class MainFragment extends Fragment {
                         intent = new Intent(mContext, ListViewIntroduceActivity.class);
                         break;
                     /**
-                     * 退出app应用的四种实现方式
+                     * 退出app应用的多种实现方式
                      */
                     case 1:
                         intent = new Intent(mContext, SystemAppFourMethodActivity.class);

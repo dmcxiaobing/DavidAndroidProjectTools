@@ -20,6 +20,7 @@ public class RefreshLoadMoreActivity extends BaseActivity {
     private Button btn_pull_xlistview_two;
     private Button btn_auto_loadmore;
     private Button btn_recycleview_auto_loadmore;
+    private Button btn_recycleview_auto_loadmore_swipe_ay;
 
 
     @Override
@@ -29,6 +30,7 @@ public class RefreshLoadMoreActivity extends BaseActivity {
         btn_pull_xlistview_two = (Button) findViewById(R.id.btn_pull_xlistview_two);
         btn_auto_loadmore = (Button) findViewById(R.id.btn_auto_loadmore);
         btn_recycleview_auto_loadmore = (Button) findViewById(R.id.btn_recycleview_auto_loadmore);
+        btn_recycleview_auto_loadmore_swipe_ay = (Button) findViewById(R.id.btn_recycleview_auto_loadmore_swipe_ay);
     }
 
     @Override
@@ -67,6 +69,16 @@ public class RefreshLoadMoreActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(RecycleViewLoadMoreActivity.class);
+            }
+        });
+
+        /**
+         * 带有自动加载与上拉刷新的activity recycleView
+         */
+        btn_recycleview_auto_loadmore_swipe_ay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(PullRefreshRecycleViewActivity.class);
             }
         });
 

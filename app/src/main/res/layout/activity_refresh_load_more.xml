@@ -9,19 +9,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="PullXlistview的真实数据实现效果" />
+
     <Button
         android:id="@+id/btn_pull_xlistview_two"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="PullXlistview的模拟数据实现效果" />
+
     <Button
         android:id="@+id/btn_auto_loadmore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="自动加载更多AutoLoadmore仿微博" />
+
     <Button
         android:id="@+id/btn_recycleview_auto_loadmore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RecycleView的自动加载更多数据" />
+
+    <Button
+        android:id="@+id/btn_recycleview_auto_loadmore_swipe_ay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="带有自动加载与上拉刷新的activity recycleView" />
 </LinearLayout>

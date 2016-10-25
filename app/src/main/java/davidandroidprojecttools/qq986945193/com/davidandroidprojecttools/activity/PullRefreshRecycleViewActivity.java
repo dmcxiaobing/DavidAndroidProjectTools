@@ -30,6 +30,10 @@ import okhttp3.Response;
  * @GitHub: https://github.com/QQ986945193
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  */
+
+/**
+ * 带有自动加载与上拉刷新的activity recycleView
+ */
 public class PullRefreshRecycleViewActivity extends BaseListActivity<TopListBean.TngouBean> {
     //页数
     int pageIndex = 1;
