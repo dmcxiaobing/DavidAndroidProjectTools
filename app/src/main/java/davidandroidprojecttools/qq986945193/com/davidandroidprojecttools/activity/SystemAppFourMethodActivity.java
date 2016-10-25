@@ -3,12 +3,14 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.Toast;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ActivityManagerUtils;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.TipsToastView;
 
 /**
  * @author ：程序员小冰
@@ -17,7 +19,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.A
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  * @交流Qq ：986945193
  * 类名：退出app应用的四种实现方式
- *
+ * <p/>
  * 说明：我这里只是调用了finish()当前的activity，实际项目中，按需要更改即可。
  */
 public class SystemAppFourMethodActivity extends Activity {
@@ -102,6 +104,7 @@ public class SystemAppFourMethodActivity extends Activity {
         }
         return super.onKeyDown(keyCode, event);
     }*/
+
     /**
      * 监听返回按钮，弹出对话框   退出应用
      * <p/>
@@ -146,4 +149,51 @@ public class SystemAppFourMethodActivity extends Activity {
             }
         }
     };
+
+
+    //退出时间
+    private long exitTime = 0;
+    /**
+     * 按两次退出应用
+     *
+     * @param keyCode
+     * @param event
+     * @return
+     */
+   /* @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK
+                && event.getAction() == KeyEvent.ACTION_DOWN) {
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                showTips(R.drawable.tips_smile, "再按一次退出程序");
+                exitTime = System.currentTimeMillis();
+            } else {
+                finish();
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    private TipsToastView tipsToast;
+
+    *//**
+     * 自定义toast
+     *
+     * @param iconResId 图片
+     * @param tips      提示文字
+     *//*
+    private void showTips(int iconResId, String tips) {
+        if (tipsToast != null) {
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+                tipsToast.cancel();
+            }
+        } else {
+            tipsToast = TipsToastView.makeText(SystemAppFourMethodActivity.this.getApplication()
+                    .getBaseContext(), tips, TipsToastView.LENGTH_SHORT);
+        }
+        tipsToast.show();
+        tipsToast.setIcon(iconResId);
+        tipsToast.setText(tips);
+    }*/
 }
