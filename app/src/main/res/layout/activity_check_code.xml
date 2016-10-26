@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_code_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tv_code_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/iv_code_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/et_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="请输入上面的验证码" />
+
+    <Button
+        android:id="@+id/btn_check_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="验证第一个" />
+
+    <Button
+        android:id="@+id/btn_check_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="验证第二个" />
+
+    <Button
+        android:id="@+id/btn_check_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="验证第三个" />
+</LinearLayout>
