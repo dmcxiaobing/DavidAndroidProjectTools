@@ -31,5 +31,6 @@ public class Urls {
     public static final String FRESCO_IMAGE_LOGO_IMAGE_PIPELINE = "https://avatars1.githubusercontent.com/u/13946951?v=3&s=466";
     /*取得热点热词列表，也可以用分类id作为参数*/
     public static final String AUTOLOADMORE_TOP_LIST ="http://www.tngou.net/api/top/list";
+    public static final String YOUKU_URL = "http://i.youku.com/i/UNDY3NTA3NTY0";
 
 }

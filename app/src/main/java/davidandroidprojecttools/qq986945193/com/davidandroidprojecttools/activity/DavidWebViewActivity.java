@@ -2,6 +2,7 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
 
 import android.os.Handler;
 import android.os.Message;
+import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ToggleButton;
 
@@ -30,6 +31,7 @@ public class DavidWebViewActivity extends BaseActivity {
     protected void initView() {
         setContentView(R.layout.activity_david_webview);
         davidWebView = (DavidWebView) findViewById(R.id.davidWebView);
+        davidWebView.setVisibility(View.VISIBLE);
         tb = (ToggleButton) findViewById(R.id.tb);
     }
 

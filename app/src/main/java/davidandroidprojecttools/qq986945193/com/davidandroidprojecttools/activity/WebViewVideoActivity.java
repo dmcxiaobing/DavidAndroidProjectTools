@@ -21,7 +21,7 @@ public class WebViewVideoActivity extends BaseActivity {
     private WebView webview;
     @Override
     protected void initView() {
-        setContentView(R.layout.activity_webview);
+        setContentView(R.layout.activity_david_webview);
         webview = (WebView) findViewById(R.id.webview);
         // 设置WebView属性，能够执行Javascript脚本
         webview.getSettings().setJavaScriptEnabled(true);
