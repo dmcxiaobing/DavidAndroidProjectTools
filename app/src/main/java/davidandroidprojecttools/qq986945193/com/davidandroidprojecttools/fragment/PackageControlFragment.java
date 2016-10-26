@@ -20,6 +20,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MyAdapterActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RefreshLoadMoreActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.StarBarViewActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.WebViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 
 /**
@@ -77,7 +78,7 @@ public class PackageControlFragment extends Fragment {
         listDatas.add("封装显示星星个数 常用评论数");
         listDatas.add("利用万能Listview的adapter进行展示数据");
         listDatas.add("流式布局显示标签，以及热搜关键词等功能");
-        listDatas.add("自定义WebView支持下拉刷新的功能");
+        listDatas.add("WebView的一些使用功能详解");
         listDatas.add("上拉加载更多与下拉刷新的多种实现");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
@@ -107,10 +108,10 @@ public class PackageControlFragment extends Fragment {
                         intent = new Intent(mContext, FlowLayoutActivity.class);
                         break;
                     /**
-                     * 自定义WebView支持下拉刷新的功能
+                     * WebView的一些使用功能详解
                      */
                     case 3:
-                        intent = new Intent(mContext, DavidWebViewActivity.class);
+                        intent = new Intent(mContext, WebViewActivity.class);
                         break;
                     /**
                      *上拉加载更多与下拉刷新的多种实现
