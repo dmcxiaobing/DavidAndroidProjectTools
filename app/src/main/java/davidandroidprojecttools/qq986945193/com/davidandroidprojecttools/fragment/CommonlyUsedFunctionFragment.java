@@ -21,6 +21,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.AutoViewPagerBannerActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.BadgeViewWaterDropActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.BarCodeActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.CheckCodeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.DavidXListViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.LoadingActivity;
@@ -94,7 +95,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
         listDatas.add("无限轮播滚动的banner(封装ViewPager)");
         listDatas.add("仿微信提示消息个数两种实现方式");
         listDatas.add("利用Zxing实现二维码的生成与扫描功能");
-        listDatas.add("---");
+        listDatas.add("验证码的多种实现方法");
         listDatas.add("仿淘宝,百度外卖,饿了么等头条滚动效果");
         listDatas.add("进入界面弹出一张大图");
         listDatas.add("loading等待提示框多种实现方式");
@@ -144,10 +145,10 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                         intent = new Intent(mContext, BarCodeActivity.class);
                         break;
                     /**
-                     *
+                     *验证码的多种实现方法
                      */
                     case 6:
-                        ToastUtils.show(mContext,"6", Toast.LENGTH_SHORT);
+                        intent = new Intent(mContext,CheckCodeActivity.class);
                         break;
                     /**
                      * 仿淘宝,百度外卖,饿了么等头条滚动效果
