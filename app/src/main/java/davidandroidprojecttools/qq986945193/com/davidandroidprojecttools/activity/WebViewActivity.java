@@ -18,12 +18,16 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 public class WebViewActivity extends BaseActivity {
     private Button btn_01;
     private Button btn_02;
+    private Button btn_03;
+    private Button btn_04;
 
     @Override
     protected void initView() {
         setContentView(R.layout.activity_webview);
         btn_01 = (Button) findViewById(R.id.btn_01);
         btn_02 = (Button) findViewById(R.id.btn_02);
+        btn_03 = (Button) findViewById(R.id.btn_03);
+        btn_04 = (Button) findViewById(R.id.btn_04);
     }
 
     @Override
@@ -46,5 +50,26 @@ public class WebViewActivity extends BaseActivity {
                 startActivity(WebViewVideoActivity.class);
             }
         });
+
+        /**
+         * 带有进度条的webview加载html网页
+         */
+
+        btn_03.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ProgressWebViewActivity.class);
+            }
+        });
+        /**
+         * webview的功能使用详解
+         */
+        btn_04.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(WebViewDetailActivity.class);
+            }
+        });
+
     }
 }

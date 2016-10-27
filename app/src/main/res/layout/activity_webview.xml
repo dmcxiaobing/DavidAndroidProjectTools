@@ -3,14 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <Button
         android:id="@+id/btn_01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="自定义WebView支持下拉刷新的功能"/>
+        android:text="自定义WebView支持下拉刷新的功能" />
+
     <Button
         android:id="@+id/btn_02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="WebView播放优酷视频(真机测试)"/>
+        android:text="WebView播放优酷视频(真机测试)" />
+
+    <Button
+        android:id="@+id/btn_03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="带有进度条的webview加载html网页" />
+
+    <Button
+        android:id="@+id/btn_04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="webview的功能使用详解" />
 </LinearLayout>
