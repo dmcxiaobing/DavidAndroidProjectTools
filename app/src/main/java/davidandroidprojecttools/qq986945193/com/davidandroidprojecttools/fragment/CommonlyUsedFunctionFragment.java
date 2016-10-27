@@ -23,6 +23,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.BarCodeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.CheckCodeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.DavidXListViewActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.DebounceClickActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.LoadingActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MarqueeActivity;
@@ -100,6 +101,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
         listDatas.add("进入界面弹出一张大图");
         listDatas.add("loading等待提示框多种实现方式");
         listDatas.add("仿MiUi的tab切换功能");
+        listDatas.add("获取手机验证码，延迟六十秒，防止重复点击");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_commonly_used_function_fragment.setAdapter(mAdatper);
@@ -148,7 +150,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                      *验证码的多种实现方法
                      */
                     case 6:
-                        intent = new Intent(mContext,CheckCodeActivity.class);
+                        intent = new Intent(mContext, CheckCodeActivity.class);
                         break;
                     /**
                      * 仿淘宝,百度外卖,饿了么等头条滚动效果
@@ -176,6 +178,13 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                      */
                     case 10:
                         intent = new Intent(mContext, MiUiTabActivity.class);
+
+                        break;
+                    /**
+                     * 获取手机验证码，延迟六十秒，防止重复点击
+                     */
+                    case 11:
+                        intent = new Intent(mContext, DebounceClickActivity.class);
 
                         break;
 

@@ -48,7 +48,6 @@ public class PackageControlFragment extends Fragment {
 
         rootView = inflater.inflate(R.layout.fragment_package_control, container, false);
         initView(rootView);
-        LogUtil.E("oncreate+package");
 
         return rootView;
     }
@@ -56,7 +55,6 @@ public class PackageControlFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        LogUtil.E("onresume+package");
 
     }
 
@@ -87,7 +85,6 @@ public class PackageControlFragment extends Fragment {
         lv_package_control_fragment.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                LogUtil.E("position == " + position);
                 switch (position) {
                     /**
                      * 封装显示星星个数 常用评论数
