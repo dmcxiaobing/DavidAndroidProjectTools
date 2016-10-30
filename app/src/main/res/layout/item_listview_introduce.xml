@@ -10,17 +10,16 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:ellipsize="end"
-        android:singleLine="true"
         android:layout_alignParentRight="true"
         android:maxEms="10"
+        android:textSize="20sp"
         android:layout_centerVertical="true"
-        android:text="" />
+        android:text="f" />
 
     <ImageView
         android:id="@+id/iv_introduce_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="5dp"
