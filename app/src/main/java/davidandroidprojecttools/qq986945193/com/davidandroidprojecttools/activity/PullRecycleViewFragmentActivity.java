@@ -8,7 +8,11 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
  * @GitHub: https://github.com/QQ986945193
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  */
-public class PullRecycleViewFragmentActivity extends BaseActivity{
+
+/**
+ * 带有自动加载与上拉刷新的fragment
+ */
+public class PullRecycleViewFragmentActivity extends BaseActivity {
     @Override
     protected void initView() {
     }
