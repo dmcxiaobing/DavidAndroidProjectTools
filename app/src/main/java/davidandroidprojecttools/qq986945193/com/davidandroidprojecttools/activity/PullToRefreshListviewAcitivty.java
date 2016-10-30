@@ -1,15 +1,6 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity;
 
-/**
- * @author ：程序员小冰
- * @新浪微博 ：http://weibo.com/mcxiaobing
- * @GitHub: https://github.com/QQ986945193
- * @CSDN博客: http://blog.csdn.net/qq_21376985
- */
-
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Toast;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,16 +12,25 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.adapter
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.TopListBean;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.callback.OkHttpStopCallback;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Urls;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.PullToRefreshMyListView;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.widget.core.PullToRefreshLayout;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.PullToRefreshBase;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.PullToRefreshListView;
+import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * 带有自动加载与上拉刷新的listview
+ * @author ：程序员小冰
+ * @新浪微博 ：http://weibo.com/mcxiaobing
+ * @GitHub: https://github.com/QQ986945193
+ * @CSDN博客: http://blog.csdn.net/qq_21376985
+ * @OsChina空间: https://my.oschina.net/mcxiaobing
  */
-public class PullToRefreshAndLoadMoreActivity extends BaseActivity {
-    @BindView(R.id.pl_listview)
-    PullToRefreshMyListView pl_listview;
+
+/**
+ * pulltofreshListview上拉加载与下拉刷新
+ */
+public class PullToRefreshListviewAcitivty extends BaseActivity {
+    @BindView(R.id.plistview)
+    PullToRefreshListView mlistview;
     private String url = "";
     private int page = 1;
     private List<TopListBean.TngouBean> lists = new ArrayList<>();
@@ -39,49 +39,41 @@ public class PullToRefreshAndLoadMoreActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        setContentView(R.layout.activity_pull_to_refresh_and_load_more);
+        setContentView(R.layout.activity_pulltorefresh_listview);
         ButterKnife.bind(this);
-        mMyCommonAdapter = new MyCommonAdapter(mContext, lists);
-        pl_listview.getListView().setAdapter(mMyCommonAdapter);
 
-        pl_listview.setLoadDataListener(new PullToRefreshLayout.LoadDataListener() {
+        mlistview.setMode(PullToRefreshBase.Mode.BOTH);
+        mlistview.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
+            /**
+             * 下拉刷新
+             * @param refreshView
+             */
             @Override
-            //下拉刷新调用
-            public void onRefresh() {
+            public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
                 page = 1;
                 lists.clear();
-                mMyCommonAdapter.notifyDataSetChanged();
-                loadData(true);
-
+//                mMyCommonAdapter.notifyDataSetChanged();
+                loadData();
             }
 
+            /**
+             * 上拉加载更多
+             * @param refreshView
+             */
             @Override
-            //加载更多调用
-            public void onLoadMore() {
-                page += 500;
-                initData();
-                loadData(false);
-
-            }
-        });
-
-        pl_listview.getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(PullToRefreshAndLoadMoreActivity.this, "po"+position, Toast.LENGTH_SHORT).show();
+            public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
+                page++;
+                loadData();
             }
         });
     }
 
     @Override
     protected void initData() {
-        loadData(false);
+        loadData();
     }
 
-    private void loadData(final boolean needFresh) {
-        if (needFresh) {
-            lists.clear();
-        }
+    private void loadData() {
         url = Urls.AUTOLOADMORE_TOP_LIST + "?id=1" + "&page=" + page + "&rows=" + "15";
         okHttpUtils.get(url, null, new OkHttpStopCallback<TopListBean>() {
 
@@ -100,23 +92,23 @@ public class PullToRefreshAndLoadMoreActivity extends BaseActivity {
                                 /**
                                  * listview绑定adapter
                                  */
-                                pl_listview.getListView().setAdapter(mMyCommonAdapter);
+                                mlistview.setAdapter(mMyCommonAdapter);
                             } else {
                                 mMyCommonAdapter.notifyDataSetChanged();
                             }
-                            //是否需要更新和是否还有更多内容
-                            pl_listview.onLoadComplete(needFresh, true);
-//                            XListviewAndTimeUtils.stopWait(mListView)
                         }
                     }
 
                 }
+                mlistview.onRefreshComplete();
+
             }
 
+            @Override
+            public void onFailure(Request request, Exception e) {
+                super.onFailure(request, e);
+                mlistview.onRefreshComplete();
+            }
         });
-
-
     }
-
-
 }

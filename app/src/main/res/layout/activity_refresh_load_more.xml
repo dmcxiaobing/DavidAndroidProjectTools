@@ -53,6 +53,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="带有自动加载与上拉刷新的fragment recycleView" />
+            <Button
+                android:id="@+id/btn_android_pulltorefresh_listview_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="pulltofreshListview上拉加载与下拉刷新" />
+            <Button
+                android:id="@+id/btn_android_pulltorefresh_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="pulltofreshGridview上拉加载与下拉刷新" />
 
         </LinearLayout>
     </ScrollView>

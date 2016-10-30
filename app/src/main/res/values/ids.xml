@@ -30,4 +30,7 @@
     <item name="swipeRefreshLayout" type="id" />
     <item name="recyclerView" type="id" />
     <item name="pullRecycler" type="id" />
+    <item name="gridview" type="id" />
+    <item name="webview" type="id" />
+    <item name="scrollview" type="id" />
 </resources>

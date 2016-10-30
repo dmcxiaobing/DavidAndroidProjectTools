@@ -10,4 +10,6 @@
     <string name="footer_hint_load_ready">加载中...</string>
     <string name="david_webview_refresh_success">刷新成功</string>
     <string name="david_webview_refresh_fail">刷新失败</string>
+
+
 </resources>
