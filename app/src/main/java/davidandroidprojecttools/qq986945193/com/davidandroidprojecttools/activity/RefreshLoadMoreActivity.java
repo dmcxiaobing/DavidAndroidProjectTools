@@ -24,6 +24,7 @@ public class RefreshLoadMoreActivity extends BaseActivity {
     private Button btn_recycleview_auto_loadmore_swipe_fm;
     private Button btn_pulltorefresh_auto_loadmore_;
     private Button btn_android_pulltorefresh_listview_;
+    private Button btn_android_pulltorefresh_gridview;
 
 
     @Override
@@ -37,6 +38,7 @@ public class RefreshLoadMoreActivity extends BaseActivity {
         btn_recycleview_auto_loadmore_swipe_fm = (Button) findViewById(R.id.btn_recycleview_auto_loadmore_swipe_fm);
         btn_pulltorefresh_auto_loadmore_ = (Button) findViewById(R.id.btn_pulltorefresh_auto_loadmore_);
         btn_android_pulltorefresh_listview_ = (Button) findViewById(R.id.btn_android_pulltorefresh_listview_);
+        btn_android_pulltorefresh_gridview = (Button) findViewById(R.id.btn_android_pulltorefresh_gridview);
     }
 
     @Override
@@ -113,6 +115,15 @@ public class RefreshLoadMoreActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(PullToRefreshListviewAcitivty.class);
+            }
+        });
+        /**
+         * pulltofreshGridview上拉加载与下拉刷新
+         */
+        btn_android_pulltorefresh_gridview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(PullToRefreshGridViewActivity.class);
             }
         });
     }

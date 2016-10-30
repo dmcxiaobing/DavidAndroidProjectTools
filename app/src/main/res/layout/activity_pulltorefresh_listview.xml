@@ -5,5 +5,12 @@
     <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.PullToRefreshListView
         android:layout_width="match_parent"
         android:id="@+id/plistview"
+        android:visibility="gone"
         android:layout_height="match_parent"/>
+    <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.PullToRefreshGridView
+        android:id="@+id/pgridview"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 </LinearLayout>
