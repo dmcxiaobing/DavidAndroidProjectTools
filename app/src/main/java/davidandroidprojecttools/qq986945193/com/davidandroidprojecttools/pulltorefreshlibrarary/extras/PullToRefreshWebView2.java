@@ -1,12 +1,12 @@
 /*******************************************************************************
  * Copyright 2011, 2012 Chris Banes.
- *
+ * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p/>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p/>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -14,6 +14,13 @@
  * limitations under the License.
  *******************************************************************************/
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.extras;
+/**
+ * @author ：程序员小冰
+ * @新浪微博 ：http://weibo.com/mcxiaobing
+ * @GitHub: https://github.com/QQ986945193
+ * @CSDN博客: http://blog.csdn.net/qq_21376985
+ * @OsChina空间: https://my.oschina.net/mcxiaobing
+ */
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -45,89 +52,89 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltor
  * can happen, and return the result via the callback mechanism. An example can
  * be seen below:
  * <p/>
- * 
+ *
  * <pre>
  * function isReadyForPullDown() {
  *   var result = ...  // Probably using the .scrollTop DOM attribute
  *   ptr.isReadyForPullDownResponse(result);
  * }
- * 
+ *
  * function isReadyForPullUp() {
  *   var result = ...  // Probably using the .scrollBottom DOM attribute
  *   ptr.isReadyForPullUpResponse(result);
  * }
  * </pre>
- * 
+ *
  * @author Chris Banes
  */
 public class PullToRefreshWebView2 extends PullToRefreshWebView {
 
-	static final String JS_INTERFACE_PKG = "ptr";
-	static final String DEF_JS_READY_PULL_DOWN_CALL = "javascript:isReadyForPullDown();";
-	static final String DEF_JS_READY_PULL_UP_CALL = "javascript:isReadyForPullUp();";
+    static final String JS_INTERFACE_PKG = "ptr";
+    static final String DEF_JS_READY_PULL_DOWN_CALL = "javascript:isReadyForPullDown();";
+    static final String DEF_JS_READY_PULL_UP_CALL = "javascript:isReadyForPullUp();";
 
-	public PullToRefreshWebView2(Context context) {
-		super(context);
-	}
+    public PullToRefreshWebView2(Context context) {
+        super(context);
+    }
 
-	public PullToRefreshWebView2(Context context, AttributeSet attrs) {
-		super(context, attrs);
-	}
+    public PullToRefreshWebView2(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
 
-	public PullToRefreshWebView2(Context context, Mode mode) {
-		super(context, mode);
-	}
+    public PullToRefreshWebView2(Context context, Mode mode) {
+        super(context, mode);
+    }
 
-	private JsValueCallback mJsCallback;
-	private final AtomicBoolean mIsReadyForPullDown = new AtomicBoolean(false);
-	private final AtomicBoolean mIsReadyForPullUp = new AtomicBoolean(false);
+    private JsValueCallback mJsCallback;
+    private final AtomicBoolean mIsReadyForPullDown = new AtomicBoolean(false);
+    private final AtomicBoolean mIsReadyForPullUp = new AtomicBoolean(false);
 
-	@Override
-	protected WebView createRefreshableView(Context context, AttributeSet attrs) {
-		WebView webView = super.createRefreshableView(context, attrs);
+    @Override
+    protected WebView createRefreshableView(Context context, AttributeSet attrs) {
+        WebView webView = super.createRefreshableView(context, attrs);
 
-		// Need to add JS Interface so we can get the response back
-		mJsCallback = new JsValueCallback();
-		webView.addJavascriptInterface(mJsCallback, JS_INTERFACE_PKG);
+        // Need to add JS Interface so we can get the response back
+        mJsCallback = new JsValueCallback();
+        webView.addJavascriptInterface(mJsCallback, JS_INTERFACE_PKG);
 
-		return webView;
-	}
+        return webView;
+    }
 
-	@Override
-	protected boolean isReadyForPullStart() {
-		// Call Javascript...
-		getRefreshableView().loadUrl(DEF_JS_READY_PULL_DOWN_CALL);
+    @Override
+    protected boolean isReadyForPullStart() {
+        // Call Javascript...
+        getRefreshableView().loadUrl(DEF_JS_READY_PULL_DOWN_CALL);
 
-		// Response will be given to JsValueCallback, which will update
-		// mIsReadyForPullDown
+        // Response will be given to JsValueCallback, which will update
+        // mIsReadyForPullDown
 
-		return mIsReadyForPullDown.get();
-	}
+        return mIsReadyForPullDown.get();
+    }
 
-	@Override
-	protected boolean isReadyForPullEnd() {
-		// Call Javascript...
-		getRefreshableView().loadUrl(DEF_JS_READY_PULL_UP_CALL);
+    @Override
+    protected boolean isReadyForPullEnd() {
+        // Call Javascript...
+        getRefreshableView().loadUrl(DEF_JS_READY_PULL_UP_CALL);
 
-		// Response will be given to JsValueCallback, which will update
-		// mIsReadyForPullUp
+        // Response will be given to JsValueCallback, which will update
+        // mIsReadyForPullUp
 
-		return mIsReadyForPullUp.get();
-	}
+        return mIsReadyForPullUp.get();
+    }
 
-	/**
-	 * Used for response from Javascript
-	 * 
-	 * @author Chris Banes
-	 */
-	final class JsValueCallback {
+    /**
+     * Used for response from Javascript
+     *
+     * @author Chris Banes
+     */
+    final class JsValueCallback {
 
-		public void isReadyForPullUpResponse(boolean response) {
-			mIsReadyForPullUp.set(response);
-		}
+        public void isReadyForPullUpResponse(boolean response) {
+            mIsReadyForPullUp.set(response);
+        }
 
-		public void isReadyForPullDownResponse(boolean response) {
-			mIsReadyForPullDown.set(response);
-		}
-	}
+        public void isReadyForPullDownResponse(boolean response) {
+            mIsReadyForPullDown.set(response);
+        }
+    }
 }

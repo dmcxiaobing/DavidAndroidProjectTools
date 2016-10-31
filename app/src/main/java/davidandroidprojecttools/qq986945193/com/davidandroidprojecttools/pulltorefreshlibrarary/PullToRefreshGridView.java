@@ -26,7 +26,13 @@ import android.widget.GridView;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.internal.EmptyViewMethodAccessor;
-
+/**
+ * @author ：程序员小冰
+ * @新浪微博 ：http://weibo.com/mcxiaobing
+ * @GitHub: https://github.com/QQ986945193
+ * @CSDN博客: http://blog.csdn.net/qq_21376985
+ * @OsChina空间: https://my.oschina.net/mcxiaobing
+ */
 public class PullToRefreshGridView extends PullToRefreshAdapterViewBase<GridView> {
 
 	public PullToRefreshGridView(Context context) {
