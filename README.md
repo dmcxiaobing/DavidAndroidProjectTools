@@ -6,6 +6,16 @@ Android开发常用功能大集合。以及知识点的详解代码
 
 新浪微博：http://weibo.com/mcxiaobing 
 
+先来看一下这个项目的总体功能图吧（这只是一小部分，会一直更新维护增加功能）：
+
+![这里写图片描述](http://img.blog.csdn.net/20161031113558371)
+
+![这里写图片描述](http://img.blog.csdn.net/20161020104006430)
+
+![这里写图片描述](http://img.blog.csdn.net/20160918100607422)
+
+更过功能欢迎下载项目中的APK文件进行体验
+
 此项目是小冰工作中总结常用的功能大集合，防止以后用到的话重复造轮子，而且还有常用控件
 
 以及难点的详解，注释非常啰嗦，纯粹是为了积累自己的知识，顺便方便自己查看。当然，说到各种
@@ -16,7 +26,7 @@ Android开发常用功能大集合。以及知识点的详解代码
 
 由于我也要上班，所以功能会慢慢地长期更新，维护此代码，所以，有bug或者好建议，欢迎提出。
 
-当然，如果你有更好的功能，欢迎联系我。好知识一起共享。Thank You！
+当然，如果你有更好的功能，欢迎联系我。好知识一起共享。Thank You！下面是部分的功能知识点介绍：
 
 【Android方面】里面主要是四大模块：
 
@@ -51,7 +61,9 @@ a,二维码的扫描与生成功能 b,圆形头像的功能
 
 6,网络状态的判断（是否有网络，以及网络是3G,WIFI等状况）
 
+7,多种loading等待框的介绍。
+
 里面所使用第三方库以及（jar文件上传）：
 
-Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,OkHttp,fresco
+Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,OkHttp,fresco,shareSDK分享等.
 
