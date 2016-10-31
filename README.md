@@ -28,6 +28,10 @@ Android开发常用功能大集合。以及知识点的详解代码
 
 当然，如果你有更好的功能，欢迎联系我。好知识一起共享。Thank You！下面是部分的功能知识点介绍：
 
+包名架构图(目前,还在更戏中......)
+
+![这里写图片描述](http://img.blog.csdn.net/20161031114217092)
+
 【Android方面】里面主要是四大模块：
 
 1,主要提供一些常用控件的知识点详解 
@@ -67,3 +71,10 @@ a,二维码的扫描与生成功能 b,圆形头像的功能
 
 Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,OkHttp,fresco,shareSDK分享等.
 
+项目为小冰所写，仅供参考，请勿用于任何商业。转载请说明出处。
+
+可以直接放在AndroidStudio开发工具中运行,
+
+记得将Constants类中的百度API秘钥改为自己的即可。
+
+欢迎star,fork，提出更好的建议。
