@@ -2,6 +2,8 @@
 
 Android开发常用功能大集合。以及知识点的详解代码
 
+项目名称：【Android利器】
+
 作者：[程序员小冰](http://blog.csdn.net/qq_21376985)
 
 新浪微博：http://weibo.com/mcxiaobing 
