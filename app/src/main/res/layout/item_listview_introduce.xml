@@ -14,7 +14,7 @@
         android:maxEms="10"
         android:textSize="20sp"
         android:layout_centerVertical="true"
-        android:text="f" />
+        android:text="" />
 
     <ImageView
         android:id="@+id/iv_introduce_img"

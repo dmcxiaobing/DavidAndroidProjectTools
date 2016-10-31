@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.AttributeSet;
+import android.view.View;
 
 import com.umeng.analytics.MobclickAgent;
 
@@ -21,9 +23,12 @@ import com.umeng.analytics.MobclickAgent;
  */
 public abstract class BaseFragmentActivity extends FragmentActivity {
     protected Context mContext;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(getLayoutResId());
         mContext = this;
         initView();
         initData();
@@ -31,9 +36,9 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 
     }
 
+
     protected void setOnclickListener() {
     }
-
 
 
     /**
@@ -46,7 +51,6 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
      * 初始化数据
      */
     protected abstract void initData();
-
 
 
     /**
@@ -126,5 +130,9 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
         startActivity(intent);
     }
 
-
+    /**
+     * 绑定布局的id
+     * @return
+     */
+    protected abstract int getLayoutResId();
 }

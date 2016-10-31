@@ -49,13 +49,17 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
 
     @Override
     protected void initView() {
-        setContentView(R.layout.activity_main);
         ActivityManagerUtils.getInstance().addActivity(MainActivity.this);
     }
 
     @Override
     protected void initData() {
         initViews();
+    }
+
+    @Override
+    protected int getLayoutResId() {
+        return R.layout.activity_main;
     }
 
 

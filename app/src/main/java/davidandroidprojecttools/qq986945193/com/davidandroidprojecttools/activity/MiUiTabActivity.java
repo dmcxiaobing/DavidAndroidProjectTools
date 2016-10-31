@@ -35,7 +35,6 @@ public class MiUiTabActivity extends BaseFragmentActivity {
 
     @Override
     protected void initView() {
-        setContentView(R.layout.activity_miui_tab);
         mViewPager = (ViewPager) findViewById(R.id.id_vp);
         mIndicator = (ViewPagerIndicator) findViewById(R.id.id_indicator);
 
@@ -69,5 +68,11 @@ public class MiUiTabActivity extends BaseFragmentActivity {
 
         mViewPager.setAdapter(mAdapter);
         mIndicator.setViewPager(mViewPager, 0);
+    }
+
+    @Override
+    protected int getLayoutResId() {
+
+        return R.layout.activity_miui_tab;
     }
 }
