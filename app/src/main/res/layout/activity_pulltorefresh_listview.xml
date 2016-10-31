@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.PullToRefreshListView
-        android:layout_width="match_parent"
         android:id="@+id/plistview"
-        android:visibility="gone"
-        android:layout_height="match_parent"/>
-    <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.PullToRefreshGridView
-        android:id="@+id/pgridview"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:visibility="visible" />
+
+    <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.PullToRefreshGridView
+        android:id="@+id/pgridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44F9F9F9"
+        android:columnWidth="167.5dp"
+        android:fadingEdge="none"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:listSelector="@null"
+        android:numColumns="2"
+        android:verticalSpacing="10dp"
+        android:visibility="visible" />
 </LinearLayout>

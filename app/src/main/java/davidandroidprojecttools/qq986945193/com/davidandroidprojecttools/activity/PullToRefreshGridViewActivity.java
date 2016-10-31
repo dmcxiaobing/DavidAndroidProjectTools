@@ -25,6 +25,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constan
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.PullToRefreshBase;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.PullToRefreshGridView;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.PullToRefreshListView;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 import okhttp3.Request;
 import okhttp3.Response;
 
@@ -34,6 +35,8 @@ import okhttp3.Response;
 public class PullToRefreshGridViewActivity extends BaseActivity {
     @BindView(R.id.pgridview)
     PullToRefreshGridView mgridView;
+    @BindView(R.id.plistview)
+    PullToRefreshListView plistview;
     private String url = "";
     private int page = 1;
     private List<TopListBean.TngouBean> lists = new ArrayList<>();
@@ -45,6 +48,9 @@ public class PullToRefreshGridViewActivity extends BaseActivity {
         setContentView(R.layout.activity_pulltorefresh_listview);
         ButterKnife.bind(this);
         mgridView.setVisibility(View.VISIBLE);
+        plistview.setVisibility(View.GONE);
+        mMyCommonAdapter = new MyCommonAdapter(this,lists);
+        mgridView.setAdapter(mMyCommonAdapter);
         mgridView.setMode(PullToRefreshBase.Mode.BOTH);
         mgridView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<GridView>() {
             /**
@@ -86,10 +92,8 @@ public class PullToRefreshGridViewActivity extends BaseActivity {
                     if (mTopListBean.getTngou() != null) {
                         if (mTopListBean.getTngou() != null) {
                             lists.addAll(mTopListBean.getTngou());
-                            if (lists == null && lists.size() == 0) {
-                                return;
-                            }
                             if (mMyCommonAdapter == null) {
+                                LogUtil.E("zouzhelile ");
                                 mMyCommonAdapter = new MyCommonAdapter(mContext, lists);
 
                                 /**
@@ -97,6 +101,8 @@ public class PullToRefreshGridViewActivity extends BaseActivity {
                                  */
                                 mgridView.setAdapter(mMyCommonAdapter);
                             } else {
+                                LogUtil.E("dddd ");
+
                                 mMyCommonAdapter.notifyDataSetChanged();
                             }
                         }

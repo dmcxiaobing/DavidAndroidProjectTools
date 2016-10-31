@@ -14,6 +14,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.To
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.callback.OkHttpStopCallback;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Urls;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.PullToRefreshBase;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.PullToRefreshGridView;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pulltorefreshlibrarary.PullToRefreshListView;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -30,6 +31,8 @@ import okhttp3.Response;
  * pulltofreshListview上拉加载与下拉刷新
  */
 public class PullToRefreshListviewAcitivty extends BaseActivity {
+    @BindView(R.id.pgridview)
+    PullToRefreshGridView mgridView;
     @BindView(R.id.plistview)
     PullToRefreshListView mlistview;
     private String url = "";
@@ -42,6 +45,7 @@ public class PullToRefreshListviewAcitivty extends BaseActivity {
     protected void initView() {
         setContentView(R.layout.activity_pulltorefresh_listview);
         ButterKnife.bind(this);
+        mgridView.setVisibility(View.GONE);
         mlistview.setVisibility(View.VISIBLE);
         mlistview.setMode(PullToRefreshBase.Mode.BOTH);
         mlistview.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
@@ -75,7 +79,7 @@ public class PullToRefreshListviewAcitivty extends BaseActivity {
     }
 
     private void loadData() {
-        url = Urls.AUTOLOADMORE_TOP_LIST + "?id=1" + "&page=" + page + "&rows=" + "15";
+        url = Urls.AUTOLOADMORE_TOP_LIST + "?id=1" + "&page=" + page + "&rows=" + "16";
         okHttpUtils.get(url, null, new OkHttpStopCallback<TopListBean>() {
 
             @Override
