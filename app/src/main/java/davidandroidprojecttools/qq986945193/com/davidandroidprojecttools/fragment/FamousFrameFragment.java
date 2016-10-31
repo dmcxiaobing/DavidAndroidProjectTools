@@ -18,6 +18,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ButterKnifeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.OkHttpActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.PicassoAndImageloaderFrescoActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SlidingMenuActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.XutilsTwoActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 
@@ -46,7 +47,6 @@ public class FamousFrameFragment extends Fragment {
 
         rootView = inflater.inflate(R.layout.fragment_famous_frame, container, false);
         initView(rootView);
-        LogUtil.E("oncreate+FamousFrameFragment");
 
         return rootView;
     }
@@ -55,7 +55,6 @@ public class FamousFrameFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        LogUtil.E("onresume+FamousFrameFragment");
 
     }
 
@@ -78,6 +77,7 @@ public class FamousFrameFragment extends Fragment {
         listDatas.add("Imageloader,Picasso,Fresco,Glide图片处理");
         listDatas.add("OkHttp的封装与网络请求详解");
         listDatas.add("ButterKnife的使用详解");
+        listDatas.add("SlidingMenu的使用详解");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_famous_frame_fragment.setAdapter(mAdatper);
 
@@ -97,9 +97,6 @@ public class FamousFrameFragment extends Fragment {
                         break;
                     case 1:
                         intent = new Intent(mContext, PicassoAndImageloaderFrescoActivity.class);
-                        /**
-                         * OkHttp的封装与网络请求详解
-                         */
                         break;
                     /**
                      * OkHttp的封装与网络请求详解
@@ -112,6 +109,12 @@ public class FamousFrameFragment extends Fragment {
                      */
                     case 3:
                         intent = new Intent(mContext, ButterKnifeActivity.class);
+                        break;
+                    /**
+                     * SlidingMenu的使用详解
+                     */
+                    case 4:
+                        intent = new Intent(mContext, SlidingMenuActivity.class);
                         break;
 
 
