@@ -36,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="RecycleView的自动加载更多数据" />
+
             <Button
                 android:id="@+id/btn_pulltorefresh_auto_loadmore_"
                 android:layout_width="match_parent"
@@ -53,17 +54,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="带有自动加载与上拉刷新的fragment recycleView" />
+
             <Button
                 android:id="@+id/btn_android_pulltorefresh_listview_"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="pulltofreshListview上拉加载与下拉刷新" />
+
             <Button
                 android:id="@+id/btn_android_pulltorefresh_gridview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="pulltofreshGridview上拉加载与下拉刷新" />
 
+            <Button
+                android:id="@+id/btn_recycleview_auto_loadmore_swipe_sectionay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="带有自动加载与上拉刷新的sectionactivity recycleView" />
+
+            <Button
+                android:id="@+id/btn_recycleview_auto_loadmore_swipe_sectionfm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="带有自动加载与上拉刷新的sectionFragment recycleView" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

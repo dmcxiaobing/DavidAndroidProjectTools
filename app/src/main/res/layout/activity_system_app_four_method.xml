@@ -8,7 +8,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:gravity="center"
-        android:text="退出app应用的四种方法"
+        android:text="退出app应用的多种方法"
         android:textSize="30sp"
         android:textStyle="bold" />
 

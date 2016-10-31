@@ -25,6 +25,8 @@ public class RefreshLoadMoreActivity extends BaseActivity {
     private Button btn_pulltorefresh_auto_loadmore_;
     private Button btn_android_pulltorefresh_listview_;
     private Button btn_android_pulltorefresh_gridview;
+    private Button btn_recycleview_auto_loadmore_swipe_sectionay;
+    private Button btn_recycleview_auto_loadmore_swipe_sectionfm;
 
 
     @Override
@@ -39,6 +41,8 @@ public class RefreshLoadMoreActivity extends BaseActivity {
         btn_pulltorefresh_auto_loadmore_ = (Button) findViewById(R.id.btn_pulltorefresh_auto_loadmore_);
         btn_android_pulltorefresh_listview_ = (Button) findViewById(R.id.btn_android_pulltorefresh_listview_);
         btn_android_pulltorefresh_gridview = (Button) findViewById(R.id.btn_android_pulltorefresh_gridview);
+        btn_recycleview_auto_loadmore_swipe_sectionay = (Button) findViewById(R.id.btn_recycleview_auto_loadmore_swipe_sectionay);
+        btn_recycleview_auto_loadmore_swipe_sectionfm = (Button) findViewById(R.id.btn_recycleview_auto_loadmore_swipe_sectionfm);
     }
 
     @Override
@@ -126,5 +130,25 @@ public class RefreshLoadMoreActivity extends BaseActivity {
                 startActivity(PullToRefreshGridViewActivity.class);
             }
         });
+        /**
+         * btn_recycleview_auto_loadmore_swipe_sectionay
+         */
+        btn_recycleview_auto_loadmore_swipe_sectionay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(PullRecycleViewSectionActivity.class);
+            }
+        });
+
+        /**
+         * 带有自动加载与上拉刷新的sectionFragment recycleView
+         */
+        btn_recycleview_auto_loadmore_swipe_sectionfm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(PullRecycleViewSectionFragmentActivity.class);
+            }
+        });
+
     }
 }
