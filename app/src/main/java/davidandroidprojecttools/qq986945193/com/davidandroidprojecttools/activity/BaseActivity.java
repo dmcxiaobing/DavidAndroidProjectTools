@@ -7,6 +7,8 @@ import android.os.Bundle;
 
 import com.umeng.analytics.MobclickAgent;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app.MyApplication;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.OkHttpUtils;
 

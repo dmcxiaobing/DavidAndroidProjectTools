@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_dateChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择日期" />
+
+    <TextView
+        android:id="@+id/tv_dateDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我是默认时间显示https://github.com/qq986945193" />
+
+
+</LinearLayout>

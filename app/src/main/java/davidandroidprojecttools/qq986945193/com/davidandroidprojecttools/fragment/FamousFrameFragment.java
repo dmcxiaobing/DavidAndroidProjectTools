@@ -134,3 +134,4 @@ public class FamousFrameFragment extends Fragment {
         lv_famous_frame_fragment = (ListView) rootView.findViewById(R.id.lv_famous_frame_fragment);
     }
 }
+
