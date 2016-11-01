@@ -1,0 +1,55 @@
+package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CityModelBean {
+    private String name;
+    private List<DistrictModelBean> districtList;
+
+    public List<String> getDisList() {
+        List<String> list = new ArrayList<>();
+        for (DistrictModelBean districtModelBean : districtList) {
+            list.add(districtModelBean.getPickerViewText());
+        }
+        return list;
+    }
+
+    public CityModelBean() {
+        super();
+    }
+
+    public CityModelBean(String name, List<DistrictModelBean> districtList) {
+        super();
+        this.name = name;
+        this.districtList = districtList;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<DistrictModelBean> getDistrictList() {
+        return districtList;
+    }
+
+    public void setDistrictList(List<DistrictModelBean> districtList) {
+        this.districtList = districtList;
+    }
+
+    @Override
+    public String toString() {
+        return "CityModel [name=" + name + ", districtList=" + districtList
+                + "]";
+    }
+
+    public String getPickerViewText() {
+        //这里还可以判断文字超长截断再提供显示
+        return name;
+    }
+
+}
