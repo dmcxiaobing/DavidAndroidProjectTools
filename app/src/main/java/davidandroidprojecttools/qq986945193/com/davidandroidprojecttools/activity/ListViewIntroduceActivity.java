@@ -1,6 +1,7 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity;
 
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.Tx
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.callback.OkHttpStopCallback;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Urls;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.OkHttpUtils;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ToastUtils;
 import okhttp3.Response;
 
 /**
@@ -48,7 +50,7 @@ public class ListViewIntroduceActivity extends BaseActivity {
             public void onSuccess(Response response, TxApiAppleBean txApiAppleBean) {
                 mTxApiAppleBean = txApiAppleBean;
                 if (mTxApiAppleBean != null) {
-                    if (mTxApiAppleBean.getCode()!=null && mTxApiAppleBean.getCode().equals("200")) {
+                    if (mTxApiAppleBean.getCode() != null && mTxApiAppleBean.getCode().equals("200")) {
                         if (mTxApiAppleBean.getNewslist() != null) {
                             newslistBeans.addAll(mTxApiAppleBean.getNewslist());
                             if (mAdapter == null) {
@@ -61,6 +63,8 @@ public class ListViewIntroduceActivity extends BaseActivity {
                                 mAdapter.notifyDataSetChanged();
                             }
                         }
+                    } else {
+                        ToastUtils.show(mContext, OkHttpUtils.getOkHttpJsonValue(), Toast.LENGTH_SHORT);
                     }
 
                 }

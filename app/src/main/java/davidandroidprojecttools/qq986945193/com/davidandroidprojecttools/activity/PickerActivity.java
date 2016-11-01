@@ -75,8 +75,8 @@ public class PickerActivity extends BaseActivity {
             }
         });
 
-
-        initDatas();
+        initData();
+        
         //选项选择器
         pvOptions = new OptionsPickerView(this);
 
@@ -193,17 +193,11 @@ public class PickerActivity extends BaseActivity {
         });
     }
 
-
+    /**
+     * 这里是使用XML中的地址
+     */
     @Override
     protected void initData() {
-
-    }
-
-    List<List<List<String>>> distrList = new ArrayList<>();
-    List<List<String>> cityList = new ArrayList<>();
-    List<String> proList = new ArrayList<>();
-
-    private void initDatas() {
         proOptions = new OptionsPickerView(this);
         AssetManager asset = getAssets();
         InputStream input = null;
@@ -241,6 +235,10 @@ public class PickerActivity extends BaseActivity {
         });
 
     }
+
+    List<List<List<String>>> distrList = new ArrayList<>();
+    List<List<String>> cityList = new ArrayList<>();
+    List<String> proList = new ArrayList<>();
 
     public static String getTime(Date date) {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm");

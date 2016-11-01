@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,6 +23,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constan
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.OkHttpUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.PicassoWithImageLoaderImageViewUtils;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ToastUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.XListviewAndTimeUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.XListView;
 import okhttp3.Response;
@@ -89,7 +91,7 @@ public class MyAdapterActivity extends BaseActivity implements XListView.IXListV
                         }
                     } else {
                         XListviewAndTimeUtils.stopWait(mListView);
-
+                        ToastUtils.show(mContext, OkHttpUtils.getOkHttpJsonValue(), Toast.LENGTH_SHORT);
                     }
 
                 } else {
