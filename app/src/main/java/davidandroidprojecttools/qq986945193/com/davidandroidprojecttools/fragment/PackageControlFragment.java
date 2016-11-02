@@ -19,6 +19,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.FlowLayoutActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MyAdapterActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RefreshLoadMoreActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SelectorPickerActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.StarBarViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.WebViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
@@ -78,6 +79,7 @@ public class PackageControlFragment extends Fragment {
         listDatas.add("流式布局显示标签，以及热搜关键词等功能");
         listDatas.add("WebView的一些使用功能详解");
         listDatas.add("上拉加载更多与下拉刷新的多种实现");
+        listDatas.add("日期以及地区等选择的多级联动");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_package_control_fragment.setAdapter(mAdatper);
@@ -115,6 +117,12 @@ public class PackageControlFragment extends Fragment {
                      */
                     case 4:
                         intent = new Intent(mContext, RefreshLoadMoreActivity.class);
+                        break;
+                    /**
+                     *日期以及地区等选择的多级联动
+                     */
+                    case 5:
+                        intent = new Intent(mContext, SelectorPickerActivity.class);
                         break;
 
                 }
