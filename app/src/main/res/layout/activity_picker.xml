@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="50dp"
-        android:text="时间" />
+        android:text="选择时间" />
 
     <TextView
         android:id="@+id/tvOptions"
@@ -17,7 +17,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/tvTime"
         android:layout_margin="50dp"
-        android:text="条件" />
+        android:text="自定义选择内容" />
 
     <TextView
         android:id="@+id/tv_pro"
@@ -25,7 +25,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/tvOptions"
         android:layout_margin="50dp"
-        android:text="pro" />
+        android:text="地区进行选择" />
 
     <View
         android:id="@+id/vMasker"
