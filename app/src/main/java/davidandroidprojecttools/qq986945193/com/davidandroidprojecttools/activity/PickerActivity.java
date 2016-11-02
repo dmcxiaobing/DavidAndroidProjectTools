@@ -43,6 +43,7 @@ public class PickerActivity extends BaseActivity {
         tvTime = (TextView) findViewById(R.id.tvTime);
         tvOptions = (TextView) findViewById(R.id.tvOptions);
         tv_pro = (TextView) findViewById(R.id.tv_pro);
+
         tv_pro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +67,8 @@ public class PickerActivity extends BaseActivity {
                 tvTime.setText(getTime(date));
             }
         });
+
+
         //弹出时间选择器
         tvTime.setOnClickListener(new View.OnClickListener() {
 
