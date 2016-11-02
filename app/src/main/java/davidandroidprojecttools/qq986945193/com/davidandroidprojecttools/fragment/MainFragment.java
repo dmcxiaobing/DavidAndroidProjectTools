@@ -22,6 +22,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SwipeRefreshListViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemStatusThemeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 /**
  * @author ：程序员小冰
@@ -48,14 +49,12 @@ public class MainFragment extends Fragment {
 
         rootView = inflater.inflate(R.layout.fragment_main, container, false);
         initView(rootView);
-        LogUtil.E("create+main");
         return rootView;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        LogUtil.E("onresume+main");
     }
 
     @Override
@@ -78,6 +77,7 @@ public class MainFragment extends Fragment {
         listDatas.add("退出app应用的多种实现方式");
         listDatas.add("SwipeRefreshLayout下拉刷新的详解");
         listDatas.add("拨打电话号码的详解代码(比较简单)");
+        listDatas.add("系统的沉浸式样式主题实现效果");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_main_fragment.setAdapter(mAdatper);
@@ -109,6 +109,12 @@ public class MainFragment extends Fragment {
                      */
                     case 3:
                         intent = new Intent(mContext, CallphoneActivity.class);
+                        break;
+                    /**
+                     *系统的沉浸式样式主题实现效果
+                     */
+                    case 4:
+                        intent = new Intent(mContext, SystemStatusThemeActivity.class);
                         break;
 
                 }

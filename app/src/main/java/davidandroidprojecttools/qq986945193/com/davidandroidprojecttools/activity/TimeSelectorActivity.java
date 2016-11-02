@@ -21,6 +21,10 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  * @OsChina空间: https://my.oschina.net/mcxiaobing
  */
+
+/**
+ * 调用系统时间工具选择时间
+ */
 public class TimeSelectorActivity extends BaseActivity {
     @BindView(R.id.btn_dateChoose)
     Button btn_dateChoose;

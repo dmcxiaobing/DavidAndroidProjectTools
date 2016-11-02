@@ -9,8 +9,10 @@ import com.umeng.analytics.MobclickAgent;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app.MyApplication;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.OkHttpUtils;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.SystemStatusManagerUtils;
 
 /**
  * @author ：程序员小冰
@@ -23,6 +25,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.O
 public abstract class BaseActivity extends Activity {
     protected Context mContext;
     protected OkHttpUtils okHttpUtils = MyApplication.getApp().getOkHttpUtils();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +38,6 @@ public abstract class BaseActivity extends Activity {
 
     protected void setOnclickListener() {
     }
-
 
 
     /**

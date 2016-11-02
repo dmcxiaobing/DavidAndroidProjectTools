@@ -12,6 +12,10 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  * @OsChina空间: https://my.oschina.net/mcxiaobing
  */
+
+/**
+ * 日期以及地区等选择的多级联动
+ */
 public class SelectorPickerActivity extends BaseActivity {
     private Button btnTimeSelector;
     private Button btnPickerSelector;

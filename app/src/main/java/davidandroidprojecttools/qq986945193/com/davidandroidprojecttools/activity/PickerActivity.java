@@ -27,6 +27,10 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.X
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  * @OsChina空间: https://my.oschina.net/mcxiaobing
  */
+
+/**
+ * 自定义选择时间，地址，以及日期的功能
+ */
 public class PickerActivity extends BaseActivity {
     private ArrayList<ProvinceBean> options1Items = new ArrayList<ProvinceBean>();
     private ArrayList<ArrayList<String>> options2Items = new ArrayList<ArrayList<String>>();
