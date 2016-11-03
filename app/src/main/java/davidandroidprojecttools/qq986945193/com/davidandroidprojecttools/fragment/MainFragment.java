@@ -23,6 +23,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SwipeRefreshListViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemStatusThemeActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.TakeSelectorPhotoActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 /**
  * @author ：程序员小冰
@@ -78,6 +79,7 @@ public class MainFragment extends Fragment {
         listDatas.add("SwipeRefreshLayout下拉刷新的详解");
         listDatas.add("拨打电话号码的详解代码(比较简单)");
         listDatas.add("系统的沉浸式样式主题实现效果");
+        listDatas.add("拍照以及选择相册手机照片");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_main_fragment.setAdapter(mAdatper);
@@ -115,6 +117,12 @@ public class MainFragment extends Fragment {
                      */
                     case 4:
                         intent = new Intent(mContext, SystemStatusThemeActivity.class);
+                        break;
+                    /**
+                     *拍照以及选择相册手机照片
+                     */
+                    case 5:
+                        intent = new Intent(mContext, TakeSelectorPhotoActivity.class);
                         break;
 
                 }
