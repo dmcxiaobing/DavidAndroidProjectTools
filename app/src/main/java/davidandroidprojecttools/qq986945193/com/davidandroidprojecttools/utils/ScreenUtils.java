@@ -1,7 +1,17 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils;
 
+/**
+ * @Author ：程序员小冰
+ * @新浪微博 ：http://weibo.com/mcxiaobing
+ * @GitHub: https://github.com/QQ986945193
+ * @CSDN博客: http://blog.csdn.net/qq_21376985
+ * @OsChina空间: https://my.oschina.net/mcxiaobing
+ */
+
 import android.content.Context;
 import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.WindowManager;
 
 /**
  * ScreenUtils
@@ -34,6 +44,16 @@ public class ScreenUtils {
             initScreen(context);
         }
         return screenH;
+    }
+
+    /**
+     * 获取屏幕的高度
+     */
+    public static int getScreenHeight(Context context) {
+        WindowManager manager = (WindowManager) context
+                .getSystemService(Context.WINDOW_SERVICE);
+        Display display = manager.getDefaultDisplay();
+        return display.getHeight();
     }
 
     /**

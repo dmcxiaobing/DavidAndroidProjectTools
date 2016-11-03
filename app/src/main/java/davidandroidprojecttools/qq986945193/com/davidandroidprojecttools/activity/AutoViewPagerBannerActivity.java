@@ -16,6 +16,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.autoban
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.autobanner.CBViewHolderCreator;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.autobanner.ConvenientBanner;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.autobanner.OnItemClickListener;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Urls;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.PicassoWithImageLoaderImageViewUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.URLUtils;
 
@@ -53,9 +54,9 @@ public class AutoViewPagerBannerActivity extends Activity implements OnItemClick
      * 添加ImageView到ViewPager中
      */
     private void initViewPager() {
-        listImages.add("http://res.vmallres.com/pimages//sale/2016-04/2016041115504417.png");
-        listImages.add("http://res.vmallres.com/pimages//sale/2016-04/20160410232653511.png");
-        listImages.add("http://res.vmallres.com/pimages//sale/2016-04/20160418001955257.png");
+        listImages.add(Urls.VIEWPAGE_BANNERIMAGE_ONE);
+        listImages.add(Urls.VIEWPAGE_BANNERIMAGE_TWO);
+        listImages.add(Urls.VIEWPAGE_BANNERIMAGE_THREE);
         vp_auto_bannar.setPages(
                 new CBViewHolderCreator<NetworkImageHolderView1>() {
                     @Override
