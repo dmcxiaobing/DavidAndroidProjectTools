@@ -2,7 +2,6 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -31,7 +30,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.adapter
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.City;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.LocateState;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.db.DBManager;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.StringUtils;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.PickerStringUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ToastUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.SideLetterBar;
 
@@ -99,7 +98,7 @@ public class CityPickerListActivity extends Activity implements View.OnClickList
                         String district = aMapLocation.getDistrict();
                         Log.e("onLocationChanged", "city: " + city);
                         Log.e("onLocationChanged", "district: " + district);
-                        String location = StringUtils.extractLocation(city, district);
+                        String location = PickerStringUtils.extractLocation(city, district);
                         mCityAdapter.updateLocateState(LocateState.SUCCESS, location);
                     } else {
                         //定位失败
