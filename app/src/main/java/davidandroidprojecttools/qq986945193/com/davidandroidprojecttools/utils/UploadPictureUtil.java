@@ -191,7 +191,7 @@ public class UploadPictureUtil {
 
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd_HHmmss");
         String timeStamp = format.format(new Date());
-        String imageFileName = "tianke_" + timeStamp + ".jpg";
+        String imageFileName = "david_" + timeStamp + ".jpg";
 
         File image = new File(getAlbumDir(), imageFileName);
         return image;
