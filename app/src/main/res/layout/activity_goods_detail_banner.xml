@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/goods_detials_bannar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_goods_detials_shopping_bannar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/vp_goods_detials_shopping_bannar"
+            android:layout_alignRight="@+id/vp_goods_detials_shopping_bannar"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@mipmap/pd_image_count_bg"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_count_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_total_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_count_page"
+                android:layout_toRightOf="@+id/tv_count_page"
+                android:text="/0"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

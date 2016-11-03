@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.HackyViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#A9A9A9"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/tv_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_count"
+            android:layout_toRightOf="@+id/tv_count"
+            android:text="/4"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#A9A9A9"
+            android:textSize="28sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
