@@ -9,12 +9,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.umeng.analytics.MobclickAgent;
 
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.Product_Bannar;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.ProductBannerBean;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ActivityManagerUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.HackyViewPager;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.ZoomableImageView;
@@ -30,7 +29,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.Zo
  * 文件名称：点击商品详情bannar条 查看图片
  */
 public class PageActivity extends Activity {
-    List<Product_Bannar> list;
+    List<ProductBannerBean> list;
     int position;
     TextView tv_all, tv_count;
     HackyViewPager viewPager;
@@ -83,10 +82,10 @@ public class PageActivity extends Activity {
 
     static class SamplePagerAdapter extends PagerAdapter {
 
-        List<Product_Bannar> list;
+        List<ProductBannerBean> list;
         PageActivity pageActivity;
 
-        public SamplePagerAdapter(List<Product_Bannar> list, PageActivity pageActivity) {
+        public SamplePagerAdapter(List<ProductBannerBean> list, PageActivity pageActivity) {
             this.list = list;
             this.pageActivity = pageActivity;
         }

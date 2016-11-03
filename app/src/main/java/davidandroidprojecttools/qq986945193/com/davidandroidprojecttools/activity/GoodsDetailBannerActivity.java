@@ -1,12 +1,9 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -17,11 +14,10 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.Product_Bannar;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.ProductBannerBean;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Urls;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.MyItemFragment;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ScreenUtils;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.URLUtils;
 
 /**
  * @Author ：程序员小冰
@@ -44,8 +40,8 @@ public class GoodsDetailBannerActivity extends BaseFragmentActivity {
     RelativeLayout goodsDetialsBannar;
     private List<String> listImages = new ArrayList<>();
     private MyAdapter mAdapter;
-    private List<Product_Bannar> bannars = new ArrayList<>();
-    private Product_Bannar bannar = null;
+    private List<ProductBannerBean> bannars = new ArrayList<>();
+    private ProductBannerBean bannar = null;
 
 
     @Override
@@ -66,7 +62,7 @@ public class GoodsDetailBannerActivity extends BaseFragmentActivity {
             tvCountPage.setText(1 + "");
         }
         for (int i = 0; i < listImages.size(); i++) {
-            bannar = new Product_Bannar(listImages.get(i));
+            bannar = new ProductBannerBean(listImages.get(i));
             bannars.add(bannar);
         }
 
@@ -104,9 +100,9 @@ public class GoodsDetailBannerActivity extends BaseFragmentActivity {
 
     private class MyAdapter extends FragmentPagerAdapter {
 
-        private List<Product_Bannar> mList;
+        private List<ProductBannerBean> mList;
 
-        public MyAdapter(FragmentManager fm, List<Product_Bannar> mList) {
+        public MyAdapter(FragmentManager fm, List<ProductBannerBean> mList) {
             super(fm);
             this.mList = mList;
         }

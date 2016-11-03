@@ -10,28 +10,28 @@ import android.os.Parcelable;
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  * @OsChina空间: https://my.oschina.net/mcxiaobing
  */
-public class Product_Bannar implements Parcelable {
+public class ProductBannerBean implements Parcelable {
 
     String pic;
 
-    public Product_Bannar(String pic) {
+    public ProductBannerBean(String pic) {
         super();
         this.pic = pic;
     }
 
-    protected Product_Bannar(Parcel in) {
+    protected ProductBannerBean(Parcel in) {
         pic = in.readString();
     }
 
-    public static final Creator<Product_Bannar> CREATOR = new Creator<Product_Bannar>() {
+    public static final Creator<ProductBannerBean> CREATOR = new Creator<ProductBannerBean>() {
         @Override
-        public Product_Bannar createFromParcel(Parcel in) {
-            return new Product_Bannar(in);
+        public ProductBannerBean createFromParcel(Parcel in) {
+            return new ProductBannerBean(in);
         }
 
         @Override
-        public Product_Bannar[] newArray(int size) {
-            return new Product_Bannar[size];
+        public ProductBannerBean[] newArray(int size) {
+            return new ProductBannerBean[size];
         }
     };
 
