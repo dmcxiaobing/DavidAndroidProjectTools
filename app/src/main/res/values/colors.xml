@@ -77,5 +77,15 @@
     <color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
     <color name="pickerview_wheelview_textcolor_divider">#d5d5d5</color>
     <!--覆盖颜色-->
+    <color name="gray">#8c8c8c</color>
+    <color name="gray_deep">#5c5c5c</color>
+    <color name="alpha_gray">#CC646464</color>
     <color name="bgColor_overlay">#60000000</color>
+    <color name="common_bg">#FAFAFA</color>
+    <color name="shadow">#AAEBEBEB</color>
+    <color name="divider">#E5E5E5</color>
+    <color name="content_bg">#F3F3F3</color>
+
+
+
 </resources>

@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.CityPickerListActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.DavidWebViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.FlowLayoutActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MyAdapterActivity;
@@ -80,6 +81,7 @@ public class PackageControlFragment extends Fragment {
         listDatas.add("WebView的一些使用功能详解");
         listDatas.add("上拉加载更多与下拉刷新的多种实现");
         listDatas.add("日期以及地区等选择的多级联动");
+        listDatas.add("仿美团饿了吗等选择城市列表，以及城市定位");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_package_control_fragment.setAdapter(mAdatper);
@@ -123,6 +125,12 @@ public class PackageControlFragment extends Fragment {
                      */
                     case 5:
                         intent = new Intent(mContext, SelectorPickerActivity.class);
+                        break;
+                    /**
+                     *仿美团饿了吗等选择城市列表，以及城市定位
+                     */
+                    case 6:
+                        intent = new Intent(mContext, CityPickerListActivity.class);
                         break;
 
                 }
