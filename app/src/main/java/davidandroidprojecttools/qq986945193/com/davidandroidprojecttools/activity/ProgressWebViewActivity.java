@@ -61,6 +61,6 @@ public class ProgressWebViewActivity extends BaseActivity {
             }
         });
 
-        progress_webview.loadUrl(Urls.GITHUB_DAVID);
+        progress_webview.loadUrl(Urls.CSDN_BLOG_DAVID);
     }
 }

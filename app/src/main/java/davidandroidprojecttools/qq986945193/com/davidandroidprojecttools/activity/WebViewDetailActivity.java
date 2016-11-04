@@ -7,6 +7,7 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  */
 
+import android.graphics.Bitmap;
 import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -46,18 +47,33 @@ public class WebViewDetailActivity extends BaseActivity {
 
         settings.setLoadWithOverviewMode(false);
 
-        webview.loadUrl(Urls.GIT_OSCHINA_DAVID);
+        webview.loadUrl(Urls.CSDN_BLOG_DAVID);
 
         /**
          * 设置不会调用手机中的浏览器 会调用app中浏览器
          */
         webview.setWebViewClient(new WebViewClient() {
+            /**
+             * 开始加载
+             */
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                super.onPageStarted(view, url, favicon);
+//                dialog.show()
+            }
+
+            /**
+             * 加载中
+             */
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
                 return true;
             }
 
+            /**
+             * 加载完成
+             */
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);

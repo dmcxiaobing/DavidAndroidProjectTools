@@ -63,7 +63,7 @@ public class ShareActivity extends BaseActivity {
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_TEXT, Urls.GITHUB_DAVID);
+        intent.putExtra(Intent.EXTRA_TEXT, Urls.CSDN_BLOG_DAVID);
         startActivity(Intent.createChooser(intent, "程序员小冰"));
 
     }
