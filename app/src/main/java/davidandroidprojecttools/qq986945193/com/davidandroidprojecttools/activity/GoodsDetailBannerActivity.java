@@ -26,6 +26,10 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.S
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  * @OsChina空间: https://my.oschina.net/mcxiaobing
  */
+
+/**
+ * 商品详情中图片展示轮播以及显示放大与缩小
+ */
 public class GoodsDetailBannerActivity extends BaseFragmentActivity {
     @BindView(R.id.vp_goods_detials_shopping_bannar)
     ViewPager vpGoodsDetialsShoppingBannar;

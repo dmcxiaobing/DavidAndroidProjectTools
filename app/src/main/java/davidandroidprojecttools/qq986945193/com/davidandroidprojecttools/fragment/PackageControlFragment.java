@@ -18,6 +18,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.CityPickerListActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.DavidWebViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.FlowLayoutActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.GoodsDetailBannerActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MyAdapterActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RefreshLoadMoreActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SelectorPickerActivity;
@@ -82,6 +83,7 @@ public class PackageControlFragment extends Fragment {
         listDatas.add("上拉加载更多与下拉刷新的多种实现");
         listDatas.add("日期以及地区等选择的多级联动");
         listDatas.add("仿美团饿了吗等选择城市列表，以及城市定位");
+        listDatas.add("商品详情中图片展示轮播以及显示放大与缩小");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_package_control_fragment.setAdapter(mAdatper);
@@ -131,6 +133,12 @@ public class PackageControlFragment extends Fragment {
                      */
                     case 6:
                         intent = new Intent(mContext, CityPickerListActivity.class);
+                        break;
+                    /**
+                     *商品详情中图片展示轮播以及显示放大与缩小
+                     */
+                    case 7:
+                        intent = new Intent(mContext, GoodsDetailBannerActivity.class);
                         break;
 
                 }
