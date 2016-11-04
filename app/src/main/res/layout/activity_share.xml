@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_share_native"
+        style="@style/ButtonLayout"
+        android:text="调用本机（本地）手机系统的分享" />
+
+    <Button
+        android:id="@+id/btn_share_sdk"
+        style="@style/ButtonLayout"
+        android:text="调用ShareSDK进行分享" />
+
+    <Button
+        android:id="@+id/btn_share_custom_ui"
+        style="@style/ButtonLayout"
+        android:text="自定义分享界面的UI功能实现与详解" />
+</LinearLayout>

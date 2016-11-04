@@ -22,6 +22,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MyAdapterActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RefreshLoadMoreActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SelectorPickerActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ShareActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.StarBarViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.WebViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
@@ -84,6 +85,7 @@ public class PackageControlFragment extends Fragment {
         listDatas.add("日期以及地区等选择的多级联动");
         listDatas.add("仿美团饿了吗等选择城市列表，以及城市定位");
         listDatas.add("商品详情中图片展示轮播以及显示放大与缩小");
+        listDatas.add("分享的一些功能与UI自定义效果实现");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_package_control_fragment.setAdapter(mAdatper);
@@ -139,6 +141,12 @@ public class PackageControlFragment extends Fragment {
                      */
                     case 7:
                         intent = new Intent(mContext, GoodsDetailBannerActivity.class);
+                        break;
+                    /**
+                     *分享的一些功能与UI自定义效果实现
+                     */
+                    case 8:
+                        intent = new Intent(mContext, ShareActivity.class);
                         break;
 
                 }
