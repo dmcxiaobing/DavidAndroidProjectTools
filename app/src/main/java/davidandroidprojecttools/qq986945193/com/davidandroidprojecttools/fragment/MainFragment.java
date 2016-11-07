@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.lidroid.xutils.util.LogUtils;
+import com.tencent.bugly.Bugly;
+import com.tencent.bugly.beta.Beta;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemStatusThemeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.TakeSelectorPhotoActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Constants;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 /**
  * @author ：程序员小冰

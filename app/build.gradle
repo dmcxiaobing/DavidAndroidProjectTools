@@ -13,6 +13,12 @@ android {
         versionName "1.0"
         // dex突破65535的限制
         multiDexEnabled true
+
+        /* 腾讯bugly升级的引用*/
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
     }
 
     /**
@@ -107,6 +113,14 @@ dependencies {
 
     /*使用一款开源的loading框架，要求最低sdk == 15*/
     compile 'com.github.d-max:spots-dialog:0.7@aar'
-    /*一键分享ShareSDK*/
+    /*引用高德地图的SDK进行定位*/
     compile files('libs/AMap_Location_v2.3.0_20160112.jar')
+
+    /*注释掉原有bugly的仓库 腾讯bugly升级的引用*/
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如
+    //compile 'com.tencent.bugly:crashreport:latest.release'1.2.9
+    /*  其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.0.0*/
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+
+
 }
