@@ -2,10 +2,13 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.tencent.bugly.beta.Beta;
+import com.tencent.bugly.beta.upgrade.UpgradeStateListener;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 
 /**
  * @Author ：程序员小冰
@@ -33,7 +36,39 @@ public class TencentBuglyUpdateActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Beta.checkUpgrade();
+                /**
+                 * 更新状态回调
+                 */
+                Beta.upgradeStateListener = new UpgradeStateListener() {
+                    @Override
+                    public void onUpgradeSuccess(boolean isManual) {
+//                        LogUtil.E("检测成功");
+//                        Toast.makeText(getApplicationContext(), "检测成功", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onUpgradeFailed(boolean isManual) {
+//                        LogUtil.E("检测失败");
+//                        Toast.makeText(getApplicationContext(), "检测失败", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onUpgrading(boolean isManual) {
+//                        LogUtil.E("检测中....");
+//
+//                        Toast.makeText(getApplicationContext(), "检测中....", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onUpgradeNoVersion(boolean isManual) {
+//                        LogUtil.E("没有最新版本....");
+//                        Toast.makeText(getApplicationContext(), "没有最新版本", Toast.LENGTH_SHORT)
+//                                .show();
+                    }
+                };
             }
         });
     }
+
+
 }

@@ -15,10 +15,10 @@ android {
         multiDexEnabled true
 
         /* 腾讯bugly升级的引用*/
-        ndk {
-            //设置支持的SO库架构
-            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
-        }
+//        ndk {
+//            //设置支持的SO库架构
+//            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+//        }
     }
 
     /**
