@@ -11,7 +11,7 @@ import android.view.animation.TranslateAnimation;
 /**
  * AnimationHelper
  */
-public class AnimationHelper {
+public class AnimationUtils {
     /**
      * 进入动画的时间
      */

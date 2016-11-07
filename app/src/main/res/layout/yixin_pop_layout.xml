@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription">
+
+    <!--
+    由于组件动画放大时不能超过其父容器的边界，因此这6个菜单必须放在同一个ViewGroup中。
+    当然也可以放在两个LinearLayout中，但是必须在这两个LinearLayout中设置很大的padding（为放大动画留出足够的空间），这样很不美观。
+    这里只是简单的写一下布局，具体的宽高在代码中设置
+    -->
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4">
+
+        <TextView
+            android:id="@+id/yixin_more_item1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="30dp"
+            android:text="图标1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/yixin_more_item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="30dp"
+            android:text="图标2"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/yixin_more_item3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="30dp"
+            android:text="图标3"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/yixin_more_item4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="20dp"
+            android:text="图标4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/yixin_more_item5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="20dp"
+            android:text="图标5"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/yixin_more_item6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="20dp"
+            android:text="图标6"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/yixin_more_blank2"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill_horizontal" />
+
+    </GridLayout>
+
+    <View
+        android:id="@+id/yixin_more_blank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
