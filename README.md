@@ -12,7 +12,7 @@ Android开发常用功能大集合。以及知识点的详解代码
 
 ![这里写图片描述](http://img.blog.csdn.net/20161031113558371)
 
-更过功能欢迎下载APK进行体验(两种方式进行)：
+更过功能欢迎下载APK进行体验(两种方式，建议第二种微云。腾讯Bugly可能有部分手机不兼容问题)：
 
 1;[点击从腾讯Bugly下载APK进行体验效果](https://beta.bugly.qq.com/davidandroidprojecttools)
 
