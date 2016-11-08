@@ -32,6 +32,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SplashAdActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.StartDialogImageActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.TabActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.UpMarqueeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.XListViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
@@ -63,7 +64,6 @@ public class CommonlyUsedFunctionFragment extends Fragment {
 
         rootView = inflater.inflate(R.layout.fragment_commonly_used_function, container, false);
         initView(rootView);
-        LogUtil.E("create+CommonlyUsedFunctionFragment");
 
         return rootView;
     }
@@ -71,7 +71,6 @@ public class CommonlyUsedFunctionFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        LogUtil.E("onresume+CommonlyUsedFunctionFragment");
 
     }
 
@@ -100,7 +99,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
         listDatas.add("仿淘宝,百度外卖,饿了么等头条滚动效果");
         listDatas.add("进入界面弹出一张大图");
         listDatas.add("loading等待提示框多种实现方式");
-        listDatas.add("仿MiUi的tab切换功能");
+        listDatas.add("各种各样的Tab切换功能效果的实现");
         listDatas.add("获取手机验证码，延迟六十秒，防止重复点击");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
@@ -174,10 +173,10 @@ public class CommonlyUsedFunctionFragment extends Fragment {
 
                         break;
                     /**
-                     * 仿MiUi的tab切换功能
+                     * 各种各样的Tab切换功能效果的实现
                      */
                     case 10:
-                        intent = new Intent(mContext, MiUiTabActivity.class);
+                        intent = new Intent(mContext, TabActivity.class);
 
                         break;
                     /**

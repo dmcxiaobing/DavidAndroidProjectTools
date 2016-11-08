@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_mui"
+        style="@style/ButtonLayout"
+        android:text="仿MiUi的TAB切换" />
+
+    <Button
+        android:id="@+id/btn_tab_01"
+        style="@style/ButtonLayout"
+        android:text="不用fragment实现tab切换" />
+
+
+</LinearLayout>
