@@ -54,18 +54,11 @@ public class FamousFrameFragment extends Fragment {
 
 
     @Override
-    public void onResume() {
-        super.onResume();
-
-    }
-
-    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         if (getActivity() != null) {
             mContext = getActivity();
         }
-        initData();
     }
 
     private Intent intent;
@@ -140,6 +133,40 @@ public class FamousFrameFragment extends Fragment {
      */
     private void initView(View rootView) {
         lv_famous_frame_fragment = (ListView) rootView.findViewById(R.id.lv_famous_frame_fragment);
+    }
+
+    private boolean isInit; // 是否可以开始加载数据
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        // 每次切换fragment时调用的方法
+        // 相当于Fragment的onResume
+        if (isVisibleToUser) {
+            isInit = true;
+            showData();
+        }
+    }
+
+    private void showData() {
+        if (isInit) {
+            isInit = false;// 加载数据完成
+            listDatas.clear();
+            initData();
+
+
+        }
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        // 判断当前fragment是否显示
+        if (getUserVisibleHint()) {
+            isInit = true;
+            showData();
+        }
     }
 }
 

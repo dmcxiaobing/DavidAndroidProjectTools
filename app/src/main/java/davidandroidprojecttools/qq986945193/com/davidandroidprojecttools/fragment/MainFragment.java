@@ -56,10 +56,6 @@ public class MainFragment extends Fragment {
         return rootView;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -67,7 +63,6 @@ public class MainFragment extends Fragment {
         if (getActivity() != null) {
             mContext = getActivity();
         }
-        initData();
 
     }
 
@@ -83,7 +78,6 @@ public class MainFragment extends Fragment {
         listDatas.add("拨打电话号码的详解代码(比较简单)");
         listDatas.add("系统的沉浸式样式主题实现效果");
         listDatas.add("拍照以及选择相册手机照片");
-
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_main_fragment.setAdapter(mAdatper);
 
@@ -142,5 +136,40 @@ public class MainFragment extends Fragment {
      */
     private void initView(View rootView) {
         lv_main_fragment = (ListView) rootView.findViewById(R.id.lv_main_fragment);
+    }
+
+
+    private boolean isInit; // 是否可以开始加载数据
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        // 每次切换fragment时调用的方法
+        // 相当于Fragment的onResume
+        if (isVisibleToUser) {
+            isInit = true;
+            showData();
+        }
+    }
+
+    private void showData() {
+        if (isInit) {
+            isInit = false;// 加载数据完成
+            listDatas.clear();
+            initData();
+
+
+        }
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        // 判断当前fragment是否显示
+        if (getUserVisibleHint()) {
+            isInit = true;
+            showData();
+        }
     }
 }

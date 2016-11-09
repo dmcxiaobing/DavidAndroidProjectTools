@@ -19,12 +19,14 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 public class TabActivity extends BaseActivity {
     private Button btn_mui;
     private Button btn_tab_01;
+    private Button btn_tab_02;
 
     @Override
     protected void initView() {
         setContentView(R.layout.activity_tab);
         btn_mui = (Button) findViewById(R.id.btn_mui);
         btn_tab_01 = (Button) findViewById(R.id.btn_tab_01);
+        btn_tab_02 = (Button) findViewById(R.id.btn_tab_02);
     }
 
     @Override
@@ -45,6 +47,16 @@ public class TabActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(NoFragmentOneTabActivity.class);
+            }
+        });
+
+        /**
+         * 用fragment不用Viewpager实现tab切换
+         */
+        btn_tab_02.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(NoViewpagerFragmentActivity.class);
             }
         });
     }

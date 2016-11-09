@@ -12,7 +12,12 @@
     <Button
         android:id="@+id/btn_tab_01"
         style="@style/ButtonLayout"
-        android:text="不用fragment实现tab切换" />
+        android:text="不用fragment用Viewpager实现tab切换" />
+
+    <Button
+        android:id="@+id/btn_tab_02"
+        style="@style/ButtonLayout"
+        android:text="用fragment不用Viewpager实现tab切换" />
 
 
 </LinearLayout>
