@@ -196,7 +196,10 @@ public class CommonlyUsedFunctionFragment extends Fragment {
      */
     private void initView(View rootView) {
         lv_commonly_used_function_fragment = (ListView) rootView.findViewById(R.id.lv_commonly_used_function_fragment);
+
+
     }
+
 
     private boolean isInit; // 是否可以开始加载数据
 
