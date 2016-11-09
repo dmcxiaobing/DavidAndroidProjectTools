@@ -74,12 +74,14 @@ a,二维码的扫描与生成功能 b,圆形头像的功能
 
 里面所使用第三方库以及（jar文件上传）：
 
-Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,OkHttp,fresco,shareSDK分享等.
+Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,OkHttp,fresco,shareSDK分享
+
+腾讯Bugly,百度ApiStore,Umeng统计的功能等.
 
 项目为小冰所写，仅供参考，请勿用于任何商业。转载请说明出处。
 
 可以直接放在AndroidStudio开发工具中运行,
 
-记得将Constants类中的百度API秘钥改为自己的即可。
+设计到第三方服务API以及SDK,记得将Constants类中的API秘钥改为自己的即可。
 
 欢迎star,fork，提出更好的建议。
