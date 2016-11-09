@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +54,7 @@ public class MainFragment extends Fragment {
 
         rootView = inflater.inflate(R.layout.fragment_main, container, false);
         initView(rootView);
+        LogUtil.E("oncreateView");
         return rootView;
     }
 
@@ -62,7 +64,10 @@ public class MainFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         if (getActivity() != null) {
             mContext = getActivity();
+            LogUtil.E("onActivityCreated");
+
         }
+
 
     }
 
@@ -144,6 +149,8 @@ public class MainFragment extends Fragment {
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
+        LogUtil.E("setUserVisibleHint");
+
         // 每次切换fragment时调用的方法
         // 相当于Fragment的onResume
         if (isVisibleToUser) {
@@ -156,6 +163,8 @@ public class MainFragment extends Fragment {
         if (isInit) {
             isInit = false;// 加载数据完成
             listDatas.clear();
+            LogUtil.E("showData");
+
             initData();
 
 
@@ -166,6 +175,8 @@ public class MainFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        LogUtil.E("onResume");
+
         // 判断当前fragment是否显示
         if (getUserVisibleHint()) {
             isInit = true;

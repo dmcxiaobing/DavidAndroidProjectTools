@@ -20,6 +20,7 @@ public class TabActivity extends BaseActivity {
     private Button btn_mui;
     private Button btn_tab_01;
     private Button btn_tab_02;
+    private Button btn_tab_03;
 
     @Override
     protected void initView() {
@@ -27,6 +28,7 @@ public class TabActivity extends BaseActivity {
         btn_mui = (Button) findViewById(R.id.btn_mui);
         btn_tab_01 = (Button) findViewById(R.id.btn_tab_01);
         btn_tab_02 = (Button) findViewById(R.id.btn_tab_02);
+        btn_tab_03 = (Button) findViewById(R.id.btn_tab_03);
     }
 
     @Override
@@ -57,6 +59,16 @@ public class TabActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(NoViewpagerFragmentActivity.class);
+            }
+        });
+
+        /**
+         * 用fragment+Viewpager实现tab切换
+         */
+        btn_tab_03.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(ViewPagerFragmentActivity.class);
             }
         });
     }

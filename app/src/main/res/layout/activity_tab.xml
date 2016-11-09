@@ -19,5 +19,10 @@
         style="@style/ButtonLayout"
         android:text="用fragment不用Viewpager实现tab切换" />
 
+    <Button
+        android:id="@+id/btn_tab_03"
+        style="@style/ButtonLayout"
+        android:text="用fragment+Viewpager实现tab切换" />
+
 
 </LinearLayout>
