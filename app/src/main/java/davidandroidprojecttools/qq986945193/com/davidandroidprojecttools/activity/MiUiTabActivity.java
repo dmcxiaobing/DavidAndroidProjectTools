@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.ViewPagerFragmentFragment;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.VpSimpleFragment;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.widget.ViewPagerIndicator;
 
@@ -27,9 +28,12 @@ public class MiUiTabActivity extends BaseFragmentActivity {
     private FragmentPagerAdapter mAdapter;
     private ViewPager mViewPager;
     private List<String> mDatas = Arrays.asList("短信1", "短信2", "短信3", "短信4");
-//	private List<String> mDatas = Arrays.asList("短信1", "短信2", "短信3", "短信4",
+    //	private List<String> mDatas = Arrays.asList("短信1", "短信2", "短信3", "短信4",
 //			"短信5", "短信6", "短信7", "短信8", "短信9");
-
+    private ViewPagerFragmentFragment mMainfragment = new ViewPagerFragmentFragment();
+    private ViewPagerFragmentFragment mFamousFragment = new ViewPagerFragmentFragment();
+    private ViewPagerFragmentFragment mPackageControlFragment = new ViewPagerFragmentFragment();
+    private ViewPagerFragmentFragment commonlyUsedFunctionFragment = new ViewPagerFragmentFragment();
     private ViewPagerIndicator mIndicator;
 
 
@@ -41,11 +45,15 @@ public class MiUiTabActivity extends BaseFragmentActivity {
     }
 
     private void initDatas() {
-        for (String data : mDatas) {
-            VpSimpleFragment fragment = VpSimpleFragment.newInstance(data);
-            mTabContents.add(fragment);
-        }
+//        for (String data : mDatas) {
+//            VpSimpleFragment fragment = VpSimpleFragment.newInstance(data);
+//            mTabContents.add(fragment);
+//        }
 
+        mTabContents.add(mMainfragment);
+        mTabContents.add(mFamousFragment);
+        mTabContents.add(mPackageControlFragment);
+        mTabContents.add(commonlyUsedFunctionFragment);
         mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public int getCount() {

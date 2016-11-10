@@ -26,6 +26,10 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragmen
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  * @OsChina空间: https://my.oschina.net/mcxiaobing
  */
+
+/**
+ *
+ */
 public class ViewPagerFragmentActivity extends BaseFragmentActivity implements View.OnClickListener {
     private ViewPager vp;
     private LinearLayout ll_index;
