@@ -82,6 +82,6 @@ Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,OkHttp,fresco,shareSDK�
 
 可以直接放在AndroidStudio开发工具中运行,
 
-设计到第三方服务API以及SDK,记得将Constants类中的API秘钥改为自己的即可。
+涉及到第三方服务API以及SDK,记得将Constants类中的API秘钥改为自己的即可。
 
 欢迎star,fork，提出更好的建议。
