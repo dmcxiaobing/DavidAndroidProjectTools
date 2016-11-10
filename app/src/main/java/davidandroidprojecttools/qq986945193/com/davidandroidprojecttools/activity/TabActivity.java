@@ -21,6 +21,7 @@ public class TabActivity extends BaseActivity {
     private Button btn_tab_01;
     private Button btn_tab_02;
     private Button btn_tab_03;
+    private Button btn_tab_04;
 
     @Override
     protected void initView() {
@@ -29,6 +30,7 @@ public class TabActivity extends BaseActivity {
         btn_tab_01 = (Button) findViewById(R.id.btn_tab_01);
         btn_tab_02 = (Button) findViewById(R.id.btn_tab_02);
         btn_tab_03 = (Button) findViewById(R.id.btn_tab_03);
+        btn_tab_04 = (Button) findViewById(R.id.btn_tab_04);
     }
 
     @Override
@@ -71,5 +73,6 @@ public class TabActivity extends BaseActivity {
                 startActivity(ViewPagerFragmentActivity.class);
             }
         });
+
     }
 }
