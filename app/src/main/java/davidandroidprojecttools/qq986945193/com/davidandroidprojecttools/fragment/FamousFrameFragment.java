@@ -20,6 +20,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.PicassoAndImageloaderFrescoActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SlidingMenuActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.TencentBuglyUpdateActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.UpDateAppActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.XutilsTwoActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 
@@ -72,7 +73,7 @@ public class FamousFrameFragment extends Fragment {
         listDatas.add("OkHttp的封装与网络请求详解");
         listDatas.add("ButterKnife的使用详解");
         listDatas.add("SlidingMenu的使用详解");
-        listDatas.add("腾讯Bugly的检测升级更新");
+        listDatas.add("升级APP软件的多种实现方式");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_famous_frame_fragment.setAdapter(mAdatper);
 
@@ -112,10 +113,10 @@ public class FamousFrameFragment extends Fragment {
                         intent = new Intent(mContext, SlidingMenuActivity.class);
                         break;
                     /**
-                     * 腾讯Bugly的检测升级更新
+                     * 升级APP软件的多种实现方式
                      */
                     case 5:
-                        intent = new Intent(mContext, TencentBuglyUpdateActivity.class);
+                        intent = new Intent(mContext, UpDateAppActivity.class);
                         break;
 
 
@@ -145,6 +146,7 @@ public class FamousFrameFragment extends Fragment {
         if (isVisibleToUser) {
             isInit = true;
             showData();
+
         }
     }
 
