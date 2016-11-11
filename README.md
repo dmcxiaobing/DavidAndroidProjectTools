@@ -72,6 +72,8 @@ a,二维码的扫描与生成功能 b,圆形头像的功能
 
 7,多种loading等待框的介绍与使用。
 
+8,sharepreference的完美封装。
+
 里面所使用第三方库以及（jar文件上传）：
 
 Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,OkHttp,fresco,shareSDK分享
