@@ -6,10 +6,12 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
  * @OsChina空间: https://my.oschina.net/mcxiaobing
  */
 
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+
 public class LocalJsonUpdateAppActivity extends BaseActivity{
     @Override
     protected void initView() {
-
+        setContentView(R.layout.activity_local_json_update_app);
     }
 
     @Override
