@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="项目中有些功能无法进行演示，具体实现方法请看源代码"
+        android:textColor="@color/red"
+        android:textSize="14sp" />
+</LinearLayout>

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.umeng.analytics.MobclickAgent;
 
@@ -25,17 +26,31 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.S
 public abstract class BaseActivity extends Activity {
     protected Context mContext;
     protected OkHttpUtils okHttpUtils = MyApplication.getApp().getOkHttpUtils();
+    protected TextView tvTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_base);
         mContext = this;
         initView();
         initData();
         setOnclickListener();
+        setTitle();
 
     }
 
+    /**
+     * 设置标题
+     */
+    protected void setTitle() {
+        tvTitle = (TextView) findViewById(R.id.tv_title);
+
+    }
+
+    /**
+     * 设置点击事件
+     */
     protected void setOnclickListener() {
     }
 
