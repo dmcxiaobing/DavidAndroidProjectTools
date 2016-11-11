@@ -7,7 +7,11 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
  */
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Constants;
 
+/**
+ * 调用本地的json数据进行更新apk
+ */
 public class LocalJsonUpdateAppActivity extends BaseActivity{
     @Override
     protected void initView() {
@@ -16,6 +20,13 @@ public class LocalJsonUpdateAppActivity extends BaseActivity{
 
     @Override
     protected void initData() {
+
+    }
+
+    @Override
+    protected void setTitle() {
+        super.setTitle();
+        tvTitle.setText(Constants.BASE_ACTIVITY_TITLE);
 
     }
 }

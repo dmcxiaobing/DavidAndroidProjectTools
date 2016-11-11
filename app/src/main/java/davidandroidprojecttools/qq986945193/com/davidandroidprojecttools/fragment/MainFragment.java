@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -22,6 +23,7 @@ import java.util.List;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.CallphoneActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MoreAnimationStartActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SwipeRefreshListViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
@@ -83,6 +85,7 @@ public class MainFragment extends Fragment {
         listDatas.add("拨打电话号码的详解代码(比较简单)");
         listDatas.add("系统的沉浸式样式主题实现效果");
         listDatas.add("拍照以及选择相册手机照片");
+        listDatas.add("Activity的多种跳转样式动画效果");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_main_fragment.setAdapter(mAdatper);
 
@@ -125,6 +128,12 @@ public class MainFragment extends Fragment {
                      */
                     case 5:
                         intent = new Intent(mContext, TakeSelectorPhotoActivity.class);
+                        break;
+                    /**
+                     *Activity的多种跳转样式动画效果
+                     */
+                    case 6:
+                        intent = new Intent(mContext, MoreAnimationStartActivity.class);
                         break;
 
                 }

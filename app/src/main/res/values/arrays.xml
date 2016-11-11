@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="anim_type">
+        <item>淡入淡出效果</item>
+        <item>放大淡出效果</item>
+        <item>转动淡出效果1</item>
+        <item>转动淡出效果2</item>
+        <item>左上角展开淡出效果</item>
+        <item>压缩变小淡出效果</item>
+        <item>右往左推出效果</item>
+        <item>下往上推出效果</item>
+        <item>左右交错效果</item>
+        <item>放大淡出效果</item>
+        <item>缩小效果</item>
+        <item>上下交错效果</item>
+    </string-array>
+</resources>

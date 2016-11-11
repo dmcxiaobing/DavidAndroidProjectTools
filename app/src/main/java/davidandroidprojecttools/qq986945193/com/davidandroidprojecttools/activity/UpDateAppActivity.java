@@ -42,8 +42,8 @@ public class UpDateAppActivity extends BaseActivity {
             }
         });
 
-        /**调用本地的json数据进行更新apk
-         *
+        /**
+         * 调用本地的json数据进行更新apk
          */
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
