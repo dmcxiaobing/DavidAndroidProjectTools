@@ -18,9 +18,9 @@ Android开发常用功能大集合。以及知识点的详解代码
 
 ![这里写图片描述](http://img.blog.csdn.net/20161108144026261)
 
-2;[点击从腾讯微云下载APK进行体验效果](https://sz-btfs-v2-yun-ftn.weiyun.com/ftn_handler/6b3e28732f4e1ab4a68fd78733e3c622706979acc09129f8680644114690780a587c7c18088247453deb5711ac2b4e4a5f6071b6f05932dabb9e9a4bcdf9b36b/Android%E5%88%A9%E5%99%A8.apk?fname=Android%E5%88%A9%E5%99%A8.apk&from=30111&version=2.0.0.2&uin=986945193)
+2;[点击从腾讯微云下载APK进行体验效果](https://sz-btfs-v2-yun-ftn.weiyun.com/ftn_handler/89277a84dd3265346828c6d955f0fad42dd67c19e3710c75024ee42d5ee317c075904f90706d63288339b2b52e82a6ceeab7dd1ab03e87831d6e47ed2920fb20/Android.apk?fname=Android.apk&from=30111&version=2.0.0.2&uin=986945193)
 
-![这里写图片描述](http://img.blog.csdn.net/20161108144524237)
+![腾讯微云下载apk二维码](http://img.blog.csdn.net/20161112153011508)
 
 此项目是小冰工作中总结常用的功能大集合，防止以后用到的话重复造轮子，而且还有常用控件
 
