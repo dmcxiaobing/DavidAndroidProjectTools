@@ -19,6 +19,5 @@
         android:layout_gravity="center_horizontal"
         android:lines="1"
         android:text="首页"
-        android:textColor="@color/selector_activity_textview"
         android:textSize="@dimen/text_size_12" />
 </LinearLayout>

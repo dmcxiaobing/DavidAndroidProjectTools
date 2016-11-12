@@ -7,16 +7,14 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
  * @OsChina空间: https://my.oschina.net/mcxiaobing
  */
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.MainFragment;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.ViewPagerFragmentFragment;
@@ -27,11 +25,6 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.ta
  * 使用fragmentTabHost第二种实现上移
  */
 public class FragmentTapHostUpTwoActivity extends BaseFragmentActivity {
-    @BindView(R.id.fmlayout)
-    FrameLayout fmlayout;
-    @BindView(android.R.id.tabcontent)
-    FrameLayout tabcontent;
-    @BindView(android.R.id.tabhost)
     XFragmentTabHost tabhost;
 
     private String[] titles = {"程序员小冰", "DAVID", "安卓利器", "Tab"};
@@ -42,14 +35,16 @@ public class FragmentTapHostUpTwoActivity extends BaseFragmentActivity {
 
     @Override
     protected void initView() {
-        ButterKnife.bind(this);
+        tabhost = (XFragmentTabHost) findViewById(android.R.id.tabhost);
         tabhost.setup(this, getSupportFragmentManager(), R.id.fmlayout);
+        tabhost.setTabMode(XFragmentTabHost.TabMode.MoveToTop);
+        tabhost.setTextActiveColor(Color.BLUE);
 
-        for (int i = 0; i < titles.length; i++) {
-            tabhost.addTabItem(new TabItemBean(titles[i], imgs[i]), mFragClass[i], Bundle.EMPTY);
+        for (int i = 0; i < mFragClass.length; i++) {
+            Bundle bundle = new Bundle();
+            tabhost.addTabItem(new TabItemBean(titles[i], imgs[i]), mFragClass[i], bundle);
         }
 
-        tabhost.setTabMode(XFragmentTabHost.TabMode.MoveToTop);
     }
 
     /**
