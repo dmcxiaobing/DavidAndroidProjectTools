@@ -92,7 +92,16 @@
     <color name="vpi__bright_foreground_holo_light">@color/vpi__background_holo_dark</color>
     <color name="vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
     <color name="vpi__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
-    <color name="vpi__bright_foreground_inverse_holo_dark">@color/vpi__bright_foreground_holo_light</color>
-    <color name="vpi__bright_foreground_inverse_holo_light">@color/vpi__bright_foreground_holo_dark</color>
+    <color name="vpi__bright_foreground_inverse_holo_dark">
+        @color/vpi__bright_foreground_holo_light
+    </color>
+    <color name="vpi__bright_foreground_inverse_holo_light">
+        @color/vpi__bright_foreground_holo_dark
+    </color>
+    <!--FragmentTabHost所需要的动画效果-->
+    <color name="colorActive">#00BCD4</color>
+    <color name="colorInactive">#d2d0d1</color>
+    <color name="colorFront">#4db6ac</color>
+    <color name="colorBehind">#84ffff</color>
 
 </resources>

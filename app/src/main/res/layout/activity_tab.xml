@@ -23,11 +23,15 @@
         android:id="@+id/btn_tab_03"
         style="@style/ButtonLayout"
         android:text="用fragment+Viewpager实现tab切换" />
-    <Button
 
+    <Button
         android:id="@+id/btn_tab_04"
         style="@style/ButtonLayout"
         android:text="使用系统自带的fragmentTabHost" />
+    <Button
+        android:id="@+id/btn_tab_05"
+        style="@style/ButtonLayout"
+        android:text="使用fragmentTabHost第二种实现上移" />
 
 
 </LinearLayout>

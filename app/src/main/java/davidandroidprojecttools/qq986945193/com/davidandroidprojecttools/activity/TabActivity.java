@@ -22,6 +22,7 @@ public class TabActivity extends BaseActivity {
     private Button btn_tab_02;
     private Button btn_tab_03;
     private Button btn_tab_04;
+    private Button btn_tab_05;
 
     @Override
     protected void initView() {
@@ -31,6 +32,7 @@ public class TabActivity extends BaseActivity {
         btn_tab_02 = (Button) findViewById(R.id.btn_tab_02);
         btn_tab_03 = (Button) findViewById(R.id.btn_tab_03);
         btn_tab_04 = (Button) findViewById(R.id.btn_tab_04);
+        btn_tab_05 = (Button) findViewById(R.id.btn_tab_05);
     }
 
     @Override
@@ -83,6 +85,17 @@ public class TabActivity extends BaseActivity {
                 startActivity(FragmentTabHostSystemOneActivity.class);
             }
         });
+
+        /**
+         * 使用fragmentTabHost第二种实现上移
+         */
+        btn_tab_05.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(FragmentTapHostUpTwoActivity.class);
+            }
+        });
+
 
     }
 }
