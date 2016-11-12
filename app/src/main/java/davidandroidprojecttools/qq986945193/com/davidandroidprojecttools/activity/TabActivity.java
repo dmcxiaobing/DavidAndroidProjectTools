@@ -74,5 +74,15 @@ public class TabActivity extends BaseActivity {
             }
         });
 
+        /**
+         *使用系统自带的fragmentTabHost
+         */
+        btn_tab_04.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(FragmentTabHostSystemOneActivity.class);
+            }
+        });
+
     }
 }

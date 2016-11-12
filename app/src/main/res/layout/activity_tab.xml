@@ -27,7 +27,7 @@
 
         android:id="@+id/btn_tab_04"
         style="@style/ButtonLayout"
-        android:text="" />
+        android:text="使用系统自带的fragmentTabHost" />
 
 
 </LinearLayout>
