@@ -150,6 +150,34 @@
                     android:textSize="12sp" />
 
             </LinearLayout>
+            <!--关于作者-->
+            <LinearLayout
+                android:id="@+id/mian_about_david"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="#0000"
+                    android:src="@drawable/selector_activity_main_img" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="3dp"
+                    android:text="关于作者"
+                    android:textColor="@drawable/selector_activity_textview"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
 

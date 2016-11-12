@@ -11,6 +11,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.AboutDavidFragment;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.PackageControlFragment;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.MainFragment;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.fragment.FamousFrameFragment;
@@ -37,6 +38,8 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
     public PackageControlFragment mPackageControlFragment = new PackageControlFragment();
     //著名开源库
     public FamousFrameFragment mFamousFrameFragment = new FamousFrameFragment();
+    //关于作者
+    public AboutDavidFragment aboutDavidFragment = new AboutDavidFragment();
 
     /**
      * 底栏四个按钮的集合Tab
@@ -79,11 +82,12 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
      * 初始化控件布局
      */
     private void initViews() {
-        mTabs = new LinearLayout[4];
+        mTabs = new LinearLayout[5];
         mTabs[0] = (LinearLayout) findViewById(R.id.main_knowledge_point);// 首页 知识点详解
         mTabs[1] = (LinearLayout) findViewById(R.id.main_package_control);// 封装控件
         mTabs[2] = (LinearLayout) findViewById(R.id.main_commonly_used_function);// 常用功能
         mTabs[3] = (LinearLayout) findViewById(R.id.mian_famous_frame);// 著名开源库
+        mTabs[4] = (LinearLayout) findViewById(R.id.mian_about_david);// 关于作者
 
         pressFlag = 0;
         index = 0;
@@ -92,6 +96,7 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
         mTabs[1].setOnClickListener(this);
         mTabs[2].setOnClickListener(this);
         mTabs[3].setOnClickListener(this);
+        mTabs[4].setOnClickListener(this);
         mTabs[0].setSelected(true);
         switchContent(mainFragment);
 
@@ -134,6 +139,12 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
                 pressFlag = 3;
                 index = 3;
                 switchContent(mFamousFrameFragment);
+                break;
+            case R.id.mian_about_david:
+                //关于作者
+                pressFlag = 4;
+                index = 4;
+                switchContent(aboutDavidFragment);
                 break;
 
 
