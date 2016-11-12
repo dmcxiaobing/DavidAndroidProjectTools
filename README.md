@@ -80,6 +80,8 @@ Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,OkHttp,fresco,shareSDK�
 
 腾讯Bugly,百度ApiStore,Umeng统计的功能等.
 
+由于有些功能效果无法展示，具体实现请看项目源代码。
+
 项目为小冰所写，仅供参考，请勿用于任何商业。转载请说明出处。
 
 可以直接放在AndroidStudio开发工具中运行,
