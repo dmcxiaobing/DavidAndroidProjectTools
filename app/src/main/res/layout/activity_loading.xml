@@ -32,5 +32,11 @@
         android:layout_height="wrap_content"
         android:text="第五种效果显示loading" />
 
+    <Button
+        android:id="@+id/btn_show_six_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="第六种效果显示loading" />
+
 
 </LinearLayout>
