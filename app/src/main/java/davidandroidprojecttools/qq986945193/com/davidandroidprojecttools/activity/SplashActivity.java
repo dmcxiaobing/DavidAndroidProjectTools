@@ -76,15 +76,15 @@ public class SplashActivity extends Activity {
          */
 //        startAdimThree();
         /**
-         * 第四种方法，利用动画实现
+         * 第四种方法，利用动画实现 渐变效果
          */
 //        StartAniFour();
 
     }
 
     private void StartAniFour() {
-        AlphaAnimation start = new AlphaAnimation(0.0f, 1.0f);
-        start.setDuration(1000);
+        AlphaAnimation start = new AlphaAnimation(0.3f, 1.0f);
+        start.setDuration(3000);
         // findViewById(R.id.splash).startAnimation(start);
         start.setAnimationListener(new Animation.AnimationListener() {
             @Override
