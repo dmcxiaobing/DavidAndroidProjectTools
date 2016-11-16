@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tab1_text"
+        style="@style/Style.ActionBarTabTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/base_title_height"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="程序员小冰"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/tab2_text"
+        style="@style/Style.ActionBarTabTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/base_title_height"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="David" />
+
+    <TextView
+        android:id="@+id/tab3_text"
+        style="@style/Style.ActionBarTabTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/base_title_height"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="Android" />
+
+</LinearLayout>

@@ -28,14 +28,21 @@
         android:id="@+id/btn_tab_04"
         style="@style/ButtonLayout"
         android:text="使用系统自带的fragmentTabHost" />
+
     <Button
         android:id="@+id/btn_tab_05"
         style="@style/ButtonLayout"
         android:text="使用fragmentTabHost第二种实现上移" />
+
     <Button
         android:id="@+id/btn_tab_06"
         style="@style/ButtonLayout"
         android:text="使用fragmentTabHost第三种实现波纹" />
+
+    <Button
+        android:id="@+id/btn_tab_07"
+        style="@style/ButtonLayout"
+        android:text="顶部TAB切换功能第一种实现方法" />
 
 
 </LinearLayout>

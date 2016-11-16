@@ -24,6 +24,7 @@ public class TabActivity extends BaseActivity {
     private Button btn_tab_04;
     private Button btn_tab_05;
     private Button btn_tab_06;
+    private Button btn_tab_07;
 
     @Override
     protected void initView() {
@@ -35,6 +36,7 @@ public class TabActivity extends BaseActivity {
         btn_tab_04 = (Button) findViewById(R.id.btn_tab_04);
         btn_tab_05 = (Button) findViewById(R.id.btn_tab_05);
         btn_tab_06 = (Button) findViewById(R.id.btn_tab_06);
+        btn_tab_07 = (Button) findViewById(R.id.btn_tab_07);
     }
 
     @Override
@@ -105,6 +107,16 @@ public class TabActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity((FragmentTabHostRippleThreeActivity.class));
+            }
+        });
+
+        /**
+         * 顶部TAB切换功能第一种实现方法
+         */
+        btn_tab_07.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(TabFragmentTopIndicatorActivity.class);
             }
         });
 
