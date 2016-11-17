@@ -42,12 +42,15 @@ android {
      */
     buildTypes {
         release {
+            /* 属性minifyEnabled可以在打包的时候去除掉无用的代码，是否对代码混淆、压缩*/
             minifyEnabled false
+            /*是否对资源压缩*/
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.davidConfig
         }
 
         debug {
+
             signingConfig signingConfigs.davidConfig
         }
     }
