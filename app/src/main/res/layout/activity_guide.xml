@@ -11,23 +11,26 @@
     <TextView
         android:id="@+id/tv_start"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="27dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="54dp"
+        android:background="@drawable/shape_guide_press"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:text="开始体验"
-        android:textColor="@color/red"
+        android:textColor="#40A1FF"
         android:textSize="20sp"
-        android:padding="4dp"
-        android:background="@color/nearby_friends_tag"
         android:visibility="invisible" />
 
     <LinearLayout
         android:id="@+id/ll_point"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="55dp"
+        android:layout_marginBottom="12dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:visibility="visible" />

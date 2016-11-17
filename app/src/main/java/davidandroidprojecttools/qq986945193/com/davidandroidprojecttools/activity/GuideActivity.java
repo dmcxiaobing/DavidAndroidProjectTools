@@ -65,8 +65,8 @@ public class GuideActivity extends Activity implements ViewPager.OnPageChangeLis
         View pointView = null;
         for (int i = 0; i < listImages.size(); i++) {
             pointView = new View(GuideActivity.this);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(30
-                    , 30);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(20
+                    , 20);
             params.rightMargin = 10;
             pointView.setLayoutParams(params);
             pointView.setSelected(false);
