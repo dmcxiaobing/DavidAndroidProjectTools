@@ -5,7 +5,10 @@ buildscript {
         jcenter()
         /**
          * mavenCentral()仓库
+         * mavenCentral() 当前的maven缓存
          */
+
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.1.3'
@@ -19,7 +22,21 @@ allprojects {
     repositories {
         jcenter()
 //        mavenCentral()
-//        maven { url 'http://maven.oschina.net/content/groups/public/' }
+//        maven {
+//            //*单个添加仓库地址*//
+//            url 'http://maven.oschina.net/content/groups/public/'
+//            //*通过用户名和密码的校验来获取依赖仓库*//
+//            credentials {
+//                username 'username'
+//                password 'password'
+//            }
+//             /*这里是将用户名和密码提取到gradle.properties文件中*/
+//            credentials{
+//                username login
+//                password pass
+//            }
+//
+//        }
     }
 }
 

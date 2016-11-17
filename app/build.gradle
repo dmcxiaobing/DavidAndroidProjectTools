@@ -26,11 +26,14 @@ android {
      */
     signingConfigs {
         davidConfig {
+            /*keytool中生成证书的时候的随机值（别名）,*/
             keyAlias 'david'
+            /*在签名过程中所需要的密钥*/
             keyPassword '123456'
-            //根据自己电脑上的签名秘钥配置
+            //根据自己电脑上的签名秘钥配置 keystore证书在磁盘中的位置
             storeFile file('D:/DavidAndroidProjectTools.jks')
 //            storeFile file('H:\\StudioWork\\DavidAndroidProjectTools\\app\\src\\main\\DavidAndroidProjectTools.jks')
+            /*keystore证书的密码*/
             storePassword '123456'
         }
     }
