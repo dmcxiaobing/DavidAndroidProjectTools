@@ -68,9 +68,6 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
 
     /**
      * 防止fragment重叠
-     *
-     * @param outState
-     * @param
      */
     @Override
     public void onSaveInstanceState(Bundle outState) {
