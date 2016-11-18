@@ -48,7 +48,7 @@ public class MainActivity extends BaseFragmentActivity implements View.OnClickLi
     /**
      * 当前fragment的index
      */
-    private int currentTabIndex;
+    private int currentTabIndex = 0;
 
     @Override
     protected void initView() {
