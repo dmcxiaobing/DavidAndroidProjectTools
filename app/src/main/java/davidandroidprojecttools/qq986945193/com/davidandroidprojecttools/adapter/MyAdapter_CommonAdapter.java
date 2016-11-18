@@ -17,7 +17,6 @@ import java.util.List;
 
 /**
  * listview所有的adapter全部继承此adapter，万能adapter
- * @param <T>
  */
 public abstract class MyAdapter_CommonAdapter<T> extends BaseAdapter {
 
