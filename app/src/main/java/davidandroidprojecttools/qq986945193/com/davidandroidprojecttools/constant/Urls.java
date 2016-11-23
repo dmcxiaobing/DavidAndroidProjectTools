@@ -50,7 +50,7 @@ public class Urls {
     public static final String VIEWPAGE_BANNERIMAGE_ONE = "http://res.vmallres.com/pimages//sale/2016-04/2016041115504417.png";
     public static final String VIEWPAGE_BANNERIMAGE_TWO = "http://res.vmallres.com/pimages//sale/2016-04/20160410232653511.png";
     public static final String VIEWPAGE_BANNERIMAGE_THREE = "http://res.vmallres.com/pimages//sale/2016-04/20160418001955257.png";
-
+    /*抓取的接口*/
     public static final String ZHIHU_URL = "http://news-at.zhihu.com/api/4/news/before/20161122";
 
 

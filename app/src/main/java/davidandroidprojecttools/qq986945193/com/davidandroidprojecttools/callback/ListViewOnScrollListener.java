@@ -12,8 +12,9 @@ import android.widget.AbsListView;
 
 import com.squareup.picasso.Picasso;
 
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MainActivity;
-
+/**
+ * 用来优化listview的滚动事件
+ */
 public class ListViewOnScrollListener implements AbsListView.OnScrollListener {
     private Context mContext;
 

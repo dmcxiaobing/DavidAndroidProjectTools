@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.TxApiAppleBean;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.ZhiHuBean;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.PicassoWithImageLoaderImageViewUtils;
 
 /**
@@ -29,12 +29,12 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.P
  * ListView中的Adapter类
  */
 public class ListViewIntroduceAdapter extends BaseAdapter {
-    private List<TxApiAppleBean.NewslistBean> lists = new ArrayList<>();
+    private List<ZhiHuBean.StoriesBean> lists = new ArrayList<>();
     private Context mContext;
     private LayoutInflater layoutInflater;
 
 
-    public ListViewIntroduceAdapter(List<TxApiAppleBean.NewslistBean> lists, Context mContext) {
+    public ListViewIntroduceAdapter(List<ZhiHuBean.StoriesBean> lists, Context mContext) {
         this.lists = lists;
         this.mContext = mContext;
         this.layoutInflater = LayoutInflater.from(mContext);
@@ -70,11 +70,13 @@ public class ListViewIntroduceAdapter extends BaseAdapter {
             convertView.setTag(holder);
         }
 
-        TxApiAppleBean.NewslistBean bean = lists.get(position);
+        ZhiHuBean.StoriesBean bean = lists.get(position);
         holder = (ViewHolder) convertView.getTag();
 
         holder.tv_introduce_name.setText(bean.getTitle());
-        PicassoWithImageLoaderImageViewUtils.displayImage(bean.getPicUrl(), holder.iv_introduce_img);
+        if (bean.getImages() != null&&bean.getImages().size()!=0) {
+            PicassoWithImageLoaderImageViewUtils.displayImage(bean.getImages().get(0), holder.iv_introduce_img);
+        }
 
         return convertView;
     }
