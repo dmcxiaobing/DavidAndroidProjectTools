@@ -13,20 +13,19 @@ import java.util.List;
  */
 
 /**
- * 生成一个随机四位数以及包括字母的四位数
+ * 生成一个随机四位数以及包括字母的四位数等工具类
  */
-public class GetRandomFourNumUtils {
+public class GetRandomNumUtils {
 
 
     /**
      * 生成一个四位数，包括字母
-     * @return
      */
     public static String getRandomFourNumString() {
-        String[] beforeShuffle = new String[] { "2", "3", "4", "5", "6", "7",
+        String[] beforeShuffle = new String[]{"2", "3", "4", "5", "6", "7",
                 "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
                 "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
-                "W", "X", "Y", "Z" };
+                "W", "X", "Y", "Z"};
         List list = Arrays.asList(beforeShuffle);
         Collections.shuffle(list);
         StringBuilder sb = new StringBuilder();
@@ -37,12 +36,24 @@ public class GetRandomFourNumUtils {
         String result = afterShuffle.substring(5, 9);
         return result;
     }
+
     /**
-     * 生成一个四位数，
-     * @return
+     * 生成一个四位数，返回的是纯数字
      */
     public static String getRandomFourNum() {
-        int num = (int) (Math.random()*9000+1000);
-        return num+"";
+        int num = (int) (Math.random() * 9000 + 1000);
+        return num + "";
+    }
+
+    /**
+     * 生成一个6位的随机字符串
+     */
+    public static String getSixNumString() {
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < 6; i++) {
+            int result = (int) (Math.random() * 26 + 97);
+            sb.append((char) result);
+        }
+        return sb.toString();
     }
 }
