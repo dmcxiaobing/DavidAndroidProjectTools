@@ -90,4 +90,4 @@ Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,OkHttp,fresco,shareSDK�
 
 涉及到第三方服务API以及SDK,记得将Constants类中的API秘钥改为自己的即可。
 
-欢迎star,fork，提出更好的建议。
+欢迎star,fork，提出更好的建议。版权所有:程序员小冰
