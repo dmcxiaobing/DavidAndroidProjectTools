@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_one"
+        style="@style/ButtonLayout"
+        android:text="展示自己内部封装的无限滚动" />
+
+    <Button
+        android:id="@+id/btn_two"
+        style="@style/ButtonLayout"
+        android:text="展示开源十多种动画效果的滚动" />
+</LinearLayout>

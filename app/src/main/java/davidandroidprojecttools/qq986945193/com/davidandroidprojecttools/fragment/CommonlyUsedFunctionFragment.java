@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.AutoViewPagerActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.AutoViewPagerBannerActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.BadgeViewWaterDropActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.BarCodeActivity;
@@ -126,7 +127,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                      * 无限轮播滚动的banner(封装ViewPager)
                      */
                     case 3:
-                        intent = new Intent(mContext, AutoViewPagerBannerActivity.class);
+                        intent = new Intent(mContext, AutoViewPagerActivity.class);
                         break;
                     /**
                      * 仿QQ微信提示消息个数两种实现方式

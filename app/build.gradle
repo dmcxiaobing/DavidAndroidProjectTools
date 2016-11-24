@@ -121,4 +121,7 @@ dependencies {
     //compile 'com.tencent.bugly:crashreport:latest.release'1.2.9
     /*  其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.0.0*/
     compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    /*引入代码家的viewpager滚动效果*/
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
 }

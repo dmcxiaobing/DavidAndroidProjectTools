@@ -29,7 +29,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.U
  */
 
 /**
- * 无限轮播滚动的banner(封装ViewPager)
+ * 使用项目中自己封装的无限滚动
  */
 public class AutoViewPagerBannerActivity extends Activity implements OnItemClickListener {
     private ConvenientBanner<String> vp_auto_bannar;

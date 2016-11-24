@@ -30,11 +30,7 @@ public class Urls {
     /*程序员小冰OsChina空间*/
     public static final String OSCHINA_DAVID = "https://my.oschina.net/mcxiaobing";
 
-
-    public static final String GET_IMAGE_URL = "http://avatar.csdn.net/D/6/7/1_qq_21376985.jpg";
     public static final String GET_IMAGE_URL_IMAGELOADER = "http://img.blog.csdn.net/20160706100407495";
-    public static final String GET_IMAGE_URL_GLIDE = "http://img3.imgtn.bdimg.com/it/u=4053239362,2182077315&fm=21&gp=0.jpg";
-    public static final String GET_IMAGE_URL_FRESCO = "http://img1.imgtn.bdimg.com/it/u=3997926325,3443864302&fm=21&gp=0.jpg";
     public static final String XUTILS_TWO_GET = "http://aqicn.org/publishingdata/json";
     public static final String XUTILS_TWO_POST = "http://apis.baidu.com/apistore/idservice/id";
     public static final String OKHTTP_GET_URL = "http://apis.baidu.com/apistore/idservice/id";
@@ -46,10 +42,14 @@ public class Urls {
     /*取得热点热词列表，也可以用分类id作为参数*/
     public static final String AUTOLOADMORE_TOP_LIST = "http://www.tngou.net/api/top/list";
     public static final String YOUKU_URL = "http://i.youku.com/i/UNDY3NTA3NTY0";
-
+    /*图片的url*/
     public static final String VIEWPAGE_BANNERIMAGE_ONE = "http://res.vmallres.com/pimages//sale/2016-04/2016041115504417.png";
     public static final String VIEWPAGE_BANNERIMAGE_TWO = "http://res.vmallres.com/pimages//sale/2016-04/20160410232653511.png";
     public static final String VIEWPAGE_BANNERIMAGE_THREE = "http://res.vmallres.com/pimages//sale/2016-04/20160418001955257.png";
+    public static final String GET_IMAGE_URL = "http://avatar.csdn.net/D/6/7/1_qq_21376985.jpg";
+    public static final String GET_IMAGE_URL_GLIDE = "http://img3.imgtn.bdimg.com/it/u=4053239362,2182077315&fm=21&gp=0.jpg";
+    public static final String GET_IMAGE_URL_FRESCO = "http://img1.imgtn.bdimg.com/it/u=3997926325,3443864302&fm=21&gp=0.jpg";
+
     /*抓取的接口*/
     public static final String ZHIHU_URL = "http://news-at.zhihu.com/api/4/news/before/20161122";
 
