@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.umeng.analytics.MobclickAgent;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -117,6 +119,18 @@ public class AutoViewPagerBannerActivity extends Activity implements OnItemClick
     protected void onResume() {
         super.onResume();
         vp_auto_bannar.startTurning(2000);
+        MobclickAgent.onResume(this);
+
+    }
+
+
+    /**
+     * onResume与onPause()封装提取原因友盟统计
+     */
+
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
 }

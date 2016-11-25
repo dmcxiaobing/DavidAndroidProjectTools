@@ -21,6 +21,8 @@ import android.widget.GridLayout;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 
+import com.umeng.analytics.MobclickAgent;
+
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.AnimationUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ScreenUtils;
@@ -219,4 +221,18 @@ public class ShareUiActivity extends AppCompatActivity {
 
         super.onBackPressed();
     }
+
+    /**
+     * onResume与onPause()封装提取原因友盟统计
+     */
+    protected void onResume() { // Umeng 对处理事件的统计
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
+
 }

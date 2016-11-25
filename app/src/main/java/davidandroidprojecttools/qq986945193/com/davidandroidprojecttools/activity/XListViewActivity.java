@@ -14,6 +14,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ArrayAdapter;
 
+import com.umeng.analytics.MobclickAgent;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -120,4 +122,18 @@ public class XListViewActivity extends Activity implements XListView.IXListViewL
     private String getTime() {
         return new SimpleDateFormat("MM-dd HH:mm", Locale.CHINA).format(new Date());
     }
+
+    /**
+     * onResume与onPause()封装提取原因友盟统计
+     */
+    protected void onResume() { // Umeng 对处理事件的统计
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
+
 }

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.umeng.analytics.MobclickAgent;
 
 import java.util.List;
 
@@ -124,6 +125,18 @@ public class PageActivity extends Activity {
             return view == object;
         }
 
+    }
+    /**
+     * onResume与onPause()封装提取原因友盟统计
+     */
+    protected void onResume() { // Umeng 对处理事件的统计
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
 

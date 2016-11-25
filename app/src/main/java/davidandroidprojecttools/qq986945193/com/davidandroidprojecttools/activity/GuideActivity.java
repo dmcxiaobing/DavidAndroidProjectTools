@@ -176,5 +176,20 @@ public class GuideActivity extends Activity implements ViewPager.OnPageChangeLis
         }
     }
 
+    /**
+     * onResume与onPause()封装提取原因友盟统计
+     */
+    protected void onResume() { // Umeng 对处理事件的统计
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
+
+
+
 
 }

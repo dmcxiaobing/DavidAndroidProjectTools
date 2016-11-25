@@ -12,6 +12,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.umeng.analytics.MobclickAgent;
+
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.SystemStatusManagerUtils;
 
@@ -36,4 +38,18 @@ public class SystemStatusThemeActivity extends Activity {
         tv_theme = (TextView) findViewById(R.id.tv_theme);
         tv_theme.setText("系统的沉浸式样式主题实现效果");
     }
+
+    /**
+     * onResume与onPause()封装提取原因友盟统计
+     */
+    protected void onResume() { // Umeng 对处理事件的统计
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
+
 }

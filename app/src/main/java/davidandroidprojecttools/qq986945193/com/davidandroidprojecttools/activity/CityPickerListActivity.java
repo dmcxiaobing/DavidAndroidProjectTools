@@ -21,6 +21,7 @@ import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
+import com.umeng.analytics.MobclickAgent;
 
 import java.util.List;
 
@@ -223,4 +224,19 @@ public class CityPickerListActivity extends Activity implements View.OnClickList
         super.onDestroy();
         mLocationClient.stopLocation();
     }
+
+
+    /**
+     * onResume与onPause()封装提取原因友盟统计
+     */
+    protected void onResume() { // Umeng 对处理事件的统计
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
+
 }

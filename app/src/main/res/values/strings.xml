@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">安卓利器</string>
     <!--这里填写我们在高德地图后台获取的API秘钥-->
-    <string name="amap_apikey">安卓利器</string>
+    <string name="amap_apikey">237e3794fbf4e9183c58abb600eecca87</string>
     <!--这里填写umeng的key-->
-    <string name="umeng_key">安卓利器</string>
+    <string name="umeng_key">75837dd045312dd1b6f00167f</string>
 
 
 
