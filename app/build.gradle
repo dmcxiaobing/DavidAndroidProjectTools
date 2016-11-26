@@ -44,7 +44,8 @@ android {
         release {
             /* 属性minifyEnabled可以在打包的时候去除掉无用的代码，是否对代码混淆、压缩*/
             minifyEnabled false
-            /*是否对资源压缩*/
+            /*是否对资源压缩。打开资源压缩。这句话的 主要 是设置混淆过程中压缩资源文件 因为这句话只有开启混淆后才会有效*/
+            // shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.davidConfig
         }
@@ -55,10 +56,42 @@ android {
         }
     }
 
-
-
+    /**
+     * 这里配置自定义多渠道打包
+     */
     productFlavors {
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+        }
+
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+        }
+
+        m360 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "m360"]
+        }
+
+        qq {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qq"]
+        }
     }
+    /**
+     * 这里也可以写多渠道打包的配置。更简洁。
+     */
+//    productFlavors {
+//
+//        wandoujia {}
+//        baidu {}
+//        m360 {}
+//        qq {}
+//
+//        productFlavors.all { flavor ->
+//            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+//        }
+//
+//    }
+
     /**
      * 解决错误：
      * `Error:Execution failed for task ‘:app:lintVitalRelease’.
