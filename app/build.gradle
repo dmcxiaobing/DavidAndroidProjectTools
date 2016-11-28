@@ -93,7 +93,8 @@ android {
 //    }
 
     /**
-     * 解决错误：
+     * 解决错误(关闭警告)：
+     *
      * `Error:Execution failed for task ‘:app:lintVitalRelease’.
      */
     lintOptions {
