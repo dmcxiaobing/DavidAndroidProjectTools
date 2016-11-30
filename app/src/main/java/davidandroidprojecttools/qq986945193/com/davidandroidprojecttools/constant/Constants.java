@@ -9,7 +9,7 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.consta
  */
 
 /**
- * 存放常量值得类
+ * 存放常量值得类 以及一些所需要的秘钥
  */
 public class Constants {
     /*这里是log的一个标签*/
