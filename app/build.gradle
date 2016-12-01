@@ -102,6 +102,13 @@ android {
         abortOnError false
     }
 
+    /**
+     * 这里可以自定义设置我们的支持jdk版本
+     */
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
 
 }
 
