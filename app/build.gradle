@@ -58,7 +58,16 @@ android {
 
     /**
      * 这里配置自定义多渠道打包
+     *
      */
+//    如果我们想打包wandoujia渠道的release版本，执行如下命令就好了：
+//    ./gradlew assembleWandoujiaRelease
+//    如果我们只打wandoujia渠道版本，则：
+//     ./gradlew assembleWandoujia
+//    此命令会生成wandoujia渠道的Release和Debug版本
+//    同理我想打全部Release版本：
+//    ./gradlew assembleRelease
+//     这条命令会把Product Flavor下的所有渠道的Release版本都打出来。
     productFlavors {
         wandoujia {
             manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
