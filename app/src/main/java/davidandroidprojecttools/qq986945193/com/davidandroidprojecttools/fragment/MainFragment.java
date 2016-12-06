@@ -22,6 +22,7 @@ import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.CallphoneActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.CreateFileActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MoreAnimationStartActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
@@ -86,6 +87,7 @@ public class MainFragment extends Fragment {
         listDatas.add("系统的沉浸式样式主题实现效果");
         listDatas.add("拍照以及选择相册手机照片");
         listDatas.add("Activity的多种跳转样式动画效果");
+        listDatas.add("在手机中创建文件以及写入,读取,删除等功能");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_main_fragment.setAdapter(mAdatper);
 
@@ -134,6 +136,12 @@ public class MainFragment extends Fragment {
                      */
                     case 6:
                         intent = new Intent(mContext, MoreAnimationStartActivity.class);
+                        break;
+                    /**
+                     *在手机中创建文件以及写入,读取,删除等功能
+                     */
+                    case 7:
+                        intent = new Intent(mContext, CreateFileActivity.class);
                         break;
 
                 }

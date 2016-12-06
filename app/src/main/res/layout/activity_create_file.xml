@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base" />
+
+    <Button
+        android:id="@+id/btn_createfile"
+        style="@style/ButtonLayout"
+        android:text="点击创建文件夹和文件并写入内容" />
+
+    <Button
+        android:id="@+id/btn_print"
+        style="@style/ButtonLayout"
+        android:text="向已经创建好的文件中写入内容" />
+    <Button
+        android:id="@+id/btn_delete"
+        style="@style/ButtonLayout"
+        android:text="删除文件夹下的所有文件" />
+    <Button
+        android:id="@+id/btn_read"
+        style="@style/ButtonLayout"
+        android:text="读取文件的所有内容" />
+</LinearLayout>
