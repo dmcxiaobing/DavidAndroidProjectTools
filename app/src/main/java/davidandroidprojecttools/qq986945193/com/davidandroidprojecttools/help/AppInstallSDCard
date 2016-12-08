@@ -6,8 +6,10 @@
  * @GitHub: https://github.com/QQ986945193
  *
  * @CSDN博客: http://blog.csdn.net/qq_21376985
- * 如何将app安装到SD卡上
+ *
  */
+
+ 如何将app安装到SD卡上
 
 自从Android 2.2版本开始，Android系统引入了一个全新的功能——APP2SD，这个功能让Android系统允许将应用程序安装到SD卡上面，一方面节约出更多的RAM空间，另一方面也允许应用程序扩大自身的体积。
 但是仅仅Android系统支持APP2SD，这样还是不够的，应用程序如果不经过处理，仍然会一如既往的转进RAM里。这是因为Android系统保持向后兼容的特性。那么，如果让应用程序不装入RAM，而是装入SD卡呢？这需要在应用程序的Android清单文件manifest.xml的manifest元素里加入android:installLocation属性。其值为：perferExtenal或auto。
