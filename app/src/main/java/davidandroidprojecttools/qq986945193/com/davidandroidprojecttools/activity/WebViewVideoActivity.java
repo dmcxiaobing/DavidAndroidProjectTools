@@ -22,7 +22,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.U
  */
 
 /**
- * WebView播放优酷视频(真机测试)
+ * WebView播放优酷视频(真机测试)  记得要在manifest添加支持属性
  */
 public class WebViewVideoActivity extends BaseActivity {
     private WebView webview;
