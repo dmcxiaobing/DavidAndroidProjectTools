@@ -42,7 +42,7 @@ public class WebViewActivity extends BaseActivity {
             }
         });
         /**
-         * WebView播放优酷视频(真机测试)
+         * WebView播放视频(真机测试)
          */
         btn_02.setOnClickListener(new View.OnClickListener() {
             @Override

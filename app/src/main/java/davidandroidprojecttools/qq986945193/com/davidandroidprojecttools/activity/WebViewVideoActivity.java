@@ -22,7 +22,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.U
  */
 
 /**
- * WebView播放优酷视频(真机测试)  记得要在manifest添加支持属性
+ * WebView播放视频(真机测试)  记得要在manifest添加支持属性
  */
 public class WebViewVideoActivity extends BaseActivity {
     private WebView webview;
@@ -37,6 +37,7 @@ public class WebViewVideoActivity extends BaseActivity {
 
         webview.setVisibility(View.VISIBLE);
         webview.getSettings().setUseWideViewPort(true);
+        //这里添加要播放视频的URL地址,这里用优酷。当然也可以用淘宝或者.mp4等视频的地址
         webview.loadUrl(Urls.YOUKU_URL);
 //        用webview加载网页时，点击网页中的视频进行播放，按返回键回到上一个页面，视频声音还在
 //
