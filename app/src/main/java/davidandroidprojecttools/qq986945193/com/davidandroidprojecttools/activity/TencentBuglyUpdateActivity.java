@@ -60,6 +60,11 @@ public class TencentBuglyUpdateActivity extends BaseActivity {
                     }
 
                     @Override
+                    public void onDownloadCompleted(boolean b) {
+
+                    }
+
+                    @Override
                     public void onUpgradeNoVersion(boolean isManual) {
 //                        LogUtil.E("没有最新版本....");
 //                        Toast.makeText(getApplicationContext(), "没有最新版本", Toast.LENGTH_SHORT)
