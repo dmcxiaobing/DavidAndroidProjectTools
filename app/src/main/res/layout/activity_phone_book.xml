@@ -3,66 +3,69 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/getPhoneNumSize"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:background="#0080FF"
-            android:gravity="center_vertical|right"
-            android:onClick="onClick"
-            android:padding="10dp"
-            android:text="批量操作联系人和手机号到电话本"
-            android:textColor="#ffffff"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/addAddressList"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#0080FF"
             android:onClick="onClick"
             android:padding="10dp"
-            android:text="添加到通讯录"
+            android:text="批量添加姓名和手机号到通讯录"
             android:textColor="#ffffff"
             android:textSize="16sp" />
 
         <Button
             android:id="@+id/clearAddressList"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:background="#0080FF"
             android:onClick="onClick"
             android:padding="10dp"
-            android:text="清除通讯录"
+            android:text="从通讯录批量删除添加的手机号和姓名"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+
+
+
+        <Button
+            android:id="@+id/addAddressPhoneList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0080FF"
+            android:onClick="onClick"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:text="批量添加手机号到通讯录"
             android:textColor="#ffffff"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/catAddressList"
-            android:layout_width="wrap_content"
+            android:id="@+id/clearAddressPhoneList"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#0080FF"
+            android:onClick="onClick"
+            android:padding="10dp"
+            android:text="从通讯录批量删除添加的手机号"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/catAddressList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:background="#0080FF"
             android:onClick="onClick"
             android:padding="10dp"
