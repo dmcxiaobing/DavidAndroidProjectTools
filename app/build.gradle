@@ -132,7 +132,7 @@ dependencies {
     //    compile 'com.google.code.gson:gson:2.7'
     //Picasso用来显示图片
     //    compile 'com.squareup.picasso:picasso:2.3.2'
-    //Umeng统计引入工具  可以使用jar文件，这里使用gradle方式
+    /*Umeng统计引入工具  可以使用jar文件，这里使用gradle方式*/
     compile 'com.umeng.analytics:analytics:latest.integration'
     //BadgeView的引入
     compile files('libs/badgeview.jar')

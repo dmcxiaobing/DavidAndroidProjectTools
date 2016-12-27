@@ -30,6 +30,9 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.Na
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ToastUtils;
 
+/**
+ * 关于查看联系人，以及添加与删除的功能
+ */
 public class PhoneBookActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void initView() {
@@ -87,7 +90,7 @@ public class PhoneBookActivity extends BaseActivity implements View.OnClickListe
             case R.id.addAddressPhoneList:
                 dialog("正在添加手机号,请稍等...");
                 try {
-                    addNumberName(listBeans);
+                    addNumber();
                 } catch (Exception e) {
                     e.printStackTrace();
                     ToastUtils.showShort(PhoneBookActivity.this, "添加失败,请重试");
@@ -176,11 +179,40 @@ public class PhoneBookActivity extends BaseActivity implements View.OnClickListe
         }).start();
     }
 
-    /**
-     * 批量添加姓名和手机号到通讯录。
-     */
-    private void addNumber(final List<NameNumberBean.NumberNameBean> listBeans) throws Exception {
+    private ContentValues values;
 
+    /**
+     * 批量添加手机号到通讯录。
+     */
+    private void addNumber() throws Exception {
+        new Thread(new Runnable() {
+            public void run() {
+                for (int i = 0; i < 5; i++) {
+                    // 创建一个空的ContentValues
+                    values = new ContentValues();
+                    // 向rawcontent。content——uri执行一个空值插入
+                    // 目的是获取系统返回的rawcontactid
+                    Uri rawcontacturi = getContentResolver().insert(
+                            ContactsContract.RawContacts.CONTENT_URI, values);
+                    long rawcontactid = ContentUris.parseId(rawcontacturi);
+                    values.clear();
+                    values.put(ContactsContract.Contacts.Data.RAW_CONTACT_ID, rawcontactid);
+                    values.put(ContactsContract.Contacts.Data.MIMETYPE, ContactsContract.CommonDataKinds.Phone.CONTENT_ITEM_TYPE);
+                    // 设置联系人电话号码
+                    String m = "000" + i;
+                    // 150 0840 0000 其实这里就是添加手机号码
+                    values.put(ContactsContract.CommonDataKinds.Phone.NUMBER, "1350840" + m);
+                    // 设置电话类型
+                    values.put(ContactsContract.CommonDataKinds.Phone.TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE);
+                    // 向联系人电话号码URI添加电话号码
+                    getContentResolver().insert(
+                            android.provider.ContactsContract.Data.CONTENT_URI,
+                            values);
+
+                }
+                hideDialog();
+            }
+        }).start();
     }
 
     private List<String> numbers = new ArrayList<>();
@@ -194,11 +226,11 @@ public class PhoneBookActivity extends BaseActivity implements View.OnClickListe
         // 获取手机联系人
         Cursor phoneCursor = resolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, null,
                 null, null); // 传入正确的uri
+
         if (phoneCursor != null) {
             while (phoneCursor.moveToNext()) {
                 // 获取联系人手机号number
 //                Number number = new Number();
-
                 NameNumberBean.NumberNameBean number = new NameNumberBean.NumberNameBean();
                 String phoneNumber = phoneCursor.getString(phoneCursor
                         .getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
@@ -326,7 +358,9 @@ public class PhoneBookActivity extends BaseActivity implements View.OnClickListe
         progressDialog.show();
     }
 
-
+    /**
+     * 隐藏progressDialog
+     */
     private void hideDialog() {
         if (progressDialog != null && progressDialog.isShowing()) {
             progressDialog.cancel();

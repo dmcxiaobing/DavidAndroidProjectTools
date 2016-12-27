@@ -29,6 +29,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.LoadingActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MarqueeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MiUiTabActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.PhoneBookActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SplashAdActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.StartDialogImageActivity;
@@ -97,7 +98,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
         listDatas.add("loading等待提示框多种实现方式");
         listDatas.add("各种各样的Tab切换功能效果的实现");
         listDatas.add("获取手机验证码，延迟六十秒，防止重复点击");
-
+        listDatas.add("关于查看联系人，以及添加与删除的功能");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_commonly_used_function_fragment.setAdapter(mAdatper);
 
@@ -180,6 +181,13 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                      */
                     case 11:
                         intent = new Intent(mContext, DebounceClickActivity.class);
+
+                        break;
+                    /**
+                     * 关于查看联系人，以及添加与删除的功能
+                     */
+                    case 12:
+                        intent = new Intent(mContext, PhoneBookActivity.class);
 
                         break;
 
