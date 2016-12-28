@@ -18,6 +18,8 @@
             android:onClick="onClick"
             android:padding="10dp"
             android:text="批量添加姓名和手机号到通讯录"
+
+
             android:textColor="#ffffff"
             android:textSize="16sp" />
 
@@ -44,7 +46,7 @@
             android:onClick="onClick"
             android:padding="10dp"
             android:layout_marginTop="10dp"
-            android:text="批量添加手机号到通讯录"
+            android:text="批量添加手机号到通讯录(无名称)"
             android:textColor="#ffffff"
             android:textSize="16sp" />
 
@@ -56,7 +58,7 @@
             android:background="#0080FF"
             android:onClick="onClick"
             android:padding="10dp"
-            android:text="从通讯录批量删除添加的手机号"
+            android:text="从通讯录批量删除无名称的的手机号"
             android:textColor="#ffffff"
             android:textSize="16sp" />
 
