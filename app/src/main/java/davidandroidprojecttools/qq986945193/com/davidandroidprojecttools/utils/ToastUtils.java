@@ -32,7 +32,7 @@ public class ToastUtils {
     }
 
     /**
-     * 短时间显示Toast
+     * 短时间显示Toast  这里message 代表的是的CharSequence路径
      */
     public static void showShort(Context context, int message) {
         if (isShow)
@@ -48,7 +48,7 @@ public class ToastUtils {
     }
 
     /**
-     * 长时间显示Toast
+     * 长时间显示Toast 这里message 代表的是的CharSequence路径
      */
     public static void showLong(Context context, int message) {
         if (isShow)
@@ -64,7 +64,7 @@ public class ToastUtils {
     }
 
     /**
-     * 自定义显示Toast时间
+     * 自定义显示Toast时间  这里message 代表的是的CharSequence路径
      */
     public static void show(Context context, int message, int duration) {
         if (isShow)
