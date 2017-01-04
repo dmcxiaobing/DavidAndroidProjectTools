@@ -14,4 +14,11 @@
         <item>缩小效果</item>
         <item>上下交错效果</item>
     </string-array>
+    <string-array name="spinner_two">
+        <item>JAVA</item>
+        <item>ANDROID</item>
+        <item>程序员小冰</item>
+        <item>IOS</item>
+        <item>Linux</item>
+    </string-array>
 </resources>
