@@ -63,7 +63,7 @@ public class SpinnerActivity extends BaseActivity {
     class SpinnerXMLSelectedListener implements AdapterView.OnItemSelectedListener {
         public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
                                    long arg3) {
-            ToastUtils.showShort(mContext,"hello"+adapter2.getItem(arg2));
+//            ToastUtils.showShort(mContext,"hello"+adapter2.getItem(arg2));
 
         }
 
