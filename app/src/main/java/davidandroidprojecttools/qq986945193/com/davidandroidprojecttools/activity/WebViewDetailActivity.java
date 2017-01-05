@@ -8,14 +8,19 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
  */
 
 import android.graphics.Bitmap;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.webkit.CookieManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Urls;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.FileUtils;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.URLUtils;
 
 /**
  * webview的功能使用详解
@@ -39,13 +44,15 @@ public class WebViewDetailActivity extends BaseActivity {
         /*设置是否支持缩放*/
         settings.setSupportZoom(true);
         settings.setBuiltInZoomControls(true);//显示放大缩小 controler
-
-
+        /*设置默认编码*/
         settings.setDefaultTextEncodingName("UTF-8");
-//        网页自适应
+        /*网页自适应*/
         settings.setUseWideViewPort(false);
 
         settings.setLoadWithOverviewMode(false);
+
+//        initWebViewSettings();
+
 
         webview.loadUrl(Urls.CSDN_BLOG_DAVID);
 
@@ -67,7 +74,10 @@ public class WebViewDetailActivity extends BaseActivity {
              */
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
+                if (URLUtils.isNetworkImageUrl(url)) {
+                    view.loadUrl(url);
+                    LogUtil.E("url" + url);
+                }
                 return true;
             }
 
@@ -76,6 +86,12 @@ public class WebViewDetailActivity extends BaseActivity {
              */
             @Override
             public void onPageFinished(WebView view, String url) {
+                /**
+                 * 获取cookie
+                 */
+                CookieManager cookieManager = CookieManager.getInstance();
+                String CookieStr = cookieManager.getCookie(url);
+                Log.e("webview的cookie", "Cookies="+CookieStr);
                 super.onPageFinished(view, url);
 //                dialog.dismiss();
             }
@@ -97,5 +113,27 @@ public class WebViewDetailActivity extends BaseActivity {
             }
         });
 
+    }
+
+    /**
+     * 常用的webview一些设置
+     */
+    private void initWebViewSettings() {
+        // 设置可以访问文件
+        webview.getSettings().setAllowFileAccess(true);
+        //如果访问的页面中有Javascript，则webview必须设置支持Javascript
+        webview.getSettings().setJavaScriptEnabled(true);
+        webview.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+        webview.getSettings().setAppCacheEnabled(true);
+        webview.getSettings().setDomStorageEnabled(true);
+        webview.getSettings().setDatabaseEnabled(true);
+        webview.getSettings().setSavePassword(true);
+        // User settings
+        webview.getSettings().setLoadsImagesAutomatically(true);
+        webview.getSettings().setUseWideViewPort(true);
+        webview.getSettings().setLoadWithOverviewMode(false);
+        webview.getSettings().setSaveFormData(true);
+        CookieManager.getInstance().setAcceptCookie(true);
+        webview.getSettings().setSupportZoom(true);
     }
 }
