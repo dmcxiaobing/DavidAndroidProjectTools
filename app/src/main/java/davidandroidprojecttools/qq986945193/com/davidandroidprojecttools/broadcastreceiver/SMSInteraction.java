@@ -1,4 +1,4 @@
-package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.broadcast;
+package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.broadcastreceiver;
 
 /*
  * @Author ：程序员小冰

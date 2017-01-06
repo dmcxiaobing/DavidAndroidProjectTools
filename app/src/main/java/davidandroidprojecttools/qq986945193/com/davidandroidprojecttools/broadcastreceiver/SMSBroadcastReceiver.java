@@ -1,4 +1,4 @@
-package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.broadcast;
+package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.broadcastreceiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
