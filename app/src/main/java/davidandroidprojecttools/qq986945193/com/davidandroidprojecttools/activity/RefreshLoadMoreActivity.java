@@ -83,6 +83,15 @@ public class RefreshLoadMoreActivity extends BaseActivity {
                 startActivity(RecycleViewLoadMoreActivity.class);
             }
         });
+        /**
+         * 带有自动加载与上拉刷新的listview
+         */
+        btn_pulltorefresh_auto_loadmore_.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(PullToRefreshAndLoadMoreActivity.class);
+            }
+        });
 
         /**
          * 带有自动加载与上拉刷新的activity recycleView
@@ -103,15 +112,7 @@ public class RefreshLoadMoreActivity extends BaseActivity {
                 startActivity(PullRecycleViewFragmentActivity.class);
             }
         });
-        /**
-         * 带有自动加载与上拉刷新的listview
-         */
-        btn_pulltorefresh_auto_loadmore_.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(PullToRefreshAndLoadMoreActivity.class);
-            }
-        });
+
         /**
          *pulltofreshListview上拉加载与下拉刷新
          */
