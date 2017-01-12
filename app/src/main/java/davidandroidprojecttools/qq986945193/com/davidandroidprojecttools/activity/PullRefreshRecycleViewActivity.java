@@ -96,7 +96,11 @@ public class PullRefreshRecycleViewActivity extends BaseListActivity<TopListBean
         if (mDataList == null) {
             mDataList = new ArrayList<TopListBean.TngouBean>();
         }
-
+        /**
+         * 根据action判断是加载更多还是下拉刷新
+         * ACTION_PULL_TO_REFRESH 下拉刷新
+         * ACTION_LOAD_MORE_REFRESH 加载更多
+         */
         if (action == PullRecycler.ACTION_PULL_TO_REFRESH) {
             pageIndex = 1;
         } else if (action == PullRecycler.ACTION_LOAD_MORE_REFRESH) {

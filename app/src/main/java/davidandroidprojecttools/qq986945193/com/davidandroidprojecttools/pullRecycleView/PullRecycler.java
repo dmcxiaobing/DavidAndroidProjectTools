@@ -19,10 +19,13 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pullRec
 public class PullRecycler extends FrameLayout implements SwipeRefreshLayout.OnRefreshListener {
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
+    //下拉刷新
     public static final int ACTION_PULL_TO_REFRESH = 1;
+    //加载更多
     public static final int ACTION_LOAD_MORE_REFRESH = 2;
     public static final int ACTION_IDLE = 0;
     private OnRecyclerRefreshListener listener;
+    //当前状态
     private int mCurrentState = ACTION_IDLE;
     private boolean isLoadMoreEnabled = false;
     private boolean isPullToRefreshEnabled = true;
@@ -46,14 +49,21 @@ public class PullRecycler extends FrameLayout implements SwipeRefreshLayout.OnRe
 
     private void setUpView() {
         LayoutInflater.from(getContext()).inflate(R.layout.widget_pull_to_refresh, this, true);
+        /**
+         * 设置SwipeRefreshLayout的属性
+         */
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
         mSwipeRefreshLayout.setOnRefreshListener(this);
         mSwipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
                 android.R.color.holo_green_light, android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
-
         mSwipeRefreshLayout.setOnRefreshListener(this);
+
+
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        /**
+         * 监听recycleView的滚动事件
+         */
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
