@@ -183,6 +183,6 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.daimajia.slider:library:1.1.5@aar'
     /*引入圆形图片的library*/
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'com.mcxiaoke.volley:library:1.0.19'
+//    compile 'de.hdodenhof:circleimageview:2.1.0'
+//    compile 'com.mcxiaoke.volley:library:1.0.19'
 }

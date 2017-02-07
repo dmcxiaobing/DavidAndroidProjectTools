@@ -68,16 +68,15 @@ public class ListViewIntroduceAdapter extends BaseAdapter {
             holder = new ViewHolder();
             ViewUtils.inject(holder, convertView);
             convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
         }
 
         ZhiHuBean.StoriesBean bean = lists.get(position);
-        holder = (ViewHolder) convertView.getTag();
-
         holder.tv_introduce_name.setText(bean.getTitle());
-        if (bean.getImages() != null&&bean.getImages().size()!=0) {
+        if (bean.getImages() != null && bean.getImages().size() != 0) {
             PicassoWithImageLoaderImageViewUtils.displayImage(bean.getImages().get(0), holder.iv_introduce_img);
         }
-
         return convertView;
     }
 
