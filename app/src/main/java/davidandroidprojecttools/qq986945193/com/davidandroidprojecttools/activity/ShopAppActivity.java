@@ -9,7 +9,9 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
  * @OsChina空间: https://my.oschina.net/mcxiaobing
  */
 
+import android.content.ClipboardManager;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -32,6 +34,7 @@ public class ShopAppActivity extends BaseActivity {
     private Button btnOpentaobaoOne;
     private Button btnOpentaobaoTwo;
     private Button btn_opentaobao_goodsdetail;
+    private Button btn_opentaobao_address;
     public static final String APP_PACKAGENAME = "com.taobao.taobao";
 
 
@@ -41,6 +44,7 @@ public class ShopAppActivity extends BaseActivity {
         btnOpentaobaoOne = (Button) findViewById(R.id.btn_opentaobao_one);
         btnOpentaobaoTwo = (Button) findViewById(R.id.btn_opentaobao_two);
         btn_opentaobao_goodsdetail = (Button) findViewById(R.id.btn_opentaobao_goodsdetail);
+        btn_opentaobao_address = (Button) findViewById(R.id.btn_opentaobao_address);
     }
 
     @Override
@@ -137,6 +141,28 @@ public class ShopAppActivity extends BaseActivity {
                 } else {
                     ToastUtils.show(ShopAppActivity.this, "对不起您还没有安装淘宝", Toast.LENGTH_SHORT);
                 }
+            }
+        });
+
+        /**
+         * 通过淘口令打开淘宝地址
+         */
+        btn_opentaobao_address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //首先判断是否已经安装了淘宝,然后在进行启动
+                if (AppUtils.isAvilible(ShopAppActivity.this, APP_PACKAGENAME)) {
+                    PackageManager packageManager = getPackageManager();
+                    Intent intent = new Intent();
+                    intent = packageManager.getLaunchIntentForPackage(APP_PACKAGENAME);
+                    startActivity(intent);
+                    ClipboardManager clip = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
+                    clip.setText("￥天猫淘宝专属无门槛优惠券列表页！私密优惠券，抢到就是赚到#22202601129#￥"); // 复制
+//                    clip.getText();//粘贴
+                } else {
+                    ToastUtils.show(ShopAppActivity.this, "对不起您还没有安装淘宝", Toast.LENGTH_SHORT);
+                }
+
             }
         });
     }

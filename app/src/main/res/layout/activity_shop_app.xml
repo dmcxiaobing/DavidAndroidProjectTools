@@ -18,4 +18,8 @@
         android:id="@+id/btn_opentaobao_goodsdetail"
         style="@style/ButtonLayout"
         android:text="打开手机淘宝商品详情"/>
+    <Button
+        android:id="@+id/btn_opentaobao_address"
+        style="@style/ButtonLayout"
+        android:text="通过淘口令打开淘宝地址"/>
 </LinearLayout>
