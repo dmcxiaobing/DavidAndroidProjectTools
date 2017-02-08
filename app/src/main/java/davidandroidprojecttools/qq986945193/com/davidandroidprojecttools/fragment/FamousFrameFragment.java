@@ -18,6 +18,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ButterKnifeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.OkHttpActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.PicassoAndImageloaderFrescoActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ShopAppActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SlidingMenuActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.TencentBuglyUpdateActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.UpDateAppActivity;
@@ -74,6 +75,8 @@ public class FamousFrameFragment extends Fragment {
         listDatas.add("ButterKnife的使用详解");
         listDatas.add("SlidingMenu的使用详解");
         listDatas.add("升级APP软件的多种实现方式");
+        listDatas.add("关于电商的一些简单常用功能");
+
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_famous_frame_fragment.setAdapter(mAdatper);
 
@@ -117,6 +120,12 @@ public class FamousFrameFragment extends Fragment {
                      */
                     case 5:
                         intent = new Intent(mContext, UpDateAppActivity.class);
+                        break;
+                    /**
+                     * 关于电商的一些简单常用功能
+                     */
+                    case 6:
+                        intent = new Intent(mContext, ShopAppActivity.class);
                         break;
 
 
