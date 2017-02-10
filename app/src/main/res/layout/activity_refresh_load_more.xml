@@ -12,7 +12,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
+            <Button
+                android:id="@+id/btn_david_auto_pull_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DavidPullListview的下拉刷新与上拉自动加载" />
             <Button
                 android:id="@+id/btn_pull_xlistview"
                 android:layout_width="match_parent"

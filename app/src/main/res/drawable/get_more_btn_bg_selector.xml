@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/get_more_btn_bg_f" android:state_pressed="true"/>
+    <item android:drawable="@drawable/get_more_btn_bg"/>
+
+</selector>

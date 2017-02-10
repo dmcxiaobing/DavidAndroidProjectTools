@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/pull_list_view_progressbar_bg"
+    android:fromDegrees="360"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="0" />

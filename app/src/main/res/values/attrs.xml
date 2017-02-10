@@ -155,4 +155,12 @@
         <attr name="dividerColor" format="color" />
         <attr name="whelltextSize" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="DavidAutoPullListView">
+        <attr name="getMoreType">
+            <enum name="auto" value="0" />
+            <enum name="click" value="1" />
+        </attr>
+        <attr name="addPullHeaderByUser" format="boolean" />
+    </declare-styleable>
 </resources>

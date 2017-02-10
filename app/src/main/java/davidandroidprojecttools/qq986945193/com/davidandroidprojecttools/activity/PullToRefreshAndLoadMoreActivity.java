@@ -49,8 +49,6 @@ public class PullToRefreshAndLoadMoreActivity extends BaseActivity {
             //下拉刷新调用
             public void onRefresh() {
                 page = 1;
-                lists.clear();
-                mMyCommonAdapter.notifyDataSetChanged();
                 loadData(true);
 
             }
@@ -68,7 +66,7 @@ public class PullToRefreshAndLoadMoreActivity extends BaseActivity {
         pl_listview.getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(PullToRefreshAndLoadMoreActivity.this, "po"+position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(PullToRefreshAndLoadMoreActivity.this, "po" + position, Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -90,6 +88,9 @@ public class PullToRefreshAndLoadMoreActivity extends BaseActivity {
                 if (mTopListBean != null) {
                     if (mTopListBean.getTngou() != null) {
                         if (mTopListBean.getTngou() != null) {
+                            if (page == 1) {
+                                lists.clear();
+                            }
                             lists.addAll(mTopListBean.getTngou());
                             if (lists == null && lists.size() == 0) {
                                 return;

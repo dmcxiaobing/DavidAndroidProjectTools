@@ -16,6 +16,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
  * 上拉加载更多与下拉刷新的多种实现
  */
 public class RefreshLoadMoreActivity extends BaseActivity {
+    private Button btn_david_auto_pull_listview;
     private Button btn_pull_xlistview;
     private Button btn_pull_xlistview_two;
     private Button btn_auto_loadmore;
@@ -32,6 +33,7 @@ public class RefreshLoadMoreActivity extends BaseActivity {
     @Override
     protected void initView() {
         setContentView(R.layout.activity_refresh_load_more);
+        btn_david_auto_pull_listview = (Button) findViewById(R.id.btn_david_auto_pull_listview);
         btn_pull_xlistview = (Button) findViewById(R.id.btn_pull_xlistview);
         btn_pull_xlistview_two = (Button) findViewById(R.id.btn_pull_xlistview_two);
         btn_auto_loadmore = (Button) findViewById(R.id.btn_auto_loadmore);
@@ -47,6 +49,15 @@ public class RefreshLoadMoreActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        /**
+         * DavidPullListview的下拉刷新与上拉自动加载
+         */
+        btn_david_auto_pull_listview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(DavidPullAutoListviewActivity.class);
+            }
+        });
         /**
          * pullXlistview的刷新与加载数据。真实数据
          */
