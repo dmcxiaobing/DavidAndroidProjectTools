@@ -8,8 +8,54 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
         />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/drawerlayout_fmlayout"
+            android:layout_width="match_parent"
+            android:layout_gravity="start"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/drawerlayout_llcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <Button
+                    android:id="@+id/btn_one"
+                    style="@style/ButtonLayout"
+                    android:text="btn_one"/>
+
+                <Button
+                    android:id="@+id/btn_two"
+                    style="@style/ButtonLayout"
+                    android:text="btn_two"/>
+
+                <Button
+                    android:id="@+id/btn_three"
+                    style="@style/ButtonLayout"
+                    android:text="btn_three"/>
+
+                <Button
+                    android:id="@+id/btn_four"
+                    style="@style/ButtonLayout"
+                    android:text="btn_four"/>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </android.support.v4.widget.DrawerLayout>
 
 </LinearLayout>

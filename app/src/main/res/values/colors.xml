@@ -18,7 +18,11 @@
     <color name="alpha_white">#9ED89F</color>
     <color name="red">#E51A18</color>
     <color name="transparent">#0000</color>
+    <color name="colorPrimary_dark">#00695c</color>
+    <color name="textColorPrimary">#ffffff</color>
+    <color name="textColorPrimary_dark">#404040</color>
 
+    <color name="windowBackground">#efefef</color>
     <!-- 背景色 -->
     <color name="backcolor_white">#FFFFFF</color>
     <color name="backcolor">#EDEDED</color>

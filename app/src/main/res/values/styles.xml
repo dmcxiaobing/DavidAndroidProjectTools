@@ -7,20 +7,29 @@
         <item name="colorPrimary">@android:color/holo_blue_bright</item>
         <!-- 状态栏颜色 -->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        //添加Actionbar
+        <!--添加Actionbar-->
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="colorAccent">@color/colorAccent</item>
         <item name="windowNoTitle">true</item>
         <item name="windowActionModeOverlay">false</item>
-    </style>
+        <!--drawerlayout的颜色与样式设置-->
+        <item name="android:textColorPrimary">@color/gray_font_dark</item>
+        <item name="android:windowBackground">@color/gray_background</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="colorAccent">@color/colorAccent</item>
 
+    </style>
+    <!--drawerlayout的样式 -->
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/red</item>
+    </style>
 
     <!-- 圆形ImageView  RoundImageView所需要的Style-->
     <declare-styleable name="RoundImageView">
-        <attr name="border_thickness" format="dimension" />
-        <attr name="border_inside_color" format="color" />
-        <attr name="border_outside_color" format="color" />
+        <attr name="border_thickness" format="dimension"/>
+        <attr name="border_inside_color" format="color"/>
+        <attr name="border_outside_color" format="color"/>
     </declare-styleable>
 
 
@@ -111,7 +120,7 @@
         <item name="android:background">?android:attr/selectableItemBackground</item>
     </style>
 
-    <style name="Button" parent="Base.Widget.AppCompat.Button.Borderless" />
+    <style name="Button" parent="Base.Widget.AppCompat.Button.Borderless"/>
 
     <style name="Button.Normal">
         <item name="android:minWidth">10dp</item>
