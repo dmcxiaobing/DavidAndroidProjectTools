@@ -4,18 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
-import com.lidroid.xutils.util.LogUtils;
-import com.tencent.bugly.Bugly;
-import com.tencent.bugly.beta.Beta;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,14 +19,12 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.CreateFileActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MoreAnimationStartActivity;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RoundZoomImageViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SpinnerActivity;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SplashAdActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SwipeRefreshListViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemStatusThemeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.TakeSelectorPhotoActivity;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Constants;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ToolbarDrawerLayoutActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 /**
  * @author ：程序员小冰
@@ -91,6 +83,7 @@ public class MainFragment extends Fragment {
         listDatas.add("Activity的多种跳转样式动画效果");
         listDatas.add("在手机中创建文件以及写入,读取,删除等功能");
         listDatas.add("spinner(下拉框)的知识点详解");
+        listDatas.add("Toolbar和DrawableLayout的用法");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_main_fragment.setAdapter(mAdatper);
 
@@ -151,6 +144,12 @@ public class MainFragment extends Fragment {
                      */
                     case 8:
                         intent = new Intent(mContext, SpinnerActivity.class);
+                        break;
+                    /**
+                     *Toolbar和DrawableLayout的用法
+                     */
+                    case 9:
+                        intent = new Intent(mContext, ToolbarDrawerLayoutActivity.class);
                         break;
 
                 }
