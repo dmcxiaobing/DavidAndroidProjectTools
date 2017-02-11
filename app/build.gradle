@@ -193,4 +193,6 @@ dependencies {
     compile files('libs/tencent_mta-sdk-1.6.2.jar')
     /*微博第三方登录的sdk*/
     compile files('libs/weiboSDKCore_3.1.4.jar')
+    /*微信第三方登录的sdk*/
+    compile files('libs/wechat_libammsdk.jar')
 }

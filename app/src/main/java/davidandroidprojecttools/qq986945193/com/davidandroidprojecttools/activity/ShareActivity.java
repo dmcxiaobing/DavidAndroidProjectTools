@@ -21,6 +21,9 @@ import com.sina.weibo.sdk.auth.WeiboAuthListener;
 import com.sina.weibo.sdk.auth.sso.SsoHandler;
 import com.sina.weibo.sdk.exception.WeiboException;
 import com.tencent.connect.UserInfo;
+import com.tencent.mm.sdk.modelmsg.SendAuth;
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.mm.sdk.openapi.WXAPIFactory;
 import com.tencent.open.utils.HttpUtils;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
@@ -43,6 +46,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.A
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.DialogThridUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ShareUtils;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.wxapi.WXEntryActivity;
 
 /**
  * 分享的一些功能与UI自定义效果实现
@@ -53,6 +57,7 @@ public class ShareActivity extends BaseActivity {
     private Button btn_share_custom_ui;
     private Button btn_qq_alone_login;
     private Button btn_weibo_alone_login;
+    private Button btn_wechat_alone_login;
 
     @Override
     protected void initView() {
@@ -62,6 +67,7 @@ public class ShareActivity extends BaseActivity {
         btn_share_custom_ui = (Button) findViewById(R.id.btn_share_custom_ui);
         btn_qq_alone_login = (Button) findViewById(R.id.btn_qq_alone_login);
         btn_weibo_alone_login = (Button) findViewById(R.id.btn_weibo_alone_login);
+        btn_wechat_alone_login = (Button) findViewById(R.id.btn_wechat_alone_login);
 
     }
 
@@ -71,6 +77,8 @@ public class ShareActivity extends BaseActivity {
     //微博
     private AuthInfo mAuthInfo;
     private SsoHandler mSsoHandler;
+    //微信
+    private IWXAPI mIWXinApi;
 
 
     @Override
@@ -198,6 +206,27 @@ public class ShareActivity extends BaseActivity {
                 }
             }
         });
+        /**
+         * 微信登录
+         */
+        btn_wechat_alone_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDialog = DialogThridUtils.showWaitDialog(mContext, Constants.LOADING_DATA, false, true);
+                mIWXinApi = WXAPIFactory.createWXAPI(ShareActivity.this, ThridLoginConstants.WeiXin.CLIENT_ID, false);
+                if (mIWXinApi.isWXAppInstalled()) {
+                    mIWXinApi.registerApp(ThridLoginConstants.WeiXin.CLIENT_ID);
+                    final SendAuth.Req req = new SendAuth.Req();
+                    req.scope = ThridLoginConstants.WeiXin.SCOPE;
+                    req.state = "wechat_sdk_demo_test";
+                    //登录后，会调用WXEntryActivity类
+                    mIWXinApi.sendReq(req);
+                } else {
+                    DialogThridUtils.closeDialog(mDialog);
+                    Toast.makeText(getApplicationContext(), "请安装微信", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
 
@@ -307,7 +336,10 @@ public class ShareActivity extends BaseActivity {
      * 调用QQ注销接口
      */
     public void logout() {
-        mTencent.logout(this);
+        /*退出QQ*/
+        if (mTencent != null) {
+            mTencent.logout(this.getApplicationContext());
+        }
     }
 
     @Override
@@ -317,7 +349,10 @@ public class ShareActivity extends BaseActivity {
             mTencent.releaseResource();
             mTencent = null;
         }
-
+        if (mIWXinApi != null) {
+            mIWXinApi.detach();
+            mIWXinApi = null;
+        }
         if (mAuthInfo != null) {
             mAuthInfo = null;
         }

@@ -39,4 +39,19 @@ public class ThridLoginConstants {
 //        String GET_ACCOUNT_INFO = "https://api.weibo.com/2/users/show.json";
     }
 
+    /**
+     * 微信登录
+     */
+    public interface WeiXin {
+        String CLIENT_ID = "wx852b5d9aca286364986944";//按需求更换
+        String APP_SECRET = "";//按需求更换
+        String SCOPE = "snsapi_userinfo";
+        String GET_ACCESS_TOKEN_URL="https://api.weixin.qq.com/sns/oauth2/access_token";
+        String REFRESH_ACCESS_TOKEN_URL="https://api.weixin.qq.com/sns/oauth2/refresh_token";
+        String GET_USER_INFO_URL="https://api.weixin.qq.com/sns/userinfo";
+        String GRANT_TYPE="authorization_code";
+
+//        https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code
+    }
+
 }

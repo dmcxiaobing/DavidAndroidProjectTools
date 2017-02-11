@@ -11,6 +11,10 @@
         android:id="@+id/btn_weibo_alone_login"
         style="@style/ButtonLayout"
         android:text="微博登录(不借助第三方SDK)" />
+    <Button
+        android:id="@+id/btn_wechat_alone_login"
+        style="@style/ButtonLayout"
+        android:text="微信登录(不借助第三方SDK)" />
 
     <Button
         android:id="@+id/btn_share_native"
