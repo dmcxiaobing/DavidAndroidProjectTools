@@ -7,6 +7,10 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.callba
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  * @OsChina空间: https://my.oschina.net/mcxiaobing
  */
+
+/**
+ * 一些第三方登录的appID
+ */
 public class ThridLoginConstants {
     /**
      * QQ登录的key
