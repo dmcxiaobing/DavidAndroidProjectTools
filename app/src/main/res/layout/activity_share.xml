@@ -3,6 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <Button
+        android:id="@+id/btn_qq_alone_login"
+        style="@style/ButtonLayout"
+        android:text="QQ登录(不借助第三方SDK)" />
+    <Button
+        android:id="@+id/btn_weibo_alone_login"
+        style="@style/ButtonLayout"
+        android:text="微博登录(不借助第三方SDK)" />
 
     <Button
         android:id="@+id/btn_share_native"
