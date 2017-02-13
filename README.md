@@ -82,7 +82,7 @@ a,二维码的扫描与生成功能 b,圆形头像的功能
 
 Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,OkHttp,fresco,shareSDK分享
 
-腾讯Bugly,百度ApiStore,Umeng统计的功能等.
+腾讯Bugly,百度ApiStore,Umeng统计的功能,微博与QQ的第三方登陆等.
 
 由于有些功能效果无法展示，具体实现请看项目源代码。
 
