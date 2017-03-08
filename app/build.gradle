@@ -129,13 +129,9 @@ dependencies {
     compile 'com.android.support:design:23.1.0'
     compile 'com.android.support:cardview-v7:23.1.0'
     //Gson用来解析json
-
     //    compile 'com.google.code.gson:gson:2.7'
-
     //Picasso用来显示图片
-
     //    compile 'com.squareup.picasso:picasso:2.3.2'
-
     /*Umeng统计引入工具  可以使用jar文件，这里使用gradle方式*/
     compile 'com.umeng.analytics:analytics:latest.integration'
     //BadgeView的引入
@@ -166,28 +162,21 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.1.0'
     apt 'com.jakewharton:butterknife-compiler:8.1.0'
     //增加这一句
-
     /*使用一款开源的loading框架，要求最低sdk == 15*/
     compile 'com.github.d-max:spots-dialog:0.7@aar'
     /*引用高德地图的SDK进行定位*/
     compile files('libs/AMap_Location_v2.3.0_20160112.jar')
     /*注释掉原有bugly的仓库 腾讯bugly升级以及Crash的引用*/
-
     //其中latest.release指代最新版本号，也可以指定明确的版本号，例如
-
     //compile 'com.tencent.bugly:crashreport:latest.release'1.2.9
-
     /*  其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.0.0*/
     compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
     /*引入代码家的viewpager滚动效果*/
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.daimajia.slider:library:1.1.5@aar'
     /*引入圆形图片的library*/
-
     //    compile 'de.hdodenhof:circleimageview:2.1.0'
-
     //    compile 'com.mcxiaoke.volley:library:1.0.19'
-
     /*QQ第三方登录的sdk*/
     compile files('libs/open_qq_sdk_r5781.jar')
     compile files('libs/tencent_mta-sdk-1.6.2.jar')
@@ -195,4 +184,5 @@ dependencies {
     compile files('libs/weiboSDKCore_3.1.4.jar')
     /*微信第三方登录的sdk*/
     compile files('libs/wechat_libammsdk.jar')
+    compile files('libs/alipaySdk-20160516.jar')
 }
