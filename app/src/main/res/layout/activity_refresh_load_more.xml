@@ -54,6 +54,12 @@
                 android:text="带有自动加载与上拉刷新的activity recycleView" />
 
             <Button
+                android:id="@+id/btn_recycleview_auto_loadmore_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="recycleView嵌套listview刷新与加载更多" />
+
+            <Button
                 android:id="@+id/btn_recycleview_auto_loadmore_swipe_fm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

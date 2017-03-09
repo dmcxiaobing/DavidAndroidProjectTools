@@ -16,6 +16,10 @@ import android.widget.GridView;
  * @OsChina空间: https://my.oschina.net/mcxiaobing
  *
  */
+
+/**
+ * Scrollview嵌套自定义gridview
+ */
 public class WrapHeightGridView extends GridView {
     public WrapHeightGridView(Context context) {
         this(context, null);
