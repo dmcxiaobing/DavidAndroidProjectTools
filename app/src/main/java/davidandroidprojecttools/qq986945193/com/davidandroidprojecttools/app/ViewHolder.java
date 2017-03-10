@@ -1,6 +1,7 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app;
 
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +16,7 @@ import android.view.ViewGroup;
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  *
  */
-public class ViewHolder {
+public class ViewHolder extends RecyclerView.ViewHolder {
 
 	private SparseArray<View> mViews;
 	private int mPosition;
