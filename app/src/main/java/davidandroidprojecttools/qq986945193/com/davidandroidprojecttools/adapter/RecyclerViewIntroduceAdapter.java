@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app.ViewHolder;
 
 
 /**
@@ -16,17 +15,19 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app.Vie
  */
 
 
-public class RecyclerViewIntroduceAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class RecyclerViewIntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
 
     @Override
-    public davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return null;
     }
 
     @Override
-    public void onBindViewHolder(davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
     }
+
 
     @Override
     public int getItemCount() {

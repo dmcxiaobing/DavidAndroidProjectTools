@@ -16,7 +16,7 @@ import android.view.ViewGroup;
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  *
  */
-public class ViewHolder extends RecyclerView.ViewHolder {
+public class ViewHolder {
 
 	private SparseArray<View> mViews;
 	private int mPosition;
