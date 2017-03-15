@@ -31,6 +31,12 @@ import okhttp3.Response;
 
 /**
  * ListView详解的类
+ *
+ * 注明:当长点击和短点吉事件冲突的话解决方法
+ *
+ * 1,长按事件的return false改为true就不会监听onclick了
+ * 2,设置变量（此方法没有尝试）
+ *
  */
 public class ListViewIntroduceActivity extends BaseActivity {
     private ListView mListView;
