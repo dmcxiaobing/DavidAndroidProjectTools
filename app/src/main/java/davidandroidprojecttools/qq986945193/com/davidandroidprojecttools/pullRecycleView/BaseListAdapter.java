@@ -14,6 +14,25 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
  * @GitHub: https://github.com/QQ986945193
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  */
+
+/**
+ * public Handler handler = new Handler();
+ * if (isShown) {
+ * Runnable r = new Runnable() {
+ * public void run() {
+ * notifyItemChanged(getItemCount());
+ * }
+ * };
+ * handler.post(r);
+ * } else {
+ * Runnable r = new Runnable() {
+ * public void run() {
+ * notifyItemRemoved(getItemCount());
+ * }
+ * };
+ * handler.post(r);
+ * }
+ */
 public abstract class BaseListAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     protected static final int VIEW_TYPE_LOAD_MORE_FOOTER = 100;
