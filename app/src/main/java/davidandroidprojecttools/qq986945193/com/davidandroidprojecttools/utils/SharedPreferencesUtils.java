@@ -6,6 +6,7 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils;
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  * @OsChina空间: https://my.oschina.net/mcxiaobing
  */
+
 import android.content.Context;
 import android.content.SharedPreferences;
 
@@ -81,6 +82,11 @@ public class SharedPreferencesUtils {
 
     }
 
+    public static void deleteBoolean(Context context, String key) {
+        sharedPreferences = context.getSharedPreferences(PREF_NAME,
+                Context.MODE_PRIVATE);
+        sharedPreferences.edit().remove(key).commit();
+    }
 
 
     public static void putBoolean(Context ctx, String key, boolean value) {
