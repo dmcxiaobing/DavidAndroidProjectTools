@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="45dp"
-    android:background="@drawable/get_more_btn_bg_selector" >
-
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+    >
+    <!--
+    可以设置footer的背景
+    android:background="@drawable/get_more_btn_bg_selector"
+ -->
     <TextView
         android:id="@+id/tv_foot_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:textColor="#404040"
-        android:textSize="16sp" >
+        android:textSize="16sp">
     </TextView>
 
     <ProgressBar
@@ -23,6 +26,6 @@
         android:layout_toLeftOf="@id/tv_foot_title"
         android:indeterminateDrawable="@drawable/pull_list_view_progressbar"
         android:indeterminateDuration="1000"
-        android:visibility="gone" />
+        android:visibility="gone"/>
 
 </RelativeLayout>
