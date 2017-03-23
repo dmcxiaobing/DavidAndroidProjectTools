@@ -4,9 +4,14 @@ import android.content.Context;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 
 import java.util.List;
+
+import static android.content.Context.WIFI_SERVICE;
 
 /**
  * @author ：程序员小冰
@@ -111,5 +116,18 @@ public class NetworkAvailableUtils {
             return true;
         }
         return false;
+    }
+
+    /**
+     * 获取wifi的信息
+     *
+     */
+    public static String getConnectWifiSsid(Context context) {
+        WifiManager wifiManager = (WifiManager) context.getSystemService(WIFI_SERVICE);
+        WifiInfo wifiInfo = wifiManager.getConnectionInfo();
+        Log.d("wifiInfo", wifiInfo.toString());
+        /*wifi的名称*/
+        Log.d("SSID", wifiInfo.getSSID());
+        return wifiInfo.getSSID();
     }
 }
