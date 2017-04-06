@@ -31,7 +31,6 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.pullRec
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static u.aly.x.G;
 
 /**
  * @author ：程序员小冰
