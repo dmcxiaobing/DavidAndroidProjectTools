@@ -80,7 +80,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
         FragmentManager fm = getSupportFragmentManager();
         // 打开事务
         FragmentTransaction ft = fm.beginTransaction();
-        // 替换
+        // 添加
         ft.add(layoutId, f, tag);
         // 关闭
         ft.commit();
@@ -107,7 +107,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
         FragmentManager fm = getSupportFragmentManager();
         // 打开事务
         FragmentTransaction ft = fm.beginTransaction();
-        // 替换
+        // 移除
         ft.remove(f);
         // 关闭
         ft.commit();
