@@ -34,7 +34,7 @@ public class DateUtils {
      * @return SimpleDateFormat对象
      * @throws RuntimeException 异常：非法日期格式
      */
-    private static SimpleDateFormat getDateFormat(String pattern) throws RuntimeException {
+    public static SimpleDateFormat getDateFormat(String pattern) throws RuntimeException {
         SimpleDateFormat dateFormat = threadLocal.get();
         if (dateFormat == null) {
             synchronized (object) {
@@ -56,7 +56,7 @@ public class DateUtils {
      * @param dateType 日期格式
      * @return 数值
      */
-    private static int getInteger(Date date, int dateType) {
+    public static int getInteger(Date date, int dateType) {
         int num = 0;
         Calendar calendar = Calendar.getInstance();
         if (date != null) {
@@ -74,7 +74,7 @@ public class DateUtils {
      * @param amount   数值
      * @return 计算后日期字符串
      */
-    private static String addInteger(String date, int dateType, int amount) {
+    public static String addInteger(String date, int dateType, int amount) {
         String dateString = null;
         DateStyle dateStyle = getDateStyle(date);
         if (dateStyle != null) {
@@ -93,7 +93,7 @@ public class DateUtils {
      * @param amount   数值
      * @return 计算后日期
      */
-    private static Date addInteger(Date date, int dateType, int amount) {
+    public static Date addInteger(Date date, int dateType, int amount) {
         Date myDate = null;
         if (date != null) {
             Calendar calendar = Calendar.getInstance();
@@ -110,7 +110,7 @@ public class DateUtils {
      * @param timestamps 时间long集合
      * @return 日期
      */
-    private static Date getAccurateDate(List<Long> timestamps) {
+    public static Date getAccurateDate(List<Long> timestamps) {
         Date date = null;
         long timestamp = 0;
         Map<Long, long[]> map = new HashMap<Long, long[]>();
