@@ -35,6 +35,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.StartDialogImageActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.TabActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.TopBottomActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.UpMarqueeActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.XListViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
@@ -99,6 +100,7 @@ public class CommonlyUsedFunctionFragment extends Fragment {
         listDatas.add("各种各样的Tab切换功能效果的实现");
         listDatas.add("获取手机验证码，延迟六十秒，防止重复点击");
         listDatas.add("关于查看联系人，以及添加与删除的功能");
+        listDatas.add("模仿百度等app底部菜单栏突出一部分");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_commonly_used_function_fragment.setAdapter(mAdatper);
 
@@ -188,6 +190,13 @@ public class CommonlyUsedFunctionFragment extends Fragment {
                      */
                     case 12:
                         intent = new Intent(mContext, PhoneBookActivity.class);
+
+                        break;
+                    /**
+                     * 模仿百度等app底部菜单栏突出一部分
+                     */
+                    case 13:
+                        intent = new Intent(mContext, TopBottomActivity.class);
 
                         break;
 
