@@ -9,6 +9,10 @@ import android.net.wifi.WifiManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.util.Enumeration;
 import java.util.List;
 
 import static android.content.Context.WIFI_SERVICE;
@@ -30,7 +34,7 @@ public class NetworkAvailableUtils {
      * 判断是否联网
      *
      * @param context
-     * @return
+     * @return * //判断是否联网 返回true 则表示已经联网否则联网了否则没有联网
      */
     public static boolean isNetworkAvailable(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context
@@ -120,7 +124,6 @@ public class NetworkAvailableUtils {
 
     /**
      * 获取wifi的信息
-     *
      */
     public static String getConnectWifiSsid(Context context) {
         WifiManager wifiManager = (WifiManager) context.getSystemService(WIFI_SERVICE);
@@ -129,5 +132,27 @@ public class NetworkAvailableUtils {
         /*wifi的名称*/
         Log.d("SSID", wifiInfo.getSSID());
         return wifiInfo.getSSID();
+    }
+
+
+    /**
+     * 获得 本地 IP地址
+     */
+    private String getLocalIPAddress() { //获得 本地IP地址
+        try {
+            for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces();
+                 en.hasMoreElements(); ) {
+                NetworkInterface intf = en.nextElement();
+                for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements(); ) {
+                    InetAddress inetAddress = enumIpAddr.nextElement();
+                    if (!inetAddress.isLoopbackAddress()) {
+                        return inetAddress.getHostAddress().toString();
+                    }
+                }
+            }
+        } catch (SocketException ex) {
+            LogUtil.E(ex.toString());
+        }
+        return null;
     }
 }
