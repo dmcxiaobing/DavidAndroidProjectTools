@@ -43,7 +43,7 @@ public class ThridLoginConstants {
      * 微信登录
      */
     public interface WeiXin {
-        String CLIENT_ID = "wx852b5d9aca286364986944";//按需求更换
+        String CLIENT_ID = "wx852b5d9aca286364986977";//按需求更换
         String APP_SECRET = "";//按需求更换
         String SCOPE = "snsapi_userinfo";
         String GET_ACCESS_TOKEN_URL="https://api.weixin.qq.com/sns/oauth2/access_token";

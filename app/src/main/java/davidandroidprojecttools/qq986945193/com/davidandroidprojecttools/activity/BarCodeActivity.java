@@ -1,9 +1,7 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,14 +10,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.zxing.WriterException;
 import com.umeng.analytics.MobclickAgent;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.DensityUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.EditTextTextViewUtils;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.callback.ScanToolsCallback;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.SystemgcBitmapUtils;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.ToastUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.zxing.activity.CaptureActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.zxing.encoding.EncodingUtils;
 
@@ -91,12 +88,32 @@ public class BarCodeActivity extends BaseActivity {
                     Toast.makeText(BarCodeActivity.this, "内容为空，请重新输入", Toast.LENGTH_SHORT).show();
                 } else {
                     try {
+//                        mBitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher);
                         //得到二维码图片并且展示
-                        mBitmap = EncodingUtils.createQRCode(string, DensityUtils.dip2px(BarCodeActivity.this, 240),DensityUtils.dip2px(BarCodeActivity.this, 240),mBitmap);
+                        mBitmap = EncodingUtils.createQRCode(string, DensityUtils.dip2px(BarCodeActivity.this, 240), DensityUtils.dip2px(BarCodeActivity.this, 240), null);
 //                        mBitmap = EncodingHandler.createQRCode(string, 400);
                         if (mBitmap != null) {
 
                             iv_qr_image.setImageBitmap(mBitmap);
+                            /**
+                             * 点击长按识别二维码
+                             */
+                            iv_qr_image.setOnLongClickListener(new View.OnLongClickListener() {
+                                @Override
+                                public boolean onLongClick(View v) {
+                                    /**
+                                     * view 你要扫描的view
+                                     *ScanCall 回调扫码结果
+                                     */
+                                    ScanToolsCallback.scanCode(iv_qr_image, new ScanToolsCallback.ScanCall() {
+                                        @Override
+                                        public void getCode(String code) {
+                                            Toast.makeText(BarCodeActivity.this, code, Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                                    return false;
+                                }
+                            });
                         }
                     } catch (Exception e) {
                         // TODO Auto-generated catch block
@@ -105,6 +122,7 @@ public class BarCodeActivity extends BaseActivity {
                 }
             }
         });
+
 
     }
 

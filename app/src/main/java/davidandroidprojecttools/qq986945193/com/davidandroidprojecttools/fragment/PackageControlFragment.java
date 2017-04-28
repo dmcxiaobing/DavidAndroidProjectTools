@@ -78,7 +78,7 @@ public class PackageControlFragment extends Fragment {
         listDatas.add("日期以及地区等选择的多级联动");
         listDatas.add("仿美团饿了吗等选择城市列表，以及城市定位");
         listDatas.add("商品详情中图片展示轮播以及显示放大与缩小");
-        listDatas.add("分享与封装的一些功能实现");
+        listDatas.add("第三方分享与第三方登陆的一些功能实现");
 
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_package_control_fragment.setAdapter(mAdatper);
@@ -136,7 +136,7 @@ public class PackageControlFragment extends Fragment {
                         intent = new Intent(mContext, GoodsDetailBannerActivity.class);
                         break;
                     /**
-                     *分享与封装的一些功能实现
+                     *第三方分享与第三方登陆的一些功能实现
                      */
                     case 8:
                         intent = new Intent(mContext, ShareActivity.class);
