@@ -5,6 +5,7 @@ import android.widget.Button;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 
+
 /**
  * @author ：程序员小冰
  * @新浪微博 ：http://weibo.com/mcxiaobing
@@ -20,7 +21,6 @@ public class WebViewActivity extends BaseActivity {
     private Button btn_02;
     private Button btn_03;
     private Button btn_04;
-    private Button btn_05;
 
     @Override
     protected void initView() {
@@ -29,7 +29,6 @@ public class WebViewActivity extends BaseActivity {
         btn_02 = (Button) findViewById(R.id.btn_02);
         btn_03 = (Button) findViewById(R.id.btn_03);
         btn_04 = (Button) findViewById(R.id.btn_04);
-        btn_05 = (Button) findViewById(R.id.btn_05);
     }
 
     @Override
@@ -72,15 +71,7 @@ public class WebViewActivity extends BaseActivity {
                 startActivity(WebViewDetailActivity.class);
             }
         });
-        /**
-         * webview的功能使用详解
-         */
-        btn_05.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(WebViewDetailActivity.class);
-            }
-        });
+
 
     }
 }

@@ -18,10 +18,11 @@ import android.webkit.DownloadListener;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.callback.ScanToolsCallback;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Urls;
-import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.FileUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.LogUtil;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.URLUtils;
 
@@ -84,21 +85,24 @@ public class WebViewDetailActivity extends BaseActivity {
 //        initWebViewSettings();
 
         /*加载网页*/
-        webview.loadUrl(Urls.CSDN_BLOG_DAVID);
+        webview.loadUrl(Urls.BAIDU_QRCODE_URL);
+        initQrcodeEvent();
         /**
          * 设置调用系统浏览器下载文件
          */
         webview.setDownloadListener(new DownloadListener() {
             @Override
             public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
-                Log.i("tag", "url=" + url);
-                Log.i("tag", "userAgent=" + userAgent);
-                Log.i("tag", "contentDisposition=" + contentDisposition);
-                Log.i("tag", "mimetype=" + mimetype);
-                Log.i("tag", "contentLength=" + contentLength);
-                Uri uri = Uri.parse(url);
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
+                if (url != null && URLUtils.isNetworkImageUrl(url)) {
+                    Log.i("tag", "url=" + url);
+                    Log.i("tag", "userAgent=" + userAgent);
+                    Log.i("tag", "contentDisposition=" + contentDisposition);
+                    Log.i("tag", "mimetype=" + mimetype);
+                    Log.i("tag", "contentLength=" + contentLength);
+                    Uri uri = Uri.parse(url);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -137,7 +141,7 @@ public class WebViewDetailActivity extends BaseActivity {
                  */
                 CookieManager cookieManager = CookieManager.getInstance();
                 String CookieStr = cookieManager.getCookie(url);
-                Log.e("webview的cookie", "Cookies="+CookieStr);
+                Log.e("webview的cookie", "Cookies=" + CookieStr);
                 super.onPageFinished(view, url);
 //                dialog.dismiss();
             }
@@ -163,5 +167,27 @@ public class WebViewDetailActivity extends BaseActivity {
 
     }
 
+    /**
+     * 长按识别二维码的功能
+     */
+    private void initQrcodeEvent() {
+        webview.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+                //todo:调用扫描工具
+
+                ScanToolsCallback.scanCode(v, new ScanToolsCallback.ScanCall() {
+                    @Override
+                    public void getCode(String code) {
+                        Toast.makeText(WebViewDetailActivity.this, code, Toast.LENGTH_SHORT).show();
+                    }
+                });
+                return true;
+            }
+        });
+
+
+    }
 
 }

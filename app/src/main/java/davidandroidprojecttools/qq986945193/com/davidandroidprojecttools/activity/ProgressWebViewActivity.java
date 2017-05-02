@@ -2,6 +2,7 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
 
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 import android.webkit.DownloadListener;
 import android.webkit.URLUtil;
 import android.webkit.WebSettings;
@@ -12,6 +13,8 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Urls;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.URLUtils;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.view.ProgressWebView;
+
+import static davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R.id.webview;
 
 /**
  * @author ：程序员小冰
@@ -56,11 +59,13 @@ public class ProgressWebViewActivity extends BaseActivity {
         progress_webview.setDownloadListener(new DownloadListener() {
             @Override
             public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
-                if (url != null && URLUtils.isNetworkImageUrl(url))
+                if (url != null && URLUtils.isNetworkImageUrl(url)) {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                }
             }
         });
 
         progress_webview.loadUrl(Urls.CSDN_BLOG_DAVID);
     }
+
 }

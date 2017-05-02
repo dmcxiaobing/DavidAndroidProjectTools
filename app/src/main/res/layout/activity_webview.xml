@@ -27,11 +27,4 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="webview的功能使用详解" />
-
-    <Button
-        android:id="@+id/btn_05"
-        android:layout_width="match_parent"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        android:text="webview下载apk文件" />
 </LinearLayout>
