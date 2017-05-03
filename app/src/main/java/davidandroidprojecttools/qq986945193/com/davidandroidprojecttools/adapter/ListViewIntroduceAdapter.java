@@ -1,6 +1,7 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MainActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean.ZhiHuBean;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils.PicassoWithImageLoaderImageViewUtils;
 
@@ -77,6 +79,10 @@ public class ListViewIntroduceAdapter extends BaseAdapter {
         if (bean.getImages() != null && bean.getImages().size() != 0) {
             PicassoWithImageLoaderImageViewUtils.displayImage(bean.getImages().get(0), holder.iv_introduce_img);
         }
+        /**
+         * 设置点击
+         */
+        convertView.setOnClickListener(new onItemClickListener("position url"));
         return convertView;
     }
 
@@ -85,5 +91,32 @@ public class ListViewIntroduceAdapter extends BaseAdapter {
         private TextView tv_introduce_name;
         @ViewInject(R.id.iv_introduce_img)
         private ImageView iv_introduce_img;
+    }
+
+    /**
+     * 自定义点击事件
+     */
+    protected class onItemClickListener implements View.OnClickListener {
+        private String postUrl;
+
+        public onItemClickListener(String postUrl) {
+            this.postUrl = postUrl;
+        }
+
+
+        @Override
+        public void onClick(View v) {
+
+            if (postUrl != null && !(postUrl.equals(""))) {
+//                Intent startActivityIntent = new Intent();
+//                startActivityIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                startActivityIntent.setClass(mContext, MainActivity.class);
+                //                传参数，进入搜索界面
+//                startActivityIntent.putExtra("buy_url", postUrl);
+//                mContext.startActivity(startActivityIntent);
+
+
+            }
+        }
     }
 }
