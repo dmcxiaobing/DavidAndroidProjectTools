@@ -9,6 +9,7 @@ import android.net.wifi.WifiManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
+import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
@@ -34,7 +35,7 @@ public class NetworkAvailableUtils {
      * 判断是否联网
      *
      * @param context
-     * @return * //判断是否联网 返回true 则表示已经联网否则联网了否则没有联网
+     * @return * //判断是否联网 返回true 则表示已经联网。否则联网了否则没有联网
      */
     public static boolean isNetworkAvailable(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context
@@ -73,7 +74,7 @@ public class NetworkAvailableUtils {
      * 三、判断WIFI是否打开
      *
      * @param context
-     * @return
+     * @return 若是返回true 则表示已经连接了wifi，否则则表示没有连接wifi
      */
 
     public static boolean isWifiEnabled(Context context) {
@@ -134,11 +135,10 @@ public class NetworkAvailableUtils {
         return wifiInfo.getSSID();
     }
 
-
     /**
-     * 获得 本地 IP地址
+     * 获得 本地 ip地址以ipV6的方式显示
      */
-    private String getLocalIPAddress() { //获得 本地IP地址
+    public static String getLocalIP6Address() { //获得 本地IP地址
         try {
             for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces();
                  en.hasMoreElements(); ) {
@@ -152,6 +152,27 @@ public class NetworkAvailableUtils {
             }
         } catch (SocketException ex) {
             LogUtil.E(ex.toString());
+        }
+
+        return null;
+    }
+
+    /**
+     * 获得本地地址 ip地址以ipV4的方式显示
+     */
+    public static String getLocalIP4Address() {
+        try {
+            for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements(); ) {
+                NetworkInterface intf = en.nextElement();
+                for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements(); ) {
+                    InetAddress inetAddress = enumIpAddr.nextElement();
+                    if (!inetAddress.isLoopbackAddress() && (inetAddress instanceof Inet4Address)) {
+                        return inetAddress.getHostAddress().toString();
+                    }
+                }
+            }
+        } catch (SocketException e) {
+            e.printStackTrace();
         }
         return null;
     }
