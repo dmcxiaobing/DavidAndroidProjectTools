@@ -5,4 +5,9 @@
     android:orientation="vertical">
 
     <include layout="@layout/activity_base" />
+    <Button
+        android:id="@+id/btn_check_update_apk"
+        android:layout_width="match_parent"
+        android:text="检测更新并下载apk"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

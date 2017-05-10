@@ -19,6 +19,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activit
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.CreateFileActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.ListViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.MoreAnimationStartActivity;
+import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.RecycleViewIntroduceActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SpinnerActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SwipeRefreshListViewActivity;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activity.SystemAppFourMethodActivity;
@@ -84,6 +85,7 @@ public class MainFragment extends Fragment {
         listDatas.add("在手机中创建文件以及写入,读取,删除等功能");
         listDatas.add("spinner(下拉框)的知识点详解");
         listDatas.add("Toolbar和DrawableLayout的用法");
+        listDatas.add("RecycleView与adapter的详解");
         mAdatper = new ArrayAdapter<String>(mContext, android.R.layout.simple_list_item_1, listDatas);
         lv_main_fragment.setAdapter(mAdatper);
 
@@ -150,6 +152,12 @@ public class MainFragment extends Fragment {
                      */
                     case 9:
                         intent = new Intent(mContext, ToolbarDrawerLayoutActivity.class);
+                        break;
+                    /**
+                     *RecycleView与adapter的详解
+                     */
+                    case 10:
+                        intent = new Intent(mContext, RecycleViewIntroduceActivity.class);
                         break;
 
                 }

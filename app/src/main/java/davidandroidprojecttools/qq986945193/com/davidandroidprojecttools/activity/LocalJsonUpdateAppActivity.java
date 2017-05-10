@@ -6,6 +6,9 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.activi
  * @OsChina空间: https://my.oschina.net/mcxiaobing
  */
 
+import android.view.View;
+import android.widget.Button;
+
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.R;
 import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constant.Constants;
 
@@ -13,6 +16,7 @@ import davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.constan
  * 调用本地的json数据进行更新apk
  */
 public class LocalJsonUpdateAppActivity extends BaseActivity{
+    private Button btn_check_update_apk;
     @Override
     protected void initView() {
         setContentView(R.layout.activity_local_json_update_app);
@@ -20,6 +24,14 @@ public class LocalJsonUpdateAppActivity extends BaseActivity{
 
     @Override
     protected void initData() {
+        btn_check_update_apk = (Button) findViewById(R.id.btn_check_update_apk);
+
+        btn_check_update_apk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
     }
 

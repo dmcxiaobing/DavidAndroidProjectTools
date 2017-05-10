@@ -156,8 +156,8 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
     //fresco的引入
     compile 'com.facebook.fresco:fresco:0.13.0'
-    /*引入multidex库文件*/
-    compile 'com.android.support:multidex:1.0.0'
+    /*引入multidex库文件1.0.0会出现警告信息，1.0.1不回出现第三方jar警告信息*/
+    compile 'com.android.support:multidex:1.0.1'
     /*增加注解的使用 butterknife*/
     compile 'com.jakewharton:butterknife:8.1.0'
     apt 'com.jakewharton:butterknife-compiler:8.1.0'

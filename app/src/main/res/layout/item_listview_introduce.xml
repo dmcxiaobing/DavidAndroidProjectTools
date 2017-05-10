@@ -13,6 +13,7 @@
         android:layout_alignParentRight="true"
         android:maxEms="10"
         android:textSize="20sp"
+        android:textColor="@color/red"
         android:layout_centerVertical="true"
         android:text="" />
 

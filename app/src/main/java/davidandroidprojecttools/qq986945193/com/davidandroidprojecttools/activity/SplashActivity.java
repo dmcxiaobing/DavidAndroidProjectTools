@@ -61,6 +61,14 @@ public class SplashActivity extends Activity {
 
         ll_splash = (LinearLayout) findViewById(R.id.ll_splash);
         /**
+         * 设置焦点触发，以防多个布局会出现显示中间的问题
+         */
+        ll_splash.setFocusable(true);
+        ll_splash.setFocusableInTouchMode(true);
+        ll_splash.requestFocus();
+
+
+        /**
          * 第一种方法，利用handler自带的sendEmptyMessageDelayed()方法。
          */
         mHandler.sendEmptyMessageDelayed(1, 2000);

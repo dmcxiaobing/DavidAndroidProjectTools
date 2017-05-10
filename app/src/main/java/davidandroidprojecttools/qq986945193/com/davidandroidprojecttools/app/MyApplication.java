@@ -1,8 +1,10 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.app;
 
 import android.app.Application;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Environment;
+import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 import android.widget.Toast;
 
@@ -44,7 +46,15 @@ public class MyApplication extends MultiDexApplication {
     private BitmapUtils bitmapUtils;
     private OkHttpUtils mOkHttpUtils;
 
-
+    /**
+     * 若是application继承了其他类，可以这样使用，突破65535
+     */
+   /* @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
+*/
     @Override
     public void onCreate() {
         super.onCreate();
