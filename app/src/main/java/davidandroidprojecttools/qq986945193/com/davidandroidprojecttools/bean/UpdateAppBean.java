@@ -1,38 +1,23 @@
 package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.bean;
 
+import java.util.List;
+
 /**
  * Created by david zheng on 2017/5/9.
  * <p>
- * http://www.anenda.com
+ * https://github.com/QQ986945193
  */
 
 public class UpdateAppBean {
 
+
     /**
-     * _ticket : jl4f3k6ha45bqlt1vttnr7m252
-     * msg : {"apiVersion":"210000","description":"【更新说明】1. 提升用户流畅度  2.提升用户流畅度提升用户流畅度. 修复已知BUG","downloadUrl":"http://localhost:8080/davidandroid.apk","versionCode":"3","versionName":"1.2"}
      * status : success
+     * msg : [{"description":"你好。this is app description","downloadApkUrl":"http://192.168.1.36:8080/javaweb/download/dandroid.apk","versionCode":"2"}]
      */
 
-    private String _ticket;
-    private MsgBean msg;
     private String status;
-
-    public String get_ticket() {
-        return _ticket;
-    }
-
-    public void set_ticket(String _ticket) {
-        this._ticket = _ticket;
-    }
-
-    public MsgBean getMsg() {
-        return msg;
-    }
-
-    public void setMsg(MsgBean msg) {
-        this.msg = msg;
-    }
+    private List<MsgBean> msg;
 
     public String getStatus() {
         return status;
@@ -42,28 +27,24 @@ public class UpdateAppBean {
         this.status = status;
     }
 
+    public List<MsgBean> getMsg() {
+        return msg;
+    }
+
+    public void setMsg(List<MsgBean> msg) {
+        this.msg = msg;
+    }
+
     public static class MsgBean {
         /**
-         * apiVersion : 210000
-         * description : 【更新说明】1. 提升用户流畅度  2.提升用户流畅度提升用户流畅度. 修复已知BUG
-         * downloadUrl : http://localhost:8080/davidandroid.apk
-         * versionCode : 3
-         * versionName : 1.2
+         * description : 你好。this is app description
+         * downloadApkUrl : http://192.168.1.36:8080/javaweb/download/dandroid.apk
+         * versionCode : 2
          */
 
-        private String apiVersion;
         private String description;
-        private String downloadUrl;
+        private String downloadApkUrl;
         private String versionCode;
-        private String versionName;
-
-        public String getApiVersion() {
-            return apiVersion;
-        }
-
-        public void setApiVersion(String apiVersion) {
-            this.apiVersion = apiVersion;
-        }
 
         public String getDescription() {
             return description;
@@ -73,12 +54,12 @@ public class UpdateAppBean {
             this.description = description;
         }
 
-        public String getDownloadUrl() {
-            return downloadUrl;
+        public String getDownloadApkUrl() {
+            return downloadApkUrl;
         }
 
-        public void setDownloadUrl(String downloadUrl) {
-            this.downloadUrl = downloadUrl;
+        public void setDownloadApkUrl(String downloadApkUrl) {
+            this.downloadApkUrl = downloadApkUrl;
         }
 
         public String getVersionCode() {
@@ -88,15 +69,5 @@ public class UpdateAppBean {
         public void setVersionCode(String versionCode) {
             this.versionCode = versionCode;
         }
-
-        public String getVersionName() {
-            return versionName;
-        }
-
-        public void setVersionName(String versionName) {
-            this.versionName = versionName;
-        }
     }
-
-
 }

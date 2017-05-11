@@ -54,7 +54,8 @@ public class Urls {
     public static final String ZHIHU_URL = "http://news-at.zhihu.com/api/4/news/before/20161122";
     /*一个带有二维码图片的url*/
     public static final String BAIDU_QRCODE_URL = "https://image.baidu.com/search/wiseala?tn=wiseala&active=1&ie=utf8&from=ala&fmpage=search&word=%E4%BA%8C%E7%BB%B4%E7%A0%81&pos=top";
-
+    /*自己写的一个升级app的servlet接口*/
+    public static final String CHECK_UPDATE_APP = "http://192.168.1.36:8080/javaweb/servlet/UpdateAppServlet";
 
 
 }
