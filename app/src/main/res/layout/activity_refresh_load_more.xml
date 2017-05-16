@@ -54,6 +54,12 @@
                 android:text="带有自动加载与上拉刷新的activity recycleView" />
 
             <Button
+                android:id="@+id/btn_custom_footer_header_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="可自动更改头部和底部的刷新与加载更多" />
+
+            <Button
                 android:id="@+id/btn_recycleview_auto_loadmore_listview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

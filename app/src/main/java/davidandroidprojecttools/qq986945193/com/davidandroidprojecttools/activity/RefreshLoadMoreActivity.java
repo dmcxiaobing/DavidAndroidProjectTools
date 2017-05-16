@@ -29,6 +29,7 @@ public class RefreshLoadMoreActivity extends BaseActivity {
     private Button btn_recycleview_auto_loadmore_swipe_sectionay;
     private Button btn_recycleview_auto_loadmore_swipe_sectionfm;
     private Button btn_recycleview_auto_loadmore_listview;
+    private Button btn_custom_footer_header_refresh;
 
 
     @Override
@@ -47,6 +48,7 @@ public class RefreshLoadMoreActivity extends BaseActivity {
         btn_recycleview_auto_loadmore_swipe_sectionay = (Button) findViewById(R.id.btn_recycleview_auto_loadmore_swipe_sectionay);
         btn_recycleview_auto_loadmore_swipe_sectionfm = (Button) findViewById(R.id.btn_recycleview_auto_loadmore_swipe_sectionfm);
         btn_recycleview_auto_loadmore_listview = (Button) findViewById(R.id.btn_recycleview_auto_loadmore_listview);
+        btn_custom_footer_header_refresh = (Button) findViewById(R.id.btn_custom_footer_header_refresh);
     }
 
     @Override
@@ -113,6 +115,15 @@ public class RefreshLoadMoreActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(PullRefreshRecycleViewActivity.class);
+            }
+        });
+        /**
+         * 可自动更改头部和底部的刷新与加载更多
+         */
+        btn_custom_footer_header_refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(RefreshCustomFooterHeaderActivity.class);
             }
         });
 
