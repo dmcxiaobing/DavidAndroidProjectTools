@@ -3,7 +3,7 @@ package davidandroidprojecttools.qq986945193.com.davidandroidprojecttools.utils;
 import android.os.Build;
 
 /**
- * Created by Neal on 2014/10/30.
+ * Created by DAVID on .
  */
 public class VersionUtil {
 
