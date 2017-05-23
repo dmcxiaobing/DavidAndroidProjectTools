@@ -14,17 +14,13 @@ Android开发常用功能大集合。以及知识点的详解代码
 
 ![效果展示图](http://img.blog.csdn.net/20161031113558371)
 
-更过功能欢迎下载APK进行体验(两种方式，建议第二种微云。腾讯Bugly可能有部分手机不兼容问题)：
+更过功能欢迎下载APK进行体验(腾讯Bugly可能有部分手机不兼容问题)：
 
-当然除了这两种,你也可以去百度手机助手,91,安卓市场进行下载体验。
+当然除了这种,你也可以去百度手机助手,91,安卓市场进行下载体验。
 
 1;[点击从腾讯Bugly下载APK进行体验效果](https://beta.bugly.qq.com/davidandroidprojecttools)
 
 ![这里写图片描述](http://img.blog.csdn.net/20161108144026261)
-
-2;[点击从腾讯微云下载APK进行体验效果](https://sz-btfs-v2-yun-ftn.weiyun.com/ftn_handler/89277a84dd3265346828c6d955f0fad42dd67c19e3710c75024ee42d5ee317c075904f90706d63288339b2b52e82a6ceeab7dd1ab03e87831d6e47ed2920fb20/Android.apk?fname=Android.apk&from=30111&version=2.0.0.2&uin=986945193)
-
-![腾讯微云下载apk二维码](http://img.blog.csdn.net/20161112153011508)
 
 此项目是小冰工作中总结常用的功能大集合，防止以后用到的话重复造轮子，而且还有常用控件
 
@@ -88,7 +84,7 @@ Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,OkHttp,fresco,shareSDK�
 
 由于有些功能效果无法展示，具体实现请看项目源代码。
 
-项目为小冰所写，仅供参考，请勿用于任何商业。转载请说明出处。
+项目为小冰所写，仅供参考，转载应用本人将不负责任何法律。转载请说明出处。
 
 可以直接放在AndroidStudio开发工具中运行,
 
