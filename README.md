@@ -18,7 +18,13 @@ Android开发常用功能大集合。以及知识点的详解代码
 
 当然除了这种,你也可以去百度手机助手,91,安卓市场进行下载体验。
 
-1;[点击从腾讯Bugly下载APK进行体验效果](https://beta.bugly.qq.com/davidandroidprojecttools)
+1;[点击从百度手机助手下载APK进行体验效果](http://shouji.baidu.com/software/11535756.html)
+
+2;[点击从安卓市场下载APK进行体验效果](http://apk.hiapk.com/appinfo/davidandroidprojecttools.qq986945193.com.davidandroidprojecttools/2)
+
+3;[点击从91助手下载APK进行体验效果](http://apk.91.com/Soft/Android/davidandroidprojecttools.qq986945193.com.davidandroidprojecttools-2.html)
+
+4;[点击从腾讯Bugly下载APK进行体验效果](https://beta.bugly.qq.com/davidandroidprojecttools)
 
 ![这里写图片描述](http://img.blog.csdn.net/20161108144026261)
 
