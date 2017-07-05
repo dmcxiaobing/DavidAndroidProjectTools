@@ -16,4 +16,11 @@
         android:layout_height="wrap_content"
         android:text="调用本地的json数据进行更新apk" />
 
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击弹出一个dialog提示" />
+
+
 </LinearLayout>
