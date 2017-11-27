@@ -6,35 +6,6 @@ Android开发常用功能大集合。以及知识点的详解代码
 
 前提说明,仅供参考.若是用于商业本人不负任何法律责任.有些接口是我自己抓取的,版权归原公司所有.
 
-部分资源来自互联网收集，并修改，归原作者所有，感谢。
-
-当然如果您感觉我侵犯了您的权益，请私信，我会立刻删除相关内容。
-
-作者：[程序员小冰](http://blog.csdn.net/qq_21376985)
-
-[欢迎点击关注我的微博](http://weibo.com/mcxiaobing)
-
-先来看一下这个项目的总体功能图吧（这只是一小部分，会一直更新维护增加功能）：
-
-![这里写图片描述](http://img.blog.csdn.net/20171127155932928?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjEzNzY5ODU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-![这里写图片描述](http://img.blog.csdn.net/20171127155943232?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjEzNzY5ODU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-![这里写图片描述](http://img.blog.csdn.net/20171127155958259?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjEzNzY5ODU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-![这里写图片描述](http://img.blog.csdn.net/20171127160004755?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjEzNzY5ODU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-
-更过功能欢迎下载APK进行体验(腾讯Bugly可能有部分手机不兼容问题)：
-
-当然除了这种,你也可以去百度手机助手,91,安卓市场进行下载体验。
-
-1;[点击从百度手机助手下载APK进行体验效果](http://shouji.baidu.com/software/11535756.html)
-
-2;[点击从安卓市场下载APK进行体验效果](http://apk.hiapk.com/appinfo/davidandroidprojecttools.qq986945193.com.davidandroidprojecttools/2)
-
-3;[点击从91助手下载APK进行体验效果](http://apk.91.com/Soft/Android/davidandroidprojecttools.qq986945193.com.davidandroidprojecttools-2.html)
-
-4;[点击从腾讯Bugly下载APK进行体验效果](https://beta.bugly.qq.com/davidandroidprojecttools)
-
-![这里写图片描述](http://img.blog.csdn.net/20161108144026261)
-
 此项目是小冰工作中总结常用的功能大集合，防止以后用到的话重复造轮子，而且还有常用控件
 
 以及难点的详解，注释非常啰嗦，纯粹是为了积累自己的知识，顺便方便自己查看。当然，说到各种
@@ -47,7 +18,7 @@ Android开发常用功能大集合。以及知识点的详解代码
 
 当然，如果你有更好的功能，欢迎联系我。好知识一起共享。Thank You！下面是部分的功能知识点介绍：
 
-包名架构图(目前,还在更戏中......)
+包名图(当然，这个项目功能点挺多的，具体请下载apk或者运行项目自己看。喜欢的朋友可以点star)
 
 ![简单效果图展示](http://img.blog.csdn.net/20161031114217092)
 
@@ -63,7 +34,7 @@ a,二维码的扫描与生成功能 b,圆形头像的功能
 
 4,著名的一些开源框架的使用以及封装
 
-【JAVA方面】java知识点：
+【JAVA方面，懒得写了，具体自己看吧。反正挺多的知识点。】java知识点：
 
 1,设计模式：单例的恶汉式和懒汉式写法。
 
@@ -102,6 +73,37 @@ Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,OkHttp,fresco,shareSDK�
 可以直接放在AndroidStudio开发工具中运行,
 
 涉及到第三方服务API以及SDK,记得将Constants类中的API秘钥改为自己的即可。
+
+更过功能欢迎下载APK进行体验(腾讯Bugly可能有部分手机不兼容问题)：
+
+当然除了这种,你也可以去百度手机助手,91,安卓市场进行下载体验。
+
+1;[点击从百度手机助手下载APK进行体验效果](http://shouji.baidu.com/software/11535756.html)
+
+2;[点击从安卓市场下载APK进行体验效果](http://apk.hiapk.com/appinfo/davidandroidprojecttools.qq986945193.com.davidandroidprojecttools/2)
+
+3;[点击从91助手下载APK进行体验效果](http://apk.91.com/Soft/Android/davidandroidprojecttools.qq986945193.com.davidandroidprojecttools-2.html)
+
+4;[点击从腾讯Bugly下载APK进行体验效果](https://beta.bugly.qq.com/davidandroidprojecttools)
+
+![这里写图片描述](http://img.blog.csdn.net/20161108144026261)
+
+
+部分资源来自互联网收集，并修改，归原作者所有，感谢。
+
+当然如果您感觉我侵犯了您的权益，请私信，我会立刻删除相关内容。
+
+作者：[程序员小冰](http://blog.csdn.net/qq_21376985)
+
+[欢迎点击关注我的微博](http://weibo.com/mcxiaobing)
+
+先来看一下这个项目的总体功能图吧（这只是一小部分，会一直更新维护增加功能）：
+
+![这里写图片描述](http://img.blog.csdn.net/20171127155932928?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjEzNzY5ODU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](http://img.blog.csdn.net/20171127155943232?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjEzNzY5ODU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](http://img.blog.csdn.net/20171127155958259?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjEzNzY5ODU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](http://img.blog.csdn.net/20171127160004755?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjEzNzY5ODU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 
 欢迎star,fork，提出更好的建议。版权所有:程序员小冰
 
