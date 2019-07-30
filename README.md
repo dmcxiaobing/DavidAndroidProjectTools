@@ -109,6 +109,5 @@ Gson, Xutils2.6, Picasso,Universional_Imageloader, glide,OkHttp,fresco,shareSDK�
 
 当然如果我的项目帮到了你，欢迎进行打赏，请作者喝杯茶。谢谢支持。
 
-![支付宝](http://plblqapuw.bkt.clouddn.com/alipay_low.jpg)
+![支付宝](http://mcxiaobing.gitee.io/blog/img/donate.jpg)
 
-![微信](http://plblqapuw.bkt.clouddn.com/wechat_low.jpg)
